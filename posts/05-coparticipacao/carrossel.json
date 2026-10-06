@@ -1,0 +1,80 @@
+{
+ "capa": {
+  "grande": "COPART",
+  "destaque": "VALE A PENA?",
+  "sub": "entenda antes de decidir",
+  "fundo": {
+   "arquivo": "copart-capa",
+   "x": 0.5,
+   "modo": "topo"
+  }
+ },
+ "lamina": [
+  {
+   "rotulo": "PASSO 01",
+   "icone": "dinheiro",
+   "titulo": "O que é",
+   "texto": "Um valor que você paga quando usa o plano, além da mensalidade. Ele está previsto no contrato.",
+   "fundo": {
+    "arquivo": "copart-oque",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "PASSO 02",
+   "icone": "documento",
+   "titulo": "Tabela no contrato",
+   "texto": "Na maioria dos casos, o contrato traz a tabela com o valor de cada consulta ou exame. Você sabe antes de usar.",
+   "fundo": {
+    "arquivo": "copart-tabela",
+    "x": 0.5,
+    "brilho": 0.9
+   }
+  },
+  {
+   "rotulo": "PASSO 03",
+   "icone": "relogio",
+   "titulo": "Mais previsível do que parece",
+   "texto": "Como o valor de cada uso é conhecido, dá para calcular o gasto antes e se planejar.",
+   "fundo": {
+    "arquivo": "copart-previsivel",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "PASSO 04",
+   "icone": "check",
+   "titulo": "Mensalidade menor",
+   "texto": "Em geral, planos com coparticipação têm mensalidade menor do que os sem coparticipação.",
+   "fundo": {
+    "arquivo": "copart-mensalidade",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "PASSO 05",
+   "icone": "lupa",
+   "titulo": "Faça a conta",
+   "texto": "Some a mensalidade com o que você costuma usar no ano e compare com um plano sem coparticipação.",
+   "fundo": {
+    "arquivo": "copart-conta",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "PASSO 06",
+   "icone": "pessoa",
+   "titulo": "Quando faz sentido",
+   "texto": "Quem usa pouco o plano pode economizar. Quem usa muito deve comparar com cuidado antes de decidir.",
+   "fundo": {
+    "arquivo": "copart-caminho",
+    "x": 0.5
+   }
+  }
+ ],
+ "final": {
+  "pergunta": "Coparticipação faz sentido para você?",
+  "texto_html": "Me chame no WhatsApp com a palavra <em>COPART</em> e conte quantas vezes costuma usar o plano no ano.",
+  "aviso": "Carências, rede e valores variam por operadora e produto."
+ }
+}
