@@ -3,7 +3,7 @@
 import json, subprocess, sys
 src, rawp, outa, outw = sys.argv[1:5]
 w = json.load(open(rawp))  # [[texto, inicio, fim], ...]
-INS = {'proposta.': 0.55, 'parecido.': 0.25, 'oferece.': 0.5, 'boa.': 0.5, 'vida.': 0.2, 'dias.': 0.5, 'indicar.': 0.5}
+INS = {'proposta.': 0.55, 'proposta!': 0.45, 'parecido.': 0.2, 'oferece.': 0.45, 'boa.': 0.5, 'boa!': 0.45, 'vida.': 0.15, 'dias.': 0.45, 'indicar.': 0.45}
 cuts = [(round(e + 0.06, 3), INS[t]) for t, s, e in w if t in INS]
 sr = 44100; fc = []; labels = []; prev = 0.0; idx = 0
 for c, sil in cuts + [(None, 0)]:

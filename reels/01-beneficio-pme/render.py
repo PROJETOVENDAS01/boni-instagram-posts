@@ -9,18 +9,20 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 HERE = os.path.dirname(os.path.abspath(__file__))
 KIT = '/home/claude/brand/kit/boni-instagram'
 W, H, FPS = 1080, 1920, 30
-DUR = 24.4
 GOLD = (245, 184, 0)
 GOLD_L = (255, 214, 92)
 PREVIEW = '--preview' in sys.argv
 
-words = json.load(open(f'{HERE}/words.json'))
+sys.path.insert(0, HERE)
+import timing
+words = timing.WORDS
+DUR = timing.DUR
 FB = f'{KIT}/fontes/Poppins-Bold.ttf'
 FM = f'{KIT}/fontes/Poppins-Medium.ttf'
 
 # ---------- cenas ----------
-BOUNDS = [0.0, 2.6, 5.9, 9.5, 12.2, 16.1, 20.6]  # inicio de cada cena; fim = 20.6 (cartao final a partir dai)
-END_START = 20.6
+BOUNDS = timing.BOUNDS  # inicio de cada cena
+END_START = timing.END_START
 TR = 0.42  # duracao das transicoes
 KINDS = ['flash', 'push', 'glitch', 'wipe', 'zoom', 'whip']  # transicao que ENTRA em cada cena (1..6) e no cartao
 
@@ -166,10 +168,7 @@ def kin_layer(txt, size, y):
         KIN[key] = out
     return KIN[key]
 
-KINETIC = [  # (texto, tamanho, y, inicio, fim)
-    ('1 VIDA', 210, 560, 11.45, 12.3),
-    ('180 DIAS', 190, 560, 14.75, 16.0),
-]
+KINETIC = timing.KINETIC
 
 def apply_kinetic(a, t):
     for txt, size, y, s, e in KINETIC:
@@ -389,7 +388,7 @@ def main():
     n = int(DUR * FPS)
     if PREVIEW:
         os.makedirs(f'{HERE}/prev', exist_ok=True)
-        for tt in [0.8, 2.5, 2.7, 4.5, 6.2, 8.0, 11.9, 15.0, 17.0, 21.5, 23.5]:
+        for tt in [0.8, 3.56, 6.0, 9.2, 15.9, 18.5, 22.0, 27.0, 29.5]:
             Image.fromarray(full_frame(tt)).save(f'{HERE}/prev/f_{tt:05.2f}.png')
         return
     cmd = ['ffmpeg', '-y', '-loglevel', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-s', f'{W}x{H}',

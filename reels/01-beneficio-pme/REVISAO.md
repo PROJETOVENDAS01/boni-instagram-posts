@@ -16,4 +16,4 @@
 Quinta 19h30 ou domingo 19h30 (horário de feed). Publicação só após o "pode publicar" do Thiago.
 
 ## Entrega
-reel-final.mp4 (1080x1920, ~24 s), capa sugerida em capa.jpg, legenda.txt, alt-text.txt.
+reel-final.mp4 (1080x1920, ~30 s), capa sugerida em capa.jpg, legenda.txt, alt-text.txt.
