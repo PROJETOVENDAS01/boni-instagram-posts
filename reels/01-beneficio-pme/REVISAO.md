@@ -1,7 +1,7 @@
 # Reel 01 – Benefício PME (piloto)
 
 ## Conferir antes de publicar
-- "Plano empresarial a partir de 1 vida" e "MEI com CNPJ ativo há 180 dias": fatos confirmados pelo Thiago (05/10/2026). A fala já diz que as demais condições variam por operadora.
+- "Plano empresarial a partir de 1 vida" e "para MEI, CNPJ ativo há 180 dias": fatos confirmados pelo Thiago (05/10/2026). A fala e a tela deixam claro que os 180 dias valem só para MEI, e que as demais condições variam por operadora.
 - "Benefício pode ajudar a manter o time e atrair gente boa": frase genérica, sem promessa de resultado.
 - Aviso obrigatório na tela final: "Carências, rede e valores variam por operadora e produto." (incluído).
 - Sem preço, sem "o melhor", sem marca de operadora/hospital, sem depoimento.
