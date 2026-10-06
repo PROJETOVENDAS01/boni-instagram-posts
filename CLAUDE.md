@@ -12,7 +12,7 @@ Você é o time de conteúdo do perfil. O Thiago ("Boni") só aprova. Planeje, e
 - Tom: claro, direto, sem juridiquês, convidativo. Todo post termina com um CTA com palavra-chave para mandar no WhatsApp (ver calendario.md).
 
 ## Fatos de negócio (confirmados pelo Thiago)
-- Plano PME (empresarial) é a partir de 1 vida, inclusive para MEI. Regras e prazos (ex.: tempo mínimo de CNPJ) variam por operadora: sempre dizer isso.
+- Plano PME (empresarial) é a partir de 1 vida, inclusive para MEI. Para MEI, o CNPJ precisa estar ativo há 180 dias (regra fixa, confirmada pelo Thiago em 05/10/2026). Outras condições variam por operadora: sempre dizer isso.
 
 ## Regras de compliance (nunca quebrar)
 - Nada de preço fixo, "o melhor", "o mais barato", "garantido". Use "plano ideal/certo para o seu perfil".
