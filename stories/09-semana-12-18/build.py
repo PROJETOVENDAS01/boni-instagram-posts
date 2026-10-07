@@ -49,7 +49,7 @@ T = {
  'ter-reel': ('bal', 1.0, 88, B(340, 'REEL NO AR', f'Reajuste do plano de saúde? {G("Veja o que olhar.")}', 'Acabou de sair no feed.', 'Assista no feed')),
  'ter-resposta': ('meet', .9, 88, B(340, 'A RESPOSTA', f'É {G("MITO.")}', 'O plano PME (empresarial) é a partir de 1 vida, inclusive para MEI. Outras condições variam por operadora.')),
  'qua-bastidor': ('laptop', 1.0, 88, B(360, 'BASTIDORES', f'Cada análise começa pelo seu {G("perfil.")}', 'Idade, cidade, rede e orçamento. O plano certo é o que cabe no seu perfil.')),
- 'qua-feed': ('pasta', 1.0, 88, B(340, 'NO FEED AGORA', f'Antes de olhar o valor, {G("olhe a rede.")}', 'Sua rede de atendimento muda tudo.', 'Confira no feed')),
+ 'qua-feed': ('pasta', 1.0, 88, B(340, 'NO FEED AGORA', f'Plano é caro? {G("Depende do seu perfil.")}', 'Pode existir uma opção que caiba no seu bolso.', 'Confira no feed')),
  'qui-dica': ('calbr', .9, 88, B(380, 'DICA RÁPIDA', f'Carência: pergunte {G("antes de assinar.")}', 'Cada plano tem os seus prazos. Peça tudo por escrito.')),
  'qui-feed': ('hand', 1.0, 88, B(340, 'NO FEED AGORA', f'Como contratar, {G("passo a passo.")}', 'Sem complicação, do primeiro contato à proposta.', 'Confira no feed')),
  'sex-1': ('calc', .9, 88, B(380, 'DICA RÁPIDA · 1/3', f'Quem vai {G("usar o plano?")}', 'Só você, a família ou a equipe? O perfil muda o tipo de plano.')),
@@ -57,7 +57,8 @@ T = {
  'sex-3': ('stet', 1.0, 88, B(340, 'DICA RÁPIDA · 3/3', f'Tem mais no {G("carrossel.")}', 'São 7 perguntas no feed. Me chame no WhatsApp com a palavra PERGUNTAS.', 'Fale comigo no link da bio')),
  'sex-reel': ('clock', 1.0, 88, B(340, 'REEL NO AR', f'Saúde {G("não espera.")}', 'Acabou de sair no feed.', 'Assista no feed')),
  'sab-enquete': ('maos', .85, 78, B(330, 'ENQUETE', f'O que pesa mais na hora de escolher o {G("plano?")}', 'Vote abaixo: rede ou mensalidade. Depois eu conto o que vem por aí.')),
- 'sab-feed': ('cal', 1.0, 88, B(340, 'NO FEED AGORA', f'Mito ou verdade: {G("plano PME.")}', 'Plano empresarial é só para empresa grande?', 'Confira no feed')),
+ 'sab-feed': ('cal', 1.0, 88, B(340, 'NO FEED AGORA', f'Nunca usei o plano. {G("Por que ter?")}', 'Porque imprevisto não avisa.', 'Confira no feed')),
+ 'dom-cena': ('phone', .8, 78, B(330, 'CENA DO DIA A DIA', f'Febre do filho de madrugada. {G("Você está preparado?")}', 'Imprevisto de saúde não avisa. Ter plano é ter mais opções na hora de agir.')),
  'dom-leve': ('chair', .9, 88, B(340, 'BOM DOMINGO', f'Segunda tem {G("mais dica.")}', 'Dúvida sobre plano de saúde? Me chame pelo link da bio.')),
 }
 css = CSS.replace('FONTES', (KIT/'fontes').as_uri())
