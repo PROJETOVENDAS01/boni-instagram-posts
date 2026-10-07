@@ -1,0 +1,14 @@
+{
+ "capa": {"grande": "7", "destaque": "PERGUNTAS", "sub": "antes de contratar qualquer plano de saúde",
+  "fundo": {"arquivo": "c-stetoscopio", "x": 0.5, "modo": "recorte"}},
+ "lamina": [
+  {"rotulo": "PERGUNTA 01", "icone": "grupo", "titulo": "Quem vai usar?", "texto": "Só você, a família ou a equipe? O perfil de quem vai usar muda o tipo de plano."},
+  {"rotulo": "PERGUNTA 02", "icone": "pino", "titulo": "Onde você se atende?", "texto": "Veja se os médicos, clínicas e hospitais que você usa estão na rede do produto."},
+  {"rotulo": "PERGUNTA 03", "icone": "dinheiro", "titulo": "Tem coparticipação?", "texto": "Se tiver, confira no contrato a tabela de valores de cada consulta e exame."},
+  {"rotulo": "PERGUNTA 04", "icone": "calendario", "titulo": "Quais as carências?", "texto": "Cada plano tem seus prazos. Pergunte antes de assinar e peça tudo por escrito."},
+  {"rotulo": "PERGUNTA 05", "icone": "documento", "titulo": "Como é o reajuste?", "texto": "Pergunte como e quando o valor pode mudar ao longo do contrato."},
+  {"rotulo": "PERGUNTA 06", "icone": "lupa", "titulo": "O que está incluído?", "texto": "Consultas, exames, internação, parto: veja o que cada cobertura inclui."},
+  {"rotulo": "PERGUNTA 07", "icone": "balao", "titulo": "Quem me ajuda depois?", "texto": "Depois de contratar, com quem você fala se precisar de ajuda? Isso também importa."}
+ ],
+ "final": {"pergunta": "Quer ajuda com essas perguntas?", "texto_html": "Me chame no WhatsApp com a palavra <em>PERGUNTAS</em> e eu olho o seu caso com você.", "aviso": "Carências, rede e valores variam por operadora e produto."}
+}

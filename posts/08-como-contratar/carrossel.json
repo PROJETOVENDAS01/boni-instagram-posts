@@ -1,0 +1,13 @@
+{
+ "capa": {"grande": "", "destaque": "COMO CONTRATAR", "sub": "o passo a passo, sem complicação",
+  "fundo": {"arquivo": "c-aperto", "x": 0.5, "modo": "recorte"}},
+ "lamina": [
+  {"rotulo": "PASSO 01", "icone": "balao", "titulo": "Você me chama", "texto": "Conta quem vai usar o plano e o que é importante para você. Pelo WhatsApp, sem compromisso.", "fundo": {"arquivo": "c-celular", "x": 0.5}},
+  {"rotulo": "PASSO 02", "icone": "lupa", "titulo": "Eu analiso o seu perfil", "texto": "Idade, cidade, rede de atendimento e orçamento. Cada perfil pede uma análise diferente.", "fundo": {"arquivo": "c-calculadora", "x": 0.5, "brilho": 0.9}},
+  {"rotulo": "PASSO 03", "icone": "documento", "titulo": "Comparo as opções", "texto": "Mostro as opções que combinam com o seu perfil, lado a lado, de forma clara.", "fundo": {"arquivo": "c-comparando", "x": 0.5, "brilho": 0.9}},
+  {"rotulo": "PASSO 04", "icone": "calendario", "titulo": "Conferimos as regras", "texto": "Carências, rede e coparticipação: tudo explicado antes de você decidir.", "fundo": {"arquivo": "c-calendario", "x": 0.5, "brilho": 0.9}},
+  {"rotulo": "PASSO 05", "icone": "check", "titulo": "Documentos e proposta", "texto": "Reunimos a documentação e enviamos a proposta. Os documentos exigidos variam por operadora.", "fundo": {"arquivo": "c-papeis", "x": 0.5, "brilho": 0.95}},
+  {"rotulo": "PASSO 06", "icone": "escudo", "titulo": "Você decide com segurança", "texto": "Com tudo claro, a decisão é sua. Eu te ajudo a acompanhar a proposta até o fim.", "fundo": {"arquivo": "c-notebook", "x": 0.5, "brilho": 0.9}}
+ ],
+ "final": {"pergunta": "Vamos começar?", "texto_html": "Me chame no WhatsApp com a palavra <em>CONTRATAR</em> e conte quem vai usar o plano.", "aviso": "Carências, rede e valores variam por operadora e produto."}
+}
