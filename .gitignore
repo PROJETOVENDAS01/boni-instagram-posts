@@ -22,3 +22,6 @@ reels/10-*/narr.mp3
 reels/11-*/cenas/
 reels/11-*/make.log
 reels/11-*/narracao_final.wav
+stories/12-*/_*
+stories/12-*/*.png
+stories/12-*/_bg-*
