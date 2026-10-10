@@ -5,6 +5,7 @@
 - O vídeo não cita idade para começar a mamografia de propósito: Ministério da Saúde e sociedades médicas divergem. Fala só "depende da idade e do histórico, converse com o seu médico". Se quiser citar idade, eu confiro as fontes oficiais.
 - "Descobrir cedo aumenta as chances": conferir no INCA.
 - Ponte do plano: "consulta e exame em dia, sem sufoco, é um dos motivos de ter um plano, conforme o produto". Sem preço, sem prometer cobertura de mamografia. Se citar, eu confiro o Rol da ANS.
+- Narração refeita em 10/10 com gancho novo ("Outubro Rosa acaba, o cuidado não.") e frases mais curtas, depois da revisão com `/ig-reel`. Mesma voz clonada de antes.
 - Tela final com "Conteúdo informativo, não substitui consulta" e o aviso fixo.
 - Cor: mantive o preto e dourado da marca (sem rosa na arte). Se quiser um toque rosa, eu faço uma versão.
 
