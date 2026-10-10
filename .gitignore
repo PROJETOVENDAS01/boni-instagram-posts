@@ -11,3 +11,5 @@ reels/*/musica_longa.wav
 reels/*/mix.m4a
 reels/*/render.log
 reels/*/prev/
+stories/11-*/_*
+stories/11-*/*.png
