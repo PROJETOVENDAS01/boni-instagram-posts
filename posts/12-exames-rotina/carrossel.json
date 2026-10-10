@@ -1,75 +1,75 @@
 {
- "capa": {
-  "grande": "",
-  "destaque": "CHECK-UP",
-  "sub": "por que fazer exames de rotina",
-  "fundo": {
-   "arquivo": "saude-consultorio-capa",
-   "x": 0.5,
-   "modo": "topo",
-   "brilho": 0.95
+  "capa": {
+    "grande": "",
+    "destaque": "CHECK-UP",
+    "sub": "por que fazer exames de rotina",
+    "fundo": {
+      "arquivo": "saude-consultorio-capa",
+      "x": 0.5,
+      "modo": "topo",
+      "brilho": 0.95
+    }
+  },
+  "lamina": [
+    {
+      "rotulo": "POR QUE FAZER",
+      "icone": "lupa",
+      "titulo": "Descobrir cedo ajuda",
+      "texto": "Muita doença não dá sintoma no começo. O exame mostra o que o corpo ainda não avisou.",
+      "fundo": {
+        "arquivo": "saude-laboratorio",
+        "x": 0.5,
+        "brilho": 0.95
+      }
+    },
+    {
+      "rotulo": "QUEM DECIDE",
+      "icone": "pessoa",
+      "titulo": "Quem escolhe é o médico",
+      "texto": "Quais exames e de quanto em quanto tempo depende da sua idade, do histórico e de como você está.",
+      "fundo": {
+        "arquivo": "saude-consultorio",
+        "x": 0.5,
+        "brilho": 0.95
+      }
+    },
+    {
+      "rotulo": "SEM ADIAR",
+      "icone": "calendario",
+      "titulo": "Marque antes de sentir",
+      "texto": "Deixar para quando aparece o problema costuma trazer mais susto e mais preocupação.",
+      "fundo": {
+        "arquivo": "agenda-data-circulada",
+        "x": 0.5,
+        "brilho": 0.95
+      }
+    },
+    {
+      "rotulo": "NA PRÁTICA",
+      "icone": "documento",
+      "titulo": "Guarde seus resultados",
+      "texto": "Junte os exames numa pasta ou no celular. Na consulta, o médico compara com os anteriores.",
+      "fundo": {
+        "arquivo": "prev-envelopes-exames",
+        "x": 0.5,
+        "brilho": 0.95
+      }
+    },
+    {
+      "rotulo": "O PLANO AJUDA",
+      "icone": "escudo",
+      "titulo": "Plano ajuda a manter em dia",
+      "texto": "Com plano, fica mais fácil ter consultas e exames em dia, conforme o produto contratado.",
+      "fundo": {
+        "arquivo": "planner-checks-estetoscopio",
+        "x": 0.5,
+        "brilho": 0.95
+      }
+    }
+  ],
+  "final": {
+    "pergunta": "Quer ver o plano certo para você?",
+    "texto_html": "Me chame no WhatsApp com a palavra <em>EXAME</em> e eu olho o seu caso com você.",
+    "aviso": "Conteúdo informativo, não substitui consulta. Carências, rede e valores variam por operadora e produto."
   }
- },
- "lamina": [
-  {
-   "rotulo": "POR QUE FAZER",
-   "icone": "lupa",
-   "titulo": "Descobrir cedo ajuda",
-   "texto": "Muita doença não dá sintoma no começo. O exame mostra o que o corpo ainda não avisou.",
-   "fundo": {
-    "arquivo": "saude-laboratorio",
-    "x": 0.5,
-    "brilho": 0.95
-   }
-  },
-  {
-   "rotulo": "QUEM DECIDE",
-   "icone": "pessoa",
-   "titulo": "Quem escolhe é o médico",
-   "texto": "Quais exames e de quanto em quanto tempo depende da sua idade, do histórico e de como você está.",
-   "fundo": {
-    "arquivo": "saude-consultorio",
-    "x": 0.5,
-    "brilho": 0.95
-   }
-  },
-  {
-   "rotulo": "SEM ADIAR",
-   "icone": "calendario",
-   "titulo": "Marque antes de sentir",
-   "texto": "Deixar para quando aparece o problema costuma trazer mais susto e mais preocupação.",
-   "fundo": {
-    "arquivo": "saude-sala-espera",
-    "x": 0.5,
-    "brilho": 0.95
-   }
-  },
-  {
-   "rotulo": "NA PRÁTICA",
-   "icone": "documento",
-   "titulo": "Guarde seus resultados",
-   "texto": "Junte os exames numa pasta ou no celular. Na consulta, o médico compara com os anteriores.",
-   "fundo": {
-    "arquivo": "saude-pressao",
-    "x": 0.5,
-    "brilho": 0.95
-   }
-  },
-  {
-   "rotulo": "O PLANO AJUDA",
-   "icone": "escudo",
-   "titulo": "Plano ajuda a manter em dia",
-   "texto": "Com plano, fica mais fácil ter consultas e exames em dia, conforme o produto contratado.",
-   "fundo": {
-    "arquivo": "saude-sala-espera",
-    "x": 0.5,
-    "brilho": 0.95
-   }
-  }
- ],
- "final": {
-  "pergunta": "Quer ver o plano certo para você?",
-  "texto_html": "Me chame no WhatsApp com a palavra <em>EXAME</em> e eu olho o seu caso com você.",
-  "aviso": "Conteúdo informativo, não substitui consulta. Carências, rede e valores variam por operadora e produto."
- }
 }

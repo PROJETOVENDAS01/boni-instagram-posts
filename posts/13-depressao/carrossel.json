@@ -1,86 +1,86 @@
 {
- "capa": {
-  "grande": "",
-  "destaque": "NÃO É FRESCURA",
-  "sub": "depressão: sinais e ajuda",
-  "fundo": {
-   "arquivo": "saude-mental-calma-capa",
-   "x": 0.5,
-   "modo": "topo",
-   "brilho": 0.95
+  "capa": {
+    "grande": "",
+    "destaque": "NÃO É FRESCURA",
+    "sub": "depressão: sinais e ajuda",
+    "fundo": {
+      "arquivo": "saude-mental-calma-capa",
+      "x": 0.5,
+      "modo": "topo",
+      "brilho": 0.95
+    }
+  },
+  "lamina": [
+    {
+      "rotulo": "OS SINAIS",
+      "icone": "pessoa",
+      "titulo": "Tristeza que não passa",
+      "texto": "Semanas sem vontade, sem prazer no que gostava, com sono e apetite diferentes. Se dura, vale prestar atenção.",
+      "fundo": {
+        "arquivo": "mente-janela-chuva",
+        "x": 0.5,
+        "brilho": 0.95
+      }
+    },
+    {
+      "rotulo": "É UMA DOENÇA",
+      "icone": "coracao",
+      "titulo": "Tem tratamento",
+      "texto": "Depressão não é fraqueza nem falta de força de vontade. Com ajuda profissional, é possível melhorar.",
+      "fundo": {
+        "arquivo": "mente-cha-amanhecer",
+        "x": 0.5,
+        "brilho": 0.95
+      }
+    },
+    {
+      "rotulo": "BUSQUE AJUDA",
+      "icone": "check",
+      "titulo": "Fale com um profissional",
+      "texto": "Um médico ou um psicólogo pode avaliar o seu caso. Quanto antes, melhor.",
+      "fundo": {
+        "arquivo": "poltronas-consultorio",
+        "x": 0.5,
+        "brilho": 0.95
+      }
+    },
+    {
+      "rotulo": "PRECISA AGORA?",
+      "icone": "balao",
+      "titulo": "CVV: ligue 188",
+      "texto": "Apoio emocional gratuito, 24 horas por dia. É só ligar para o 188.",
+      "fundo": {
+        "arquivo": "celular-aceso",
+        "x": 0.5,
+        "brilho": 0.95
+      }
+    },
+    {
+      "rotulo": "NÃO ESTÁ SOZINHO",
+      "icone": "grupo",
+      "titulo": "Conte com quem confia",
+      "texto": "Fale com alguém próximo. Pedir ajuda é um ato de cuidado, não de fraqueza.",
+      "fundo": {
+        "arquivo": "pessoas-maos-idoso-jovem",
+        "x": 0.5,
+        "brilho": 0.95
+      }
+    },
+    {
+      "rotulo": "O PLANO AJUDA",
+      "icone": "escudo",
+      "titulo": "Cuidar da mente é saúde",
+      "texto": "Um plano pode dar mais opções de consulta com especialista, conforme o produto contratado.",
+      "fundo": {
+        "arquivo": "mente-caderno-caneta",
+        "x": 0.5,
+        "brilho": 0.95
+      }
+    }
+  ],
+  "final": {
+    "pergunta": "Quer conversar sobre o plano certo?",
+    "texto_html": "Me chame no WhatsApp com a palavra <em>SAÚDE</em> e eu olho o seu caso com você.",
+    "aviso": "Conteúdo informativo, não substitui consulta. Carências, rede e valores variam por operadora e produto."
   }
- },
- "lamina": [
-  {
-   "rotulo": "OS SINAIS",
-   "icone": "pessoa",
-   "titulo": "Tristeza que não passa",
-   "texto": "Semanas sem vontade, sem prazer no que gostava, com sono e apetite diferentes. Se dura, vale prestar atenção.",
-   "fundo": {
-    "arquivo": "saude-mental-calma",
-    "x": 0.5,
-    "brilho": 0.95
-   }
-  },
-  {
-   "rotulo": "É UMA DOENÇA",
-   "icone": "coracao",
-   "titulo": "Tem tratamento",
-   "texto": "Depressão não é fraqueza nem falta de força de vontade. Com ajuda profissional, é possível melhorar.",
-   "fundo": {
-    "arquivo": "saude-consultorio",
-    "x": 0.5,
-    "brilho": 0.95
-   }
-  },
-  {
-   "rotulo": "BUSQUE AJUDA",
-   "icone": "check",
-   "titulo": "Fale com um profissional",
-   "texto": "Um médico ou um psicólogo pode avaliar o seu caso. Quanto antes, melhor.",
-   "fundo": {
-    "arquivo": "saude-consultorio",
-    "x": 0.5,
-    "brilho": 0.95
-   }
-  },
-  {
-   "rotulo": "PRECISA AGORA?",
-   "icone": "balao",
-   "titulo": "CVV: ligue 188",
-   "texto": "Apoio emocional gratuito, 24 horas por dia. É só ligar para o 188.",
-   "fundo": {
-    "arquivo": "saude-mental-calma",
-    "x": 0.5,
-    "brilho": 0.95
-   }
-  },
-  {
-   "rotulo": "NÃO ESTÁ SOZINHO",
-   "icone": "grupo",
-   "titulo": "Conte com quem confia",
-   "texto": "Fale com alguém próximo. Pedir ajuda é um ato de cuidado, não de fraqueza.",
-   "fundo": {
-    "arquivo": "saude-caminhada",
-    "x": 0.5,
-    "brilho": 0.95
-   }
-  },
-  {
-   "rotulo": "O PLANO AJUDA",
-   "icone": "escudo",
-   "titulo": "Cuidar da mente é saúde",
-   "texto": "Um plano pode dar mais opções de consulta com especialista, conforme o produto contratado.",
-   "fundo": {
-    "arquivo": "saude-sala-espera",
-    "x": 0.5,
-    "brilho": 0.95
-   }
-  }
- ],
- "final": {
-  "pergunta": "Quer conversar sobre o plano certo?",
-  "texto_html": "Me chame no WhatsApp com a palavra <em>SAÚDE</em> e eu olho o seu caso com você.",
-  "aviso": "Conteúdo informativo, não substitui consulta. Carências, rede e valores variam por operadora e produto."
- }
 }

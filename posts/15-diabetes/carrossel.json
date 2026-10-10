@@ -1,75 +1,75 @@
 {
- "capa": {
-  "grande": "",
-  "destaque": "SILENCIOSO",
-  "sub": "diabetes pode não dar sintoma no começo",
-  "fundo": {
-   "arquivo": "saude-glicemia-capa",
-   "x": 0.5,
-   "modo": "topo",
-   "brilho": 0.95
+  "capa": {
+    "grande": "",
+    "destaque": "SILENCIOSO",
+    "sub": "diabetes pode não dar sintoma no começo",
+    "fundo": {
+      "arquivo": "saude-glicemia-capa",
+      "x": 0.5,
+      "modo": "topo",
+      "brilho": 0.95
+    }
+  },
+  "lamina": [
+    {
+      "rotulo": "NO COMEÇO",
+      "icone": "lupa",
+      "titulo": "Pode não ter sintoma",
+      "texto": "Muita gente só descobre a diabetes depois de anos.",
+      "fundo": {
+        "arquivo": "saude-glicemia",
+        "x": 0.5,
+        "brilho": 0.95
+      }
+    },
+    {
+      "rotulo": "FIQUE ATENTO",
+      "icone": "pergunta",
+      "titulo": "Sinais que merecem atenção",
+      "texto": "Muita sede, vontade de urinar toda hora, cansaço e visão embaçada podem ser sinais.",
+      "fundo": {
+        "arquivo": "copo-agua-servindo",
+        "x": 0.5,
+        "brilho": 0.95
+      }
+    },
+    {
+      "rotulo": "CONFIRMAÇÃO",
+      "icone": "documento",
+      "titulo": "Só o exame confirma",
+      "texto": "Quem diagnostica é o médico, com exame de sangue. Só pelos sintomas não dá para saber.",
+      "fundo": {
+        "arquivo": "saude-laboratorio",
+        "x": 0.5,
+        "brilho": 0.95
+      }
+    },
+    {
+      "rotulo": "DESCOBRIR CEDO",
+      "icone": "check",
+      "titulo": "Controlar é possível",
+      "texto": "Com acompanhamento médico, dá para controlar e viver bem.",
+      "fundo": {
+        "arquivo": "prev-frutas-agua",
+        "x": 0.5,
+        "brilho": 0.95
+      }
+    },
+    {
+      "rotulo": "CHECK-UP",
+      "icone": "escudo",
+      "titulo": "Primeiro passo",
+      "texto": "Check-up em dia, e um plano ajuda a ter acesso a consultas e exames, conforme o produto.",
+      "fundo": {
+        "arquivo": "prev-organizador-semanal",
+        "x": 0.5,
+        "brilho": 0.95
+      }
+    }
+  ],
+  "final": {
+    "pergunta": "Quer ver o plano certo para você?",
+    "texto_html": "Me chame no WhatsApp com a palavra <em>EXAME</em> e eu olho o seu caso com você.",
+    "aviso": "Conteúdo informativo, não substitui consulta. Carências, rede e valores variam por operadora e produto."
   }
- },
- "lamina": [
-  {
-   "rotulo": "NO COMEÇO",
-   "icone": "lupa",
-   "titulo": "Pode não ter sintoma",
-   "texto": "Muita gente só descobre a diabetes depois de anos.",
-   "fundo": {
-    "arquivo": "saude-glicemia",
-    "x": 0.5,
-    "brilho": 0.95
-   }
-  },
-  {
-   "rotulo": "FIQUE ATENTO",
-   "icone": "pergunta",
-   "titulo": "Sinais que merecem atenção",
-   "texto": "Muita sede, vontade de urinar toda hora, cansaço e visão embaçada podem ser sinais.",
-   "fundo": {
-    "arquivo": "saude-mental-calma",
-    "x": 0.5,
-    "brilho": 0.95
-   }
-  },
-  {
-   "rotulo": "CONFIRMAÇÃO",
-   "icone": "documento",
-   "titulo": "Só o exame confirma",
-   "texto": "Quem diagnostica é o médico, com exame de sangue. Só pelos sintomas não dá para saber.",
-   "fundo": {
-    "arquivo": "saude-laboratorio",
-    "x": 0.5,
-    "brilho": 0.95
-   }
-  },
-  {
-   "rotulo": "DESCOBRIR CEDO",
-   "icone": "check",
-   "titulo": "Controlar é possível",
-   "texto": "Com acompanhamento médico, dá para controlar e viver bem.",
-   "fundo": {
-    "arquivo": "saude-consultorio",
-    "x": 0.5,
-    "brilho": 0.95
-   }
-  },
-  {
-   "rotulo": "CHECK-UP",
-   "icone": "escudo",
-   "titulo": "Primeiro passo",
-   "texto": "Check-up em dia, e um plano ajuda a ter acesso a consultas e exames, conforme o produto.",
-   "fundo": {
-    "arquivo": "saude-sala-espera",
-    "x": 0.5,
-    "brilho": 0.95
-   }
-  }
- ],
- "final": {
-  "pergunta": "Quer ver o plano certo para você?",
-  "texto_html": "Me chame no WhatsApp com a palavra <em>EXAME</em> e eu olho o seu caso com você.",
-  "aviso": "Conteúdo informativo, não substitui consulta. Carências, rede e valores variam por operadora e produto."
- }
 }
