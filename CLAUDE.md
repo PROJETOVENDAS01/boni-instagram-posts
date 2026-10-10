@@ -49,6 +49,11 @@ Você é o time de conteúdo do perfil. O Thiago ("Boni") só aprova. Planeje, e
 - Demissão: mesmo com plano pela empresa, o que acontece se for demitido e perder o plano? Por que não ter um plano à parte para uma emergência? (objetivo: vender).
 - Stories: por enquanto só os que saem sem a participação dele (imagem + chamada + conteúdo). Sticker (caixinha, enquete) não vai pela API e ele ainda não interage; usar chamada para WhatsApp com palavra-chave.
 
+## Regra das imagens de fundo (Thiago, 10/10/2026)
+- Cada cena de Reel, lâmina de carrossel e tela de Story precisa mostrar o que a frase daquele momento diz. Nunca imagem sem relação com o texto.
+- Antes de renderizar: escrever, para cada cena, a frase narrada e a imagem escolhida; conferir lado a lado. Se nenhuma imagem do banco (fundos/) combinar de verdade, gerar uma nova só para aquela cena (vertical 9:16 para Reels e Stories) em vez de aproveitar a "mais ou menos".
+- Sem rostos e sem marca, como sempre.
+
 ## Stories (Destaques)
 - Pasta stories/NN-destaque/ com story-1..N.png (1080x1920). Exemplos: stories/01-quem-sou-eu e stories/02-pme (build_v2.py / build.py geram as telas).
 - Foto de fundo em tela cheia, ligada ao assunto, gerada vertical 9:16 em 2K (ex.: ElevenLabs flux-3-image, aspect_ratio 9:16, resolution 2K). Guardar em fundos/. Evitar o topo (270px) e a base (340px) com texto importante.
