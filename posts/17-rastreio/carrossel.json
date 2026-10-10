@@ -1,0 +1,86 @@
+{
+ "capa": {
+  "grande": "",
+  "destaque": "DESCOBRIR CEDO",
+  "sub": "rastreio de câncer: o que é e por que importa",
+  "fundo": {
+   "arquivo": "saude-outubro-rosa-capa",
+   "x": 0.1,
+   "modo": "topo",
+   "brilho": 0.95
+  }
+ },
+ "lamina": [
+  {
+   "rotulo": "O QUE É",
+   "icone": "lupa",
+   "titulo": "Rastreio é procurar cedo",
+   "texto": "São exames em quem ainda não tem sintoma, para achar a doença no começo.",
+   "fundo": {
+    "arquivo": "saude-laboratorio",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  },
+  {
+   "rotulo": "POR QUE IMPORTA",
+   "icone": "coracao",
+   "titulo": "Cedo aumenta as chances",
+   "texto": "Quando descoberto no início, o tratamento costuma ter mais chances de sucesso.",
+   "fundo": {
+    "arquivo": "saude-consultorio",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  },
+  {
+   "rotulo": "CADA CASO",
+   "icone": "calendario",
+   "titulo": "Cada exame tem seu público",
+   "texto": "Mamografia, papanicolau e exame do intestino: quando fazer depende da idade e do histórico.",
+   "fundo": {
+    "arquivo": "saude-sala-espera",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  },
+  {
+   "rotulo": "OUTUBRO ROSA",
+   "icone": "coracao",
+   "titulo": "Cuidado o ano todo",
+   "texto": "O Outubro Rosa lembra, mas a saúde da mulher pede atenção o ano inteiro.",
+   "fundo": {
+    "arquivo": "saude-outubro-rosa",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  },
+  {
+   "rotulo": "CONVERSE",
+   "icone": "pessoa",
+   "titulo": "Pergunte ao seu médico",
+   "texto": "Ele diz quais exames fazer, e a partir de quando, no seu caso.",
+   "fundo": {
+    "arquivo": "saude-consultorio",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  },
+  {
+   "rotulo": "O PLANO AJUDA",
+   "icone": "escudo",
+   "titulo": "Consultas e exames",
+   "texto": "Um plano ajuda a manter consultas e exames em dia, conforme o produto contratado.",
+   "fundo": {
+    "arquivo": "saude-sala-espera",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  }
+ ],
+ "final": {
+  "pergunta": "Quer ver o plano certo para você?",
+  "texto_html": "Me chame no WhatsApp com a palavra <em>RASTREIO</em> e eu olho o seu caso com você.",
+  "aviso": "Conteúdo informativo, não substitui consulta. Carências, rede e valores variam por operadora e produto."
+ }
+}

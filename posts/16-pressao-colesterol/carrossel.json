@@ -1,0 +1,86 @@
+{
+ "capa": {
+  "grande": "",
+  "destaque": "SILENCIOSOS",
+  "sub": "pressão alta e colesterol quase não avisam",
+  "fundo": {
+   "arquivo": "saude-pressao-capa",
+   "x": 0.5,
+   "modo": "topo",
+   "brilho": 0.95
+  }
+ },
+ "lamina": [
+  {
+   "rotulo": "PRESSÃO ALTA",
+   "icone": "coracao",
+   "titulo": "Muitas vezes sem aviso",
+   "texto": "Pode não causar sintoma nenhum. Só medindo para saber.",
+   "fundo": {
+    "arquivo": "saude-pressao",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  },
+  {
+   "rotulo": "COLESTEROL",
+   "icone": "lupa",
+   "titulo": "Também fica quieto",
+   "texto": "O colesterol alto geralmente não dá sinal. O exame de sangue é que mostra.",
+   "fundo": {
+    "arquivo": "saude-laboratorio",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  },
+  {
+   "rotulo": "POR QUE IMPORTA",
+   "icone": "escudo",
+   "titulo": "Cuidar do coração",
+   "texto": "Pressão e colesterol altos podem aumentar o risco de problemas no coração e nas artérias.",
+   "fundo": {
+    "arquivo": "saude-consultorio",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  },
+  {
+   "rotulo": "O QUE FAZER",
+   "icone": "check",
+   "titulo": "Meça e converse",
+   "texto": "Meça a pressão e faça os exames de rotina que o seu médico indicar.",
+   "fundo": {
+    "arquivo": "saude-pressao",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  },
+  {
+   "rotulo": "ROTINA",
+   "icone": "relogio",
+   "titulo": "Hábitos ajudam",
+   "texto": "Alimentação equilibrada, movimento e sono ajudam, com orientação profissional.",
+   "fundo": {
+    "arquivo": "saude-caminhada",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  },
+  {
+   "rotulo": "O PLANO AJUDA",
+   "icone": "escudo",
+   "titulo": "Consultas e exames",
+   "texto": "Um plano ajuda a manter consultas e exames em dia, conforme o produto contratado.",
+   "fundo": {
+    "arquivo": "saude-sala-espera",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  }
+ ],
+ "final": {
+  "pergunta": "Quer ver o plano certo para você?",
+  "texto_html": "Me chame no WhatsApp com a palavra <em>PRESSÃO</em> e eu olho o seu caso com você.",
+  "aviso": "Conteúdo informativo, não substitui consulta. Carências, rede e valores variam por operadora e produto."
+ }
+}

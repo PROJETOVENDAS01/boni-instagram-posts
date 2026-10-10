@@ -3,3 +3,5 @@ posts/0[6-9]*/_*
 stories/09-semana-12-18/*.png
 stories/09-semana-12-18/_*
 __pycache__/
+posts/1[0-9]*/slide-*.png
+posts/1[0-9]*/_*

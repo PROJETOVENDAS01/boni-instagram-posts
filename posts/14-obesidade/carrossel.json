@@ -1,0 +1,75 @@
+{
+ "capa": {
+  "grande": "",
+  "destaque": "SEM JULGAMENTO",
+  "sub": "obesidade é doença crônica e tem acompanhamento",
+  "fundo": {
+   "arquivo": "saude-alimentacao-capa",
+   "x": 0.5,
+   "modo": "topo",
+   "brilho": 0.95
+  }
+ },
+ "lamina": [
+  {
+   "rotulo": "DOENÇA CRÔNICA",
+   "icone": "coracao",
+   "titulo": "Vários fatores",
+   "texto": "Genética, rotina, sono e saúde emocional se misturam. Não é só falta de força de vontade.",
+   "fundo": {
+    "arquivo": "saude-alimentacao",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  },
+  {
+   "rotulo": "DEIXAR PARA DEPOIS",
+   "icone": "relogio",
+   "titulo": "Adiar pesa",
+   "texto": "Pode aumentar o risco de diabetes, pressão alta e problemas no coração.",
+   "fundo": {
+    "arquivo": "saude-pressao",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  },
+  {
+   "rotulo": "ACOMPANHAMENTO",
+   "icone": "pessoa",
+   "titulo": "Médico e nutricionista",
+   "texto": "Um plano de cuidado feito para você, no seu ritmo. Sem dieta da moda e sem milagre.",
+   "fundo": {
+    "arquivo": "saude-consultorio",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  },
+  {
+   "rotulo": "ROTINA",
+   "icone": "check",
+   "titulo": "Pequenos passos contam",
+   "texto": "Movimento, boa alimentação e sono ajudam, sempre com orientação profissional.",
+   "fundo": {
+    "arquivo": "saude-exercicio",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  },
+  {
+   "rotulo": "O PLANO AJUDA",
+   "icone": "escudo",
+   "titulo": "Consultas em dia",
+   "texto": "Ter plano ajuda a manter consultas e exames em dia, conforme o produto contratado.",
+   "fundo": {
+    "arquivo": "saude-sala-espera",
+    "x": 0.5,
+    "brilho": 0.95
+   }
+  }
+ ],
+ "final": {
+  "pergunta": "Quer ver o plano certo para você?",
+  "texto_html": "Me chame no WhatsApp com a palavra <em>PLANO</em> e eu olho o seu caso com você.",
+  "aviso": "Conteúdo informativo, não substitui consulta. Carências, rede e valores variam por operadora e produto."
+ }
+}
