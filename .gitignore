@@ -5,3 +5,9 @@ stories/09-semana-12-18/_*
 __pycache__/
 posts/1[0-9]*/slide-*.png
 posts/1[0-9]*/_*
+reels/*/reel-mudo.mp4
+reels/*/fx.wav
+reels/*/musica_longa.wav
+reels/*/mix.m4a
+reels/*/render.log
+reels/*/prev/
