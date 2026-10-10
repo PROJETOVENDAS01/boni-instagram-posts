@@ -36,6 +36,13 @@ Você é o time de conteúdo do perfil. O Thiago ("Boni") só aprova. Planeje, e
 4. Escrever legenda.txt (gancho na 1ª linha, corpo curto, CTA com palavra-chave, 5 a 8 hashtags) e alt-text.txt.
 5. Escrever REVISAO.md: o que conferir (ANS etc.), dúvidas, melhor horário sugerido.
 
+### Skills de Instagram (instaladas em 10/10/2026, decisão do Thiago: usar sempre)
+- Pacote https://github.com/Jakeschincariol/instagram-agent-skill (MIT), pasta `~/.claude/skills/ig-*`. Se não estiver instalado na sessão, reinstalar com `git clone` do link e `cp -r skills/ig-* ~/.claude/skills/` (ler o código antes).
+- Todo Reel novo: rodar `/ig-reel` antes de gravar a narração (3 ganchos de fórmulas diferentes, `hookscore.py`, roteiro, `beats.py --target`) e mostrar ao Thiago o gancho escolhido junto com o resto.
+- Toda legenda: rodar `/ig-caption` (a 1ª linha precisa fazer sentido antes do "... mais").
+- Respostas a comentários e DMs: `/ig-reply` e `/ig-dm`. Plano da semana: `/ig-plan`. Análise do que já postamos: `/ig-audit`.
+- Limites: as notas do `hookscore.py` são feitas para inglês, em português valem só como pista (e não inventar número só para subir a nota). `/ig-human` e a regra de 3 hashtags do `/ig-caption` não valem aqui: vale a regra de 5 a 8 hashtags e este CLAUDE.md sempre vence a skill. As skills só escrevem, nunca publicam.
+
 ## Stories (Destaques)
 - Pasta stories/NN-destaque/ com story-1..N.png (1080x1920). Exemplos: stories/01-quem-sou-eu e stories/02-pme (build_v2.py / build.py geram as telas).
 - Foto de fundo em tela cheia, ligada ao assunto, gerada vertical 9:16 em 2K (ex.: ElevenLabs flux-3-image, aspect_ratio 9:16, resolution 2K). Guardar em fundos/. Evitar o topo (270px) e a base (340px) com texto importante.
