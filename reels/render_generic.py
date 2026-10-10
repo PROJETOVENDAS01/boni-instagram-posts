@@ -7,7 +7,8 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 HERE = os.path.abspath([a for a in sys.argv[1:] if not a.startswith('--')][0])
-KIT = '/home/claude/brand/kit/boni-instagram'
+_REPO = __import__('os').path.dirname(__import__('os').path.dirname(__import__('os').path.abspath(__file__)))
+KIT = _REPO if __import__('os').path.exists(_REPO + '/marca/emblema.png') and __import__('os').path.exists(_REPO + '/fontes/Poppins-Bold.ttf') else '/home/claude/brand/kit/boni-instagram'
 W, H, FPS = 1080, 1920, 30
 GOLD = (245, 184, 0)
 GOLD_L = (255, 214, 92)
