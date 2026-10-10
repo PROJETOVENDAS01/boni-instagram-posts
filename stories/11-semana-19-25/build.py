@@ -2,7 +2,7 @@ from pathlib import Path
 from PIL import Image, ImageFilter
 import numpy as np
 from playwright.sync_api import sync_playwright
-KIT = Path('/tmp/kt'); AQUI = Path(__file__).resolve().parent; REPO = AQUI.parents[1]
+AQUI = Path(__file__).resolve().parent; REPO = AQUI.parents[1]; KIT = REPO
 def grade(arq, fx=.5, tint=.4, brilho=1.0):
     im = Image.open(REPO/'fundos'/f'{arq}.png').convert('RGB')
     w, h = im.size; nw = int(w*1920/h)
@@ -49,18 +49,21 @@ T = {
  'qua-demissao': ('demissao-caixa-mesa', .4, .95, 80, B(330, 'E SE EU FOR DEMITIDO?', f'O plano da empresa {G("vai embora")} com o emprego.', f'Ter um plano só seu dá mais segurança numa emergência. {WA} PLANO.', 'Link na bio ↑'), 1),
  'qua-feed': ('mente-janela-chuva', .5, 1.0, 88, B(340, 'NO FEED AGORA', f'Saúde mental {G("também é saúde.")}', 'Um assunto que merece cuidado. Confira no feed.', 'Confira no feed'), 0),
  'qui-dica': ('pme-notebook-cafe', .3, .95, 80, B(330, 'DICA PARA MEI', f'MEI pode ter plano {G("empresarial.")}', f'O plano PME é a partir de 1 vida. Para MEI, o CNPJ precisa estar ativo há 180 dias. Outras condições variam por operadora. {WA} MEI.', 'Link na bio ↑'), 1),
- 'qui-feed': ('prev-organizador-semanal', .6, 1.0, 88, B(340, 'NO FEED AGORA', f'Rastreio: {G("descobrir cedo")} faz diferença.', 'Confira no feed.', 'Confira no feed'), 0),
+ 'qui-feed': ('07s2-mamografia', .5, 1.0, 88, B(340, 'NO FEED AGORA', f'Rastreio: {G("descobrir cedo")} faz diferença.', 'Confira no feed.', 'Confira no feed'), 0),
  'sex-dica': ('protecao-guarda-chuva', .35, .95, 80, B(330, 'DICA RÁPIDA', f'Plano é como um {G("guarda-chuva.")}', f'Você contrata antes da chuva. Quando o imprevisto chega, ele já está lá. {WA} PLANO.', 'Link na bio ↑'), 1),
  'sex-feed': ('prev-frutas-agua', .5, 1.0, 88, B(340, 'NO FEED AGORA', f'Obesidade não é {G("falta de força de vontade.")}', 'Confira no feed.', 'Confira no feed'), 0),
- 'sab-dica': ('decisao-porta-entreaberta', .55, .9, 80, B(330, '3 PERGUNTAS ANTES DE ASSINAR', f'Carência? Rede? {G("Reajuste?")}', f'Pergunte tudo e peça por escrito. {WA} PERGUNTAS.', 'Link na bio ↑'), 1),
+ 'sab-dica': ('story-contrato-lupa', .5, .95, 80, B(330, '3 PERGUNTAS ANTES DE ASSINAR', f'Carência? Rede? {G("Reajuste?")}', f'Pergunte tudo e peça por escrito. {WA} PERGUNTAS.', 'Link na bio ↑'), 1),
  'sab-cena': ('pessoas-familia-silhueta-janela', .6, 1.0, 82, B(330, 'CENA DO DIA A DIA', f'Cuidar de quem você ama {G("começa antes.")}', 'Pensar no plano antes da emergência é cuidar da família.'), 1),
- 'dom-feed': ('prev-fita-balanca', .45, 1.0, 88, B(340, 'NO FEED AGORA', f'Diabetes pode não dar {G("sintoma no começo.")}', 'Confira no feed.', 'Confira no feed'), 0),
+ 'dom-feed': ('06s1-glicosimetro', .5, 1.0, 88, B(340, 'NO FEED AGORA', f'Diabetes pode não dar {G("sintoma no começo.")}', 'Confira no feed.', 'Confira no feed'), 0),
  'dom-leve': ('mente-cha-amanhecer', .6, .95, 88, B(340, 'BOA SEMANA', f'Segunda tem {G("mais dica.")}', 'Dúvida sobre plano de saúde? Me chame pelo link da bio.'), 0),
 }
 css = CSS.replace('FONTES', (KIT/'fontes').as_uri())
 with sync_playwright() as p:
     b = p.chromium.launch(); pg = b.new_page(viewport={'width': 1080, 'height': 1920})
+    import os
+    ONLY = os.environ.get('ONLY', '').split(',')
     for nome, (f, fx, br, gi, corpo, av) in T.items():
+        if ONLY != [''] and nome not in ONLY: continue
         h = AQUI/f'_{nome}.html'
         h.write_text(f'<!doctype html><html><head><meta charset="utf-8"><style>{css}</style></head><body>{tela(grade(f, fx, brilho=br), gi, corpo, av).replace("MARCA/", (KIT/"marca").as_uri()+"/")}</body></html>', encoding='utf-8')
         pg.goto(h.as_uri()); pg.wait_for_timeout(500); pg.screenshot(path=str(AQUI/f'{nome}.png'))
