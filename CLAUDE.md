@@ -43,6 +43,12 @@ Você é o time de conteúdo do perfil. O Thiago ("Boni") só aprova. Planeje, e
 - Respostas a comentários e DMs: `/ig-reply` e `/ig-dm`. Plano da semana: `/ig-plan`. Análise do que já postamos: `/ig-audit`.
 - Limites: as notas do `hookscore.py` são feitas para inglês, em português valem só como pista (e não inventar número só para subir a nota). `/ig-human` e a regra de 3 hashtags do `/ig-caption` não valem aqui: vale a regra de 5 a 8 hashtags e este CLAUDE.md sempre vence a skill. As skills só escrevem, nunca publicam.
 
+## Orientações de conteúdo (Thiago, 10/10/2026)
+- Portabilidade: não incentivar; só falar em casos muito específicos de operadora (ex.: Prevent Senior). Foco em redução de carências (sem prometer; varia por operadora e produto).
+- Maternidade: o ponto é ter o plano ANTES de engravidar; a carência para parto pode chegar a 300 dias, então entrar grávida pode deixar o parto de fora (conferir na ANS).
+- Demissão: mesmo com plano pela empresa, o que acontece se for demitido e perder o plano? Por que não ter um plano à parte para uma emergência? (objetivo: vender).
+- Stories: por enquanto só os que saem sem a participação dele (imagem + chamada + conteúdo). Sticker (caixinha, enquete) não vai pela API e ele ainda não interage; usar chamada para WhatsApp com palavra-chave.
+
 ## Stories (Destaques)
 - Pasta stories/NN-destaque/ com story-1..N.png (1080x1920). Exemplos: stories/01-quem-sou-eu e stories/02-pme (build_v2.py / build.py geram as telas).
 - Foto de fundo em tela cheia, ligada ao assunto, gerada vertical 9:16 em 2K (ex.: ElevenLabs flux-3-image, aspect_ratio 9:16, resolution 2K). Guardar em fundos/. Evitar o topo (270px) e a base (340px) com texto importante.
