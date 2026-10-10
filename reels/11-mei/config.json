@@ -1,0 +1,12 @@
+{
+ "starts": ["", "Muito MEI", "O plano", "Ou seja,", "O CNPJ", "O resto"],
+ "end": "Comenta MEI",
+ "cenas": [["11s1-mesa-mei",0.5],["contas-maos-preocupadas",0.5],["11s3-cartao-um",0.5],["11s4-sozinho",0.5],["agenda-data-circulada",0.5],["pastas-diferentes",0.5]],
+ "kinetic": [
+  ["PLANO EMPRESARIAL", 90, 560, "plano empresarial.", "plano empresarial."],
+  ["180 DIAS", 120, 560, "180 dias.", "180 dias."]
+ ],
+ "end_tag": "MEI TAMBÉM TEM PLANO",
+ "keyword": "MEI",
+ "foot1": "Conteúdo informativo."
+}
