@@ -13,3 +13,9 @@ reels/*/render.log
 reels/*/prev/
 stories/11-*/_*
 stories/11-*/*.png
+reels/08-*/cenas/
+reels/09-*/cenas/
+reels/10-*/cenas/
+reels/08-*/narr.mp3
+reels/09-*/narr.mp3
+reels/10-*/narr.mp3

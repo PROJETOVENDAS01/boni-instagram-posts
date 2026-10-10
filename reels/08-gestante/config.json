@@ -1,0 +1,63 @@
+{
+ "starts": [
+  "",
+  "Isso é carência.",
+  "O parto tem",
+  "Quem entra",
+  "O momento certo",
+  "As regras variam"
+ ],
+ "end": "Comenta GESTANTE",
+ "cenas": [
+  [
+   "gestante-maos-barriga",
+   0.5
+  ],
+  [
+   "agenda-data-circulada",
+   0.5
+  ],
+  [
+   "generico-cronometro",
+   0.5
+  ],
+  [
+   "decisao-porta-entreaberta",
+   0.5
+  ],
+  [
+   "protecao-maos-luz",
+   0.5
+  ],
+  [
+   "decisao-chaves-douradas",
+   0.5
+  ]
+ ],
+ "kinetic": [
+  [
+   "300 DIAS",
+   130,
+   560,
+   "300 dias.",
+   "300 dias."
+  ],
+  [
+   "CARÊNCIA",
+   110,
+   560,
+   "carência.",
+   "carência."
+  ],
+  [
+   "ANTES",
+   130,
+   560,
+   "antes de engravidar.",
+   "antes de engravidar."
+  ]
+ ],
+ "end_tag": "PLANO ANTES DA GRAVIDEZ",
+ "keyword": "GESTANTE",
+ "foot1": "Conteúdo informativo."
+}

@@ -1,0 +1,56 @@
+{
+ "starts": [
+  "",
+  "Carência é",
+  "Consulta,",
+  "Cada operadora",
+  "Antes de",
+  "Em alguns"
+ ],
+ "end": "Comenta CARÊNCIA",
+ "cenas": [
+  [
+   "agenda-data-circulada",
+   0.5
+  ],
+  [
+   "dinheiro-calculadora-moedas",
+   0.5
+  ],
+  [
+   "prev-envelopes-exames",
+   0.5
+  ],
+  [
+   "decisao-dois-caminhos",
+   0.5
+  ],
+  [
+   "generico-assinatura-papeis",
+   0.5
+  ],
+  [
+   "protecao-maos-luz",
+   0.5
+  ]
+ ],
+ "kinetic": [
+  [
+   "CARÊNCIA",
+   120,
+   560,
+   "carência.",
+   "carência."
+  ],
+  [
+   "ANTES DE ASSINAR",
+   90,
+   560,
+   "Antes de assinar,",
+   "Antes de assinar,"
+  ]
+ ],
+ "end_tag": "CARÊNCIA SEM MISTÉRIO",
+ "keyword": "CARÊNCIA",
+ "foot1": "Conteúdo informativo."
+}

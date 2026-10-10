@@ -2,12 +2,11 @@
 
 Nada agendado. Cada story só sai depois do "pode agendar" do Thiago.
 
-## O que conferir antes (ANS)
-- Carência: "em alguns casos dá para buscar condições melhores" (seg-dica). Confirmar com o Thiago que a frase está correta para as operadoras dele; não prometer redução.
-- Parto: "a carência pode chegar a 300 dias" (ter-gestante). Confirmar o prazo máximo na ANS e se o texto pode citar "300 dias".
-- Demissão: "plano da empresa vai embora com o emprego" (qua-demissao). Existe regra de manutenção do plano para demitido sem justa causa em certas condições; a frase foi escrita sem negar isso. Conferir com o Thiago/ANS se vale ajustar.
-- MEI: 180 dias de CNPJ ativo (confirmado pelo Thiago em 05/10/2026).
-- Portabilidade: não citar (decisão do Thiago em 10/10/2026, só casos específicos como Prevent Senior).
+## Decisões do Thiago (10/10/2026)
+- Carência, 300 dias de parto e demissão: textos aprovados por ele, não precisa checar na ANS.
+- MEI: 180 dias de CNPJ ativo (confirmado em 05/10/2026).
+- Portabilidade: não citar (só casos específicos como Prevent Senior).
+- Não prometer redução de carência: varia por operadora e produto.
 
 ## Grade (horário sugerido)
 | Dia | 12h (dica) | 19h45 ou 20h (chamada para o feed) |

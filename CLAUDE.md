@@ -45,7 +45,7 @@ Você é o time de conteúdo do perfil. O Thiago ("Boni") só aprova. Planeje, e
 
 ## Orientações de conteúdo (Thiago, 10/10/2026)
 - Portabilidade: não incentivar; só falar em casos muito específicos de operadora (ex.: Prevent Senior). Foco em redução de carências (sem prometer; varia por operadora e produto).
-- Maternidade: o ponto é ter o plano ANTES de engravidar; a carência para parto pode chegar a 300 dias, então entrar grávida pode deixar o parto de fora (conferir na ANS).
+- Maternidade: o ponto é ter o plano ANTES de engravidar; a carência para parto pode chegar a 300 dias, então entrar grávida pode deixar o parto de fora (Thiago dispensou a checagem na ANS em 10/10/2026 para estes temas: gestante/300 dias, demissão e carência).
 - Demissão: mesmo com plano pela empresa, o que acontece se for demitido e perder o plano? Por que não ter um plano à parte para uma emergência? (objetivo: vender).
 - Stories: por enquanto só os que saem sem a participação dele (imagem + chamada + conteúdo). Sticker (caixinha, enquete) não vai pela API e ele ainda não interage; usar chamada para WhatsApp com palavra-chave.
 

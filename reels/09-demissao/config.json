@@ -1,0 +1,63 @@
+{
+ "starts": [
+  "",
+  "Hoje você",
+  "Se for",
+  "E emergência",
+  "Um plano só",
+  "Vamos ver"
+ ],
+ "end": "Comenta PLANO",
+ "cenas": [
+  [
+   "demissao-caixa-mesa",
+   0.5
+  ],
+  [
+   "pme-notebook-cafe",
+   0.5
+  ],
+  [
+   "contas-maos-preocupadas",
+   0.5
+  ],
+  [
+   "reuniao-preocupado-costas",
+   0.5
+  ],
+  [
+   "protecao-guarda-chuva",
+   0.5
+  ],
+  [
+   "decisao-chaves-douradas",
+   0.5
+  ]
+ ],
+ "kinetic": [
+  [
+   "SOME COM O EMPREGO",
+   84,
+   560,
+   "some com o emprego.",
+   "some com o emprego."
+  ],
+  [
+   "EMERGÊNCIA",
+   120,
+   560,
+   "emergência",
+   "emergência"
+  ],
+  [
+   "PLANO SÓ SEU",
+   110,
+   560,
+   "plano só seu",
+   "plano só seu"
+  ]
+ ],
+ "end_tag": "UM PLANO SÓ SEU",
+ "keyword": "PLANO",
+ "foot1": "Conteúdo informativo."
+}
