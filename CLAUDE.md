@@ -32,6 +32,11 @@ Você é o time de conteúdo do perfil. O Thiago ("Boni") só aprova. Planeje, e
 - Pasta privada "Motion BONI": https://br.pinterest.com/thiagobonisupervisor/motion-boni/ (ler pelo Chrome dele, logado). Também há pins em "Ideias não organizadas".
 - Objetivo: reproduzir o EFEITO de cada referência (movimento de câmera, luz, transição, composição) do zero, com geração própria (cenas sem rosto) + Remotion. Nunca baixar nem reaproveitar o arquivo do pin. Mostrar lado a lado: referência x nossa versão.
 
+### Série "Por que eu indico a [operadora]" (padrão aprovado, 11/10/2026)
+- Base: reels/16-amil (Amil.tsx), 17 (Adesao.tsx), 18 (Sula.tsx). Checklist do que pedir: reels/MODELO-operadora.md.
+- Logo da operadora, de parceiros (Rede D'Or, Wellhub) e fotos de hospitais enviadas pelo Thiago podem aparecer (exceção desta série). Hospitais em quadros 3D de vidro (leque ou carrossel), nomes e bairros no vidro.
+- 4 motivos com número 3D dourado, legenda com cor de destaque da operadora sobre a base dourada, final com logo da operadora + BONI, "Comenta [PALAVRA]" e aviso de carências. Visual claro recebe correção de cor dourada.
+
 ## Regras de compliance (nunca quebrar)
 - Nada de preço fixo, "o melhor", "o mais barato", "garantido". Use "plano ideal/certo para o seu perfil".
 - Carência, reajuste, cobertura e regras de urgência/emergência: conferir em fonte oficial (ANS) e listar em REVISAO.md o que o Thiago precisa checar.
