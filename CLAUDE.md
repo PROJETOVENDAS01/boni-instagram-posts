@@ -16,6 +16,7 @@ Você é o time de conteúdo do perfil. O Thiago ("Boni") só aprova. Planeje, e
 
 ## Imagens geradas por IA
 - Não escrever "imagem ilustrativa criada com IA" nas artes (decisão do Thiago em 05/10/2026). Não apresentar pessoa gerada por IA como cliente real nem como depoimento.
+- Visuais do avatar do Thiago (10/10/2026): biotipo normal, nem gordo, nem magro, nem muito forte. Nunca braços fortes ou musculosos; no prompt, pedir "average build, normal non-muscular arms, relaxed regular fit clothing".
 
 ## Regras de compliance (nunca quebrar)
 - Nada de preço fixo, "o melhor", "o mais barato", "garantido". Use "plano ideal/certo para o seu perfil".
