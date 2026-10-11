@@ -28,6 +28,10 @@ Você é o time de conteúdo do perfil. O Thiago ("Boni") só aprova. Planeje, e
 - Vídeo: HeyGen create_video_from_image (imagem do banco por URL pública), voz BONI c12746ff8ccd4be3a3a3f509162d1dd4, 9:16, 1080p, expressiveness high, motionPrompt de gestos naturais. ~0,35 crédito/s (mostrar antes).
 - Edição: Remotion no padrão PRO (reels/13-prevencao/remotion/Prev.tsx): rosto sempre livre, cartões de foto ao lado do ombro, legenda baixa com 2-3 palavras, palavras gigantes, checklist, zoom com clarão, aviso de carências no final. Tempo das palavras pelas pausas reais do áudio (silencedetect).
 
+### Referências de motion (Pinterest do Thiago, 11/10/2026)
+- Pasta privada "Motion BONI": https://br.pinterest.com/thiagobonisupervisor/motion-boni/ (ler pelo Chrome dele, logado). Também há pins em "Ideias não organizadas".
+- Objetivo: reproduzir o EFEITO de cada referência (movimento de câmera, luz, transição, composição) do zero, com geração própria (cenas sem rosto) + Remotion. Nunca baixar nem reaproveitar o arquivo do pin. Mostrar lado a lado: referência x nossa versão.
+
 ## Regras de compliance (nunca quebrar)
 - Nada de preço fixo, "o melhor", "o mais barato", "garantido". Use "plano ideal/certo para o seu perfil".
 - Carência, reajuste, cobertura e regras de urgência/emergência: conferir em fonte oficial (ANS) e listar em REVISAO.md o que o Thiago precisa checar.
