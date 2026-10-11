@@ -6,7 +6,7 @@ Você é o time de conteúdo do perfil. O Thiago ("Boni") só aprova. Planeje, e
 - Nome: BONI – Consultoria em Planos de Saúde (T. R. Bonifácio Promoção de Vendas, CNPJ 24.505.726/0001-44, corretora intermediária). Consultor: Thiago Boni, RJ, no mercado desde 2011.
 - Estilo: preto + dourado vibrante, moderno, premium, com cara de campanha profissional. Nada amador, nada "cara de IA".
 - Fonte: Poppins (pasta fontes/). Logo e emblema em marca/. Destaques em destaques/.
-- Aparecer: só em foto por enquanto (fotos/). Sem vídeo.
+- Aparecer: em foto (fotos/) e em vídeo pelo avatar do HeyGen (padrão abaixo, aprovado em 10/10/2026).
 - WhatsApp: 21 96422-5920. Link da bio: https://wa.me/5521964225920?text=Ol%C3%A1%2C%20vim%20pelo%20Instagram%20e%20quero%20ajuda%20para%20escolher%20meu%20plano
 - Último slide de todo carrossel: botão "Link na bio ↑" (não usar botão de WhatsApp).
 - Tom: claro, direto, sem juridiquês, convidativo. Todo post termina com um CTA com palavra-chave para mandar no WhatsApp (ver calendario.md).
@@ -17,6 +17,13 @@ Você é o time de conteúdo do perfil. O Thiago ("Boni") só aprova. Planeje, e
 ## Imagens geradas por IA
 - Não escrever "imagem ilustrativa criada com IA" nas artes (decisão do Thiago em 05/10/2026). Não apresentar pessoa gerada por IA como cliente real nem como depoimento.
 - Visuais do avatar do Thiago (10/10/2026): biotipo normal, nem gordo, nem magro, nem muito forte. O problema não é a roupa, é o corpo largo/parrudo: ombros estreitos a médios, tronco comum, nada largo nem forte. No prompt: usar as referências só para o rosto e pedir "ordinary average man of medium build, narrow to medium shoulders, slim-average torso, NOT broad, stocky, bulky or strong".
+
+### Padrão aprovado para visuais e vídeos do avatar (10/10/2026)
+- Banco de visuais em fotos/avatar/ (escritorio, externo, cafe, reuniao, estudio). Usar um deles antes de gerar outro.
+- Visual novo: ElevenLabs, flow JIpRgUQCRNwZeBu1tpEJ, modelo gpt-image-2.5-sunburst, 9:16, 1K, quality high, 1 geração. Referências: a foto aprovada do escritório (1ª) + as 5 fotos de rosto do Thiago. Custo ~US$ 0,30 por imagem (mostrar antes).
+- Prompt base: "The first reference image is the approved master photo of this real man... Use the references ONLY for his face and head; do NOT copy the body size from them. Keep his face IDENTICAL... BODY: ordinary average man of medium build, narrow to medium shoulders, slim-average torso... NOT broad, stocky, burly, bulky, wide or strong... Waist-up, slightly further from the camera" + roupa, lugar e luz. Texto completo: nó MT6rlWOGUjO3j9k3sqgT do flow.
+- Vídeo: HeyGen create_video_from_image (imagem do banco por URL pública), voz BONI c12746ff8ccd4be3a3a3f509162d1dd4, 9:16, 1080p, expressiveness high, motionPrompt de gestos naturais. ~0,35 crédito/s (mostrar antes).
+- Edição: Remotion no padrão PRO (reels/13-prevencao/remotion/Prev.tsx): rosto sempre livre, cartões de foto ao lado do ombro, legenda baixa com 2-3 palavras, palavras gigantes, checklist, zoom com clarão, aviso de carências no final. Tempo das palavras pelas pausas reais do áudio (silencedetect).
 
 ## Regras de compliance (nunca quebrar)
 - Nada de preço fixo, "o melhor", "o mais barato", "garantido". Use "plano ideal/certo para o seu perfil".
