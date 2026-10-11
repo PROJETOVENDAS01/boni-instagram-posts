@@ -149,7 +149,7 @@ const Card: React.FC<{from: number; to: number; img: string; side: 'L' | 'R'; la
 
 
 
-const OFF = 125; // drone intro frames
+const OFF = 150; // walking intro frames
 
 const Checklist: React.FC = () => {
   const f = useCurrentFrame();
@@ -398,8 +398,7 @@ export const Apres: React.FC = () => {
       <style>{fontCss}</style>
       <Sequence durationInFrames={OFF + 4}>
         <AbsoluteFill style={{filter: `blur(${interpolate(f, [OFF - 6, OFF], [0, 10], cl)}px)`}}>
-          <Sequence durationInFrames={53}><OffthreadVideo src={staticFile('drone14.mp4')} style={{width: '100%', height: '100%', objectFit: 'cover'}} muted /></Sequence>
-          <Sequence from={50}><Aerial /></Sequence>
+          <OffthreadVideo src={staticFile('walk14.mp4')} style={{width: '100%', height: '100%', objectFit: 'cover'}} muted />
         </AbsoluteFill>
         <Intro />
       </Sequence>
@@ -407,7 +406,7 @@ export const Apres: React.FC = () => {
         <Talk />
       </Sequence>
       <AbsoluteFill style={{background: `radial-gradient(circle at 50% 40%, rgba(255,240,190,${flash}), rgba(245,184,0,${flash * 0.6}) 40%, rgba(0,0,0,0) 80%)`, mixBlendMode: 'screen'}} />
-      <Audio src={staticFile('music.mp3')} volume={(x) => interpolate(x, [0, 10, OFF, OFF + 10, 670, 700], [0, 0.32, 0.32, 0.13, 0.13, 0], cl)} />
+      <Audio src={staticFile('music.mp3')} volume={(x) => interpolate(x, [0, 10, OFF, OFF + 10, 695, 725], [0, 0.32, 0.32, 0.13, 0.13, 0], cl)} />
       <Sfx />
     </AbsoluteFill>
   );

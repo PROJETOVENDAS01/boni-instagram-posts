@@ -13,6 +13,6 @@ export const Root: React.FC = () => (
     ))}
     <Composition id="PRO" component={Pro} durationInFrames={DUR} fps={FPS} width={1080} height={1920} />
     <Composition id="PREV" component={Prev} durationInFrames={525} fps={FPS} width={1080} height={1920} />
-    <Composition id="APRES" component={Apres} durationInFrames={700} fps={FPS} width={1080} height={1920} />
+    <Composition id="APRES" component={Apres} durationInFrames={725} fps={FPS} width={1080} height={1920} />
   </>
 );
