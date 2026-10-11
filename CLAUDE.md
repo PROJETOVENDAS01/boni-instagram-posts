@@ -17,6 +17,7 @@ Você é o time de conteúdo do perfil. O Thiago ("Boni") só aprova. Planeje, e
 ## Imagens geradas por IA
 - Não escrever "imagem ilustrativa criada com IA" nas artes (decisão do Thiago em 05/10/2026). Não apresentar pessoa gerada por IA como cliente real nem como depoimento.
 - Visuais do avatar do Thiago (10/10/2026): biotipo normal, nem gordo, nem magro, nem muito forte. O problema não é a roupa, é o corpo largo/parrudo: ombros estreitos a médios, tronco comum, nada largo nem forte. No prompt: usar as referências só para o rosto e pedir "ordinary average man of medium build, narrow to medium shoulders, slim-average torso, NOT broad, stocky, bulky or strong".
+- Altura do Thiago: cerca de 1,73 m (homem de estatura mediana, nada imponente; câmera na altura dos olhos, com espaço em volta). Ambiente preferido para vídeos externos: área externa moderna ao ar livre (calçada de porcelanato, jardins verticais, ripas de madeira, fachada de vidro, sem teto/pergolado), não praia do RJ. Referência: ref/ambiente-externo.jpg.
 
 ### Padrão aprovado para visuais e vídeos do avatar (10/10/2026)
 - Banco de visuais em fotos/avatar/ (escritorio, externo, cafe, reuniao, estudio). Usar um deles antes de gerar outro.
