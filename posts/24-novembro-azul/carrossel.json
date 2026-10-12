@@ -1,0 +1,78 @@
+{
+ "capa": {
+  "destaque": "NOVEMBRO AZUL: O CHECK-UP DO HOMEM",
+  "sub": "o que não pode faltar, passo a passo",
+  "fundo": {
+   "arquivo": "laco-azul-novembro",
+   "x": 0.5,
+   "modo": "topo"
+  }
+ },
+ "lamina": [
+  {
+   "rotulo": "PASSO 01",
+   "icone": "pessoa",
+   "titulo": "Consulta de rotina",
+   "texto": "Um clínico geral olha o todo e pede os exames certos para a sua idade e o seu histórico.",
+   "fundo": {
+    "arquivo": "pessoas-consulta-medica",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "PASSO 02",
+   "icone": "coracao",
+   "titulo": "Pressão",
+   "texto": "Pressão alta quase não dá sintoma. Medir é o único jeito de saber.",
+   "fundo": {
+    "arquivo": "pessoas-medindo-pressao",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "PASSO 03",
+   "icone": "check",
+   "titulo": "Glicose e colesterol",
+   "texto": "Exame de sangue mostra. O médico diz de quanto em quanto tempo repetir.",
+   "fundo": {
+    "arquivo": "06s6-tubos",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "PASSO 04",
+   "icone": "escudo",
+   "titulo": "Próstata",
+   "texto": "Converse com o urologista sobre a próstata. Com histórico na família, essa conversa pode começar mais cedo.",
+   "fundo": {
+    "arquivo": "pessoas-atendimento-silhueta",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "PASSO 05",
+   "icone": "calendario",
+   "titulo": "Na idade certa",
+   "texto": "Outros exames, como os do intestino, entram com a idade. Quem indica é o seu médico.",
+   "fundo": {
+    "arquivo": "agenda-data-circulada",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "PASSO 06",
+   "icone": "documento",
+   "titulo": "Plano ajuda",
+   "texto": "Ter plano facilita manter consultas e exames em dia, conforme o produto contratado.",
+   "fundo": {
+    "arquivo": "planner-checks-estetoscopio",
+    "x": 0.5
+   }
+  }
+ ],
+ "final": {
+  "pergunta": "Seus exames estão em dia?",
+  "texto_html": "Comenta <em>EXAME</em> ou me chama no WhatsApp.",
+  "aviso": "Conteúdo informativo, não substitui consulta. Carências, rede e valores variam por operadora e produto."
+ }
+}
