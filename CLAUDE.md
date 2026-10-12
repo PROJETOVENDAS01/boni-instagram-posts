@@ -40,6 +40,7 @@ Você é o time de conteúdo do perfil. O Thiago ("Boni") só aprova. Planeje, e
 ### Série "Plano por adesão para [profissão]" (Thiago, 12/10/2026)
 - Começa por advogados. Documento para aderir (vale para todas as profissões): carteira do conselho ou diploma de conclusão. Servidores públicos: contracheque.
 - Não citar operadora nem entidade/administradora: dizer que escolhemos o plano de acordo com o perfil.
+- Não ligar ao "sem CNPJ": a chamada é para a profissão e a possibilidade de plano com condições especiais para a classe dela.
 - Cada episódio: cor de destaque da profissão sobre a base dourada, objetos da profissão em 3D (sem rosto), visual do avatar revezando, CTA "Comenta [PROFISSÃO]".
 
 ## Regras de compliance (nunca quebrar)
