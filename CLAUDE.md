@@ -37,6 +37,11 @@ Você é o time de conteúdo do perfil. O Thiago ("Boni") só aprova. Planeje, e
 - Logo da operadora, de parceiros (Rede D'Or, Wellhub) e fotos de hospitais enviadas pelo Thiago podem aparecer (exceção desta série). Hospitais em quadros 3D de vidro (leque ou carrossel), nomes e bairros no vidro.
 - 4 motivos com número 3D dourado, legenda com cor de destaque da operadora sobre a base dourada, final com logo da operadora + BONI, "Comenta [PALAVRA]" e aviso de carências. Visual claro recebe correção de cor dourada.
 
+### Série "Plano por adesão para [profissão]" (Thiago, 12/10/2026)
+- Começa por advogados. Documento para aderir (vale para todas as profissões): carteira do conselho ou diploma de conclusão. Servidores públicos: contracheque.
+- Não citar operadora nem entidade/administradora: dizer que escolhemos o plano de acordo com o perfil.
+- Cada episódio: cor de destaque da profissão sobre a base dourada, objetos da profissão em 3D (sem rosto), visual do avatar revezando, CTA "Comenta [PROFISSÃO]".
+
 ## Regras de compliance (nunca quebrar)
 - Nada de preço fixo, "o melhor", "o mais barato", "garantido". Use "plano ideal/certo para o seu perfil".
 - Carência, reajuste, cobertura e regras de urgência/emergência: conferir em fonte oficial (ANS) e listar em REVISAO.md o que o Thiago precisa checar.
