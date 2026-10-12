@@ -1,0 +1,80 @@
+{
+ "capa": {
+  "logo": "reels/16-amil/logo-amil-4x.png",
+  "logo_h": 80,
+  "destaque": "POR QUE EU INDICO A AMIL",
+  "sub": "para empresa e pessoa física, aqui no Rio",
+  "fundo": {
+   "arquivo": "hv-fachada",
+   "x": 0.55,
+   "modo": "topo"
+  }
+ },
+ "lamina": [
+  {
+   "rotulo": "MOTIVO 01",
+   "icone": "predio",
+   "titulo": "Pelo CNPJ",
+   "texto": "Plano empresarial a partir de 2 vidas, inclusive para MEI com CNPJ ativo há 180 dias.",
+   "fundo": {
+    "arquivo": "11s1-mesa-mei",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "MOTIVO 02",
+   "icone": "pessoa",
+   "titulo": "Também para 1 pessoa",
+   "texto": "Sem CNPJ? Tem o plano por adesão, na pessoa física, conforme as regras de cada entidade.",
+   "fundo": {
+    "arquivo": "11s4-sozinho",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "MOTIVO 03",
+   "icone": "check",
+   "titulo": "Todo perfil",
+   "texto": "Do plano mais simples ao alto padrão. Dá para escolher pelo que você usa e pelo que cabe no bolso.",
+   "fundo": {
+    "arquivo": "pastas-diferentes",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "MOTIVO 04",
+   "icone": "grupo",
+   "titulo": "A família inteira",
+   "texto": "Além de filhos e cônjuge: pai, mãe, irmãos, sobrinhos e netos, até 69 anos, conforme o produto.",
+   "fundo": {
+    "arquivo": "familia-abraco-sala",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "MOTIVO 05",
+   "icone": "cruz",
+   "titulo": "Hospitais de referência",
+   "texto": "Vitória e Samaritano na Barra, Pró-Cardíaco e Clínicas de Jacarepaguá, conforme o produto.",
+   "fundo": {
+    "arquivo": "hv-fachada-americas",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "MOTIVO 06",
+   "icone": "lupa",
+   "titulo": "Escolha guiada",
+   "texto": "Eu comparo os produtos Amil com você e mostro o que faz sentido para o seu perfil.",
+   "fundo": {
+    "arquivo": "consultor-maos-documento",
+    "x": 0.5
+   }
+  }
+ ],
+ "final": {
+  "pergunta": "Qual plano Amil combina com você?",
+  "texto_html": "Comenta <em>AMIL</em> ou me chama no WhatsApp.",
+  "aviso": "Carências, rede e valores variam por operadora e produto."
+ }
+}

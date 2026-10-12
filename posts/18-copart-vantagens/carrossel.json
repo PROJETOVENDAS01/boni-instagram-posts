@@ -1,0 +1,79 @@
+{
+ "capa": {
+  "grande": "COPART",
+  "destaque": "É CARO? DEPENDE.",
+  "sub": "e pode ser uma ótima escolha",
+  "fundo": {
+   "arquivo": "dinheiro-calculadora-moedas",
+   "x": 0.6,
+   "modo": "topo"
+  }
+ },
+ "lamina": [
+  {
+   "rotulo": "VANTAGEM 01",
+   "icone": "dinheiro",
+   "titulo": "Mensalidade menor",
+   "texto": "Em geral, o plano com coparticipação tem mensalidade bem menor do que o mesmo plano sem ela.",
+   "fundo": {
+    "arquivo": "dinheiro-cofrinho",
+    "x": 0.65
+   }
+  },
+  {
+   "rotulo": "VANTAGEM 02",
+   "icone": "check",
+   "titulo": "Paga só quando usa",
+   "texto": "Consulta e exame têm uma parte paga por você só quando acontecem. Não usou, não paga.",
+   "fundo": {
+    "arquivo": "saude-consultorio",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "VANTAGEM 03",
+   "icone": "calendario",
+   "titulo": "Economia o ano inteiro",
+   "texto": "Se você vai pouco ao médico, a diferença na mensalidade aparece todo mês.",
+   "fundo": {
+    "arquivo": "agenda-data-circulada",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "VANTAGEM 04",
+   "icone": "escudo",
+   "titulo": "Não fica sem plano",
+   "texto": "Para muita gente, é o que faz o plano caber no bolso. Melhor ter plano do que ficar sem.",
+   "fundo": {
+    "arquivo": "protecao-guarda-chuva",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "VANTAGEM 05",
+   "icone": "documento",
+   "titulo": "Regras no contrato",
+   "texto": "Cada operadora define quanto você paga em cada uso. Tudo vem escrito no contrato.",
+   "fundo": {
+    "arquivo": "contrato-lupa",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "VANTAGEM 06",
+   "icone": "lupa",
+   "titulo": "A conta certa",
+   "texto": "Eu comparo com você o plano com e sem coparticipação, pelo jeito que você usa.",
+   "fundo": {
+    "arquivo": "pessoas-consultor-cliente",
+    "x": 0.5
+   }
+  }
+ ],
+ "final": {
+  "pergunta": "Coparticipação combina com você?",
+  "texto_html": "Comenta <em>CONTA</em> ou me chama no WhatsApp que eu faço essa conta com você.",
+  "aviso": "Carências, rede e valores variam por operadora e produto."
+ }
+}

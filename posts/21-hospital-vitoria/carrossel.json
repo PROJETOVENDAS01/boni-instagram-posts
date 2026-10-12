@@ -1,0 +1,78 @@
+{
+ "capa": {
+  "destaque": "HOSPITAL VITÓRIA SEM PLANO?",
+  "sub": "quanto custa e como ter acesso",
+  "fundo": {
+   "arquivo": "hv-fachada",
+   "x": 0.5,
+   "modo": "topo"
+  }
+ },
+ "lamina": [
+  {
+   "rotulo": "NO PARTICULAR",
+   "icone": "dinheiro",
+   "titulo": "Diária",
+   "texto": "Na média, uma diária de internação no particular pode passar de R$ 10 mil.",
+   "fundo": {
+    "arquivo": "hv-quarto",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "NO PARTICULAR",
+   "icone": "dinheiro",
+   "titulo": "Cirurgia",
+   "texto": "Uma cirurgia no particular pode passar de R$ 100 mil. Valores médios, podem variar.",
+   "fundo": {
+    "arquivo": "hv-uti",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "ESTRUTURA",
+   "icone": "predio",
+   "titulo": "Hospital completo",
+   "texto": "Um dos mais completos da Barra: emergência, UTI moderna e centro cirúrgico.",
+   "fundo": {
+    "arquivo": "hv-fachada-americas",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "CONFORTO",
+   "icone": "coracao",
+   "titulo": "Cara de hotel",
+   "texto": "Recepção e quartos pensados para o paciente e a família ficarem bem.",
+   "fundo": {
+    "arquivo": "hv-lounge",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "A VIRADA",
+   "icone": "escudo",
+   "titulo": "Com o plano certo",
+   "texto": "Você tem acesso a hospitais como esse, pagando uma mensalidade que cabe no seu perfil.",
+   "fundo": {
+    "arquivo": "dinheiro-cofrinho",
+    "x": 0.65
+   }
+  },
+  {
+   "rotulo": "PRÓXIMO PASSO",
+   "icone": "lupa",
+   "titulo": "Quais planos atendem",
+   "texto": "A rede muda de produto para produto. Eu te mostro quais planos atendem o Vitória.",
+   "fundo": {
+    "arquivo": "contrato-lupa",
+    "x": 0.5
+   }
+  }
+ ],
+ "final": {
+  "pergunta": "Quer o Vitória na sua rede?",
+  "texto_html": "Comenta <em>VITÓRIA</em> ou me chama no WhatsApp.",
+  "aviso": "Valores médios no particular, podem variar. Carências, rede e valores variam por operadora e produto."
+ }
+}

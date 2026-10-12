@@ -1,0 +1,80 @@
+{
+ "capa": {
+  "logo": "reels/18-sulamerica/marcas/sulamerica.png",
+  "logo_h": 70,
+  "destaque": "PARA A SUA EMPRESA",
+  "sub": "a partir de 3 vidas",
+  "fundo": {
+   "arquivo": "rd-barra-dor",
+   "x": 0.5,
+   "modo": "topo"
+  }
+ },
+ "lamina": [
+  {
+   "rotulo": "DIFERENCIAL 01",
+   "icone": "grupo",
+   "titulo": "A partir de 3 vidas",
+   "texto": "Para proteger a sua família, os seus funcionários ou os dois, pelo CNPJ.",
+   "fundo": {
+    "arquivo": "pme-notebook-cafe",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "DIFERENCIAL 02",
+   "icone": "cruz",
+   "titulo": "Rede D'Or",
+   "texto": "Rios D'Or, Barra D'Or, Quinta D'Or, Glória D'Or, Copa D'Or, entre outros, conforme o produto.",
+   "fundo": {
+    "arquivo": "rd-quinta-dor",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "DIFERENCIAL 03",
+   "icone": "escudo",
+   "titulo": "Odonto e seguro de vida",
+   "texto": "Plano odontológico e seguro de vida sem custo a mais, em todos os produtos SulAmérica.",
+   "fundo": {
+    "arquivo": "protecao-maos-luz",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "DIFERENCIAL 04",
+   "icone": "coracao",
+   "titulo": "Wellhub incluso",
+   "texto": "Acesso ao Wellhub, o antigo Gympass: academias, yoga, pilates, terapia online e meditação.",
+   "fundo": {
+    "arquivo": "generico-halteres-academia",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "DIFERENCIAL 05",
+   "icone": "check",
+   "titulo": "Para todos do plano",
+   "texto": "Os benefícios valem para titulares e dependentes.",
+   "fundo": {
+    "arquivo": "familia-feliz-por-do-sol",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "DIFERENCIAL 06",
+   "icone": "lupa",
+   "titulo": "Do jeito certo",
+   "texto": "A rede muda conforme o produto. Eu confiro com você o que atende a sua empresa.",
+   "fundo": {
+    "arquivo": "contrato-lupa",
+    "x": 0.5
+   }
+  }
+ ],
+ "final": {
+  "pergunta": "Sua empresa já tem esses benefícios?",
+  "texto_html": "Comenta <em>SULAMÉRICA</em> ou me chama no WhatsApp.",
+  "aviso": "Carências, rede e valores variam por operadora e produto."
+ }
+}
