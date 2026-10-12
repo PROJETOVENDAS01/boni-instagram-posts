@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, Easing, random} from 'remotion';
 import words from '../public/words21.json';
 import {DUR21} from './dentDur';
+import {GlassCard} from './Glass';
 
 const FPS = 25;
 const DURF = DUR21;
@@ -273,6 +274,16 @@ const Proof: React.FC<{from: number; to: number; img: string; tag: string; label
   );
 };
 
+
+const GProof: React.FC<{from: number; to: number; img: string; tag: string; label: string; side: 'L' | 'R'; top?: number}> = ({from, to, img, tag, label, side, top = 460}) => {
+  const f = useCurrentFrame();
+  return (
+    <div style={{position: 'absolute', left: side === 'R' ? 775 : 25, top, width: 290, height: 360}}>
+      <GlassCard f={f} a={fr(from)} b={fr(to)} img={img} tag={tag} label={label} accent={VIO2} gold={GOLD} side={side} w={290} h={360} icon={<svg width="30" height="30" viewBox="0 0 100 100"><path d={ICONS.tooth[0]} fill="none" stroke={GOLD} strokeWidth="8" /></svg>} />
+    </div>
+  );
+};
+
 // ---------- ALTA / tratamento concluído ----------
 const Alta: React.FC = () => {
   const f = useCurrentFrame();
@@ -455,23 +466,23 @@ export const Dent: React.FC = () => (
   <AbsoluteFill style={{background: '#000'}}>
     <style>{fontCss}</style>
     <Camera>
-      <OffthreadVideo src={staticFile('avatar21.mp4')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+      <OffthreadVideo src={staticFile('avatar21b.mp4')} style={{width: '100%', height: '100%', objectFit: 'cover', filter: 'sepia(.32) saturate(1.15) brightness(.8) contrast(1.1)'}} />
     </Camera>
     <Atmosphere />
     <Flash />
     <Lens />
     <Brand />
     <HookTitle />
-    <Card from={0.4} to={T.anam - 0.1} img="a21-consultorio" side="R" label="SUA VEZ NA CADEIRA" icon="tooth" />
+    <GProof from={0.4} to={T.anam - 0.1} img="a21-consultorio" tag="CONSULTÓRIO" label="SUA VEZ" side="R" />
     <Ficha />
     <Particles from={T.adesao} to={T.adesao + 1.2} cx={700} cy={1050} n={30} />
-    <Proof from={T.m1} to={T.m2 - 0.1} img="a21-exame" tag="ACHADO 1" label="SUA CATEGORIA" side="R" />
-    <Proof from={T.m2} to={T.m3 - 0.1} img="a20-familia" tag="ACHADO 2" label="FAMÍLIA" side="R" />
-    <Proof from={T.m3} to={T.alto - 0.1} img="a20-enfermaria" tag="ACHADO 3" label="ENFERMARIA" side="L" top={560} />
-    <Proof from={T.alto} to={T.comp - 0.1} img="a20-suite" tag="ACHADO 3" label="APARTAMENTO" side="L" top={560} />
+    <GProof from={T.m1} to={T.m2 - 0.1} img="a21-exame" tag="ACHADO 1" label="SUA CATEGORIA" side="R" />
+    <GProof from={T.m2} to={T.m3 - 0.1} img="a20-familia" tag="ACHADO 2" label="FAMÍLIA" side="R" />
+    <GProof from={T.m3} to={T.alto - 0.1} img="a20-enfermaria" tag="ACHADO 3" label="ENFERMARIA" side="L" top={560} />
+    <GProof from={T.alto} to={T.comp - 0.1} img="a20-suite" tag="ACHADO 3" label="APARTAMENTO" side="L" top={560} />
     <Tiers from={T.simples - 0.2} to={T.comp - 0.1} />
     <Pills from={T.comp} to={T.precisa - 0.1} items={[[T.comp + 0.15, 'QUEM VAI USAR'], [T.opc, 'ONDE SE TRATA'], [T.opc + 0.5, 'QUANTO CABE NO BOLSO'], [T.perfil, 'SEU PERFIL']]} />
-    <Proof from={T.precisa} to={T.trat - 0.1} img="a21-docs" tag="DOCUMENTOS" label="CRO OU DIPLOMA" side="L" />
+    <GProof from={T.precisa} to={T.trat - 0.1} img="a21-docs" tag="DOCUMENTOS" label="CRO OU DIPLOMA" side="L" />
     <Pills from={T.carteira} to={T.trat - 0.1} items={[[T.carteira, 'CARTEIRA DO CRO'], [T.dip, 'OU DIPLOMA'], [T.so, 'SÓ ISSO']]} top={900} />
     <Alta />
     <Particles from={T.concl} to={T.concl + 1.4} cx={540} cy={1060} n={50} />
