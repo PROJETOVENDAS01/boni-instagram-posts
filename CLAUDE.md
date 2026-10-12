@@ -39,6 +39,7 @@ Você é o time de conteúdo do perfil. O Thiago ("Boni") só aprova. Planeje, e
 
 ### Série "Plano por adesão para [profissão]" (Thiago, 12/10/2026)
 - Começa por advogados. Documento para aderir (vale para todas as profissões): carteira do conselho ou diploma de conclusão. Servidores públicos: contracheque.
+- Na fala e na tela dizer "carteira do conselho" (não a sigla do conselho, ex.: CAU), a partir do arquiteto (12/10/2026).
 - Não citar operadora nem entidade/administradora: dizer que escolhemos o plano de acordo com o perfil.
 - Não ligar ao "sem CNPJ": a chamada é para a profissão e a possibilidade de plano com condições especiais para a classe dela.
 - Falar de forma ampla da formação ("profissional do Direito", "profissional formado em Odontologia"), nada muito específico (ex.: não "cirurgião-dentista"). Cada profissão usa a linguagem dela como tema (advogado = processo; dentista = consulta).
