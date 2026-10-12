@@ -41,6 +41,7 @@ Você é o time de conteúdo do perfil. O Thiago ("Boni") só aprova. Planeje, e
 - Começa por advogados. Documento para aderir (vale para todas as profissões): carteira do conselho ou diploma de conclusão. Servidores públicos: contracheque.
 - Não citar operadora nem entidade/administradora: dizer que escolhemos o plano de acordo com o perfil.
 - Não ligar ao "sem CNPJ": a chamada é para a profissão e a possibilidade de plano com condições especiais para a classe dela.
+- Falar de forma ampla da formação ("profissional do Direito", "profissional formado em Odontologia"), nada muito específico (ex.: não "cirurgião-dentista"). Cada profissão usa a linguagem dela como tema (advogado = processo; dentista = consulta).
 - Cada episódio: cor de destaque da profissão sobre a base dourada, objetos da profissão em 3D (sem rosto), visual do avatar revezando, CTA "Comenta [PROFISSÃO]".
 
 ## Regras de compliance (nunca quebrar)
