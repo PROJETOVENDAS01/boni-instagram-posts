@@ -38,7 +38,7 @@ const T = {
   comenta: at(/^Comenta/),
 };
 const CAM: [number, number, number, boolean][] = [
-  [0, 1.12, 0, false], [T.adv, 1.0, 0, true], [T.esp, 1.08, -0.6, true],
+  [0, 1.0, 0, false], [T.adv, 1.06, 0, false], [T.esp, 1.08, -0.6, true],
   [T.adesao, 1.02, 0, true], [T.advoc, 1.1, 0.6, false],
   [T.um, 1.0, 0, true], [T.cat, 1.08, -0.5, false],
   [T.dois, 1.02, 0, true], [T.fam, 1.12, 0.6, false],
@@ -212,14 +212,14 @@ const HookTitle: React.FC = () => {
   const f = useCurrentFrame();
   const b = fr(T.tem) - 2;
   if (f > b + 8) return null;
-  const p1 = sp(f, 0.12, 11, 200), p2 = sp(f, T.adv - 0.05, 10, 190);
+  const p1 = sp(f, 0.12, 12, 170), p2 = sp(f, 0.2, 12, 170);
   const o = interpolate(f, [b, b + 8], [1, 0], cl);
-  const sweep = interpolate(f - fr(T.adv), [4, 22], [-40, 140], cl);
+  const sweep = interpolate(f - fr(T.adv), [0, 22], [-40, 140], cl);
   return (
     <div style={{position: 'absolute', left: 0, right: 0, top: 1040, textAlign: 'center', opacity: o}}>
       <div style={{fontFamily: F, fontWeight: 800, fontSize: 70, color: '#fff', letterSpacing: 8, opacity: p1, transform: `translateY(${(1 - p1) * -40}px)`, textShadow: '0 4px 18px #000'}}>ATENÇÃO,</div>
       <div style={{position: 'relative', display: 'inline-block', transform: `scale(${0.4 + 0.6 * p2})`, opacity: Math.min(1, p2 * 1.5)}}>
-        <div style={{fontFamily: F, fontWeight: 800, fontSize: 132, lineHeight: 1, color: VIO2, textShadow: `0 3px 0 ${VIO}, 0 6px 0 #6e1230, 0 9px 0 #4a0b20, 0 20px 40px rgba(0,0,0,.8), 0 0 50px rgba(176,32,74,.7)`}}>ADVOGADO</div>
+        <div style={{fontFamily: F, fontWeight: 800, fontSize: 132, lineHeight: 1, color: GOLD, WebkitTextStroke: `2px ${VIO}`, textShadow: `0 3px 0 ${VIO}, 0 6px 0 #6e1230, 0 9px 0 #4a0b20, 0 20px 40px rgba(0,0,0,.8), 0 0 40px rgba(245,184,0,.45)`}}>ADVOGADO</div>
         <div style={{position: 'absolute', inset: 0, WebkitMaskImage: 'linear-gradient(#000,#000)', overflow: 'hidden'}}>
           <div style={{position: 'absolute', top: 0, bottom: 0, left: `${sweep}%`, width: '18%', background: 'linear-gradient(100deg, rgba(255,255,255,0), rgba(255,236,170,.75), rgba(255,255,255,0))', mixBlendMode: 'screen'}} />
         </div>
@@ -309,7 +309,7 @@ const Tiers: React.FC<{from: number; to: number}> = ({from, to}) => {
   const fill = interpolate(f, [fr(T.simples) - 3, fr(T.alto) + 8], [0, 1], cl);
   return (
     <div style={{position: 'absolute', left: 705, top: 820, width: 330, padding: '20px 18px', borderRadius: 26, background: 'rgba(20,6,12,.72)', border: `3px solid ${GOLD}`, backdropFilter: 'blur(10px)', opacity: o, transform: `translateX(${(1 - pin) * 400}px)`, boxShadow: '0 20px 50px rgba(0,0,0,.6)'}}>
-      <div style={{fontFamily: F, fontWeight: 800, fontSize: 28, color: GOLD, textAlign: 'center', marginBottom: 12}}>TODO PERFIL</div>
+      <div style={{fontFamily: F, fontWeight: 800, fontSize: 28, color: GOLD, textAlign: 'center', marginBottom: 12}}>ACOMODAÇÃO</div>
       <div style={{display: 'flex', alignItems: 'flex-end', gap: 10, height: 190}}>
         {[0, 1, 2, 3].map((i) => {
           const pp = interpolate(fill * 4 - i, [0, 1], [0, 1], cl);
@@ -320,7 +320,7 @@ const Tiers: React.FC<{from: number; to: number}> = ({from, to}) => {
           );
         })}
       </div>
-      <div style={{display: 'flex', justifyContent: 'space-between', marginTop: 10, fontFamily: F, fontWeight: 700, fontSize: 17, color: '#fff'}}><span>SIMPLES</span><span style={{color: GOLD}}>ALTO PADRÃO</span></div>
+      <div style={{display: 'flex', justifyContent: 'space-between', marginTop: 10, fontFamily: F, fontWeight: 700, fontSize: 17, color: '#fff'}}><span>ENFERMARIA</span><span style={{color: GOLD}}>APARTAMENTO</span></div>
     </div>
   );
 };
@@ -429,7 +429,7 @@ export const Adv: React.FC = () => (
   <AbsoluteFill style={{background: '#000'}}>
     <style>{fontCss}</style>
     <Camera>
-      <OffthreadVideo src={staticFile('avatar20.mp4')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+      <OffthreadVideo src={staticFile('avatar20b.mp4')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
     </Camera>
     <Atmosphere />
     <Flash />
@@ -443,7 +443,8 @@ export const Adv: React.FC = () => (
     <BigNum at={T.dois} to={T.tres - 0.05} n="2" label={'FAMÍLIA'} />
     <Card from={T.fam - 0.3} to={T.tres - 0.1} img="a20-familia" side="R" label="FAMÍLIA" icon="people" />
     <BigNum at={T.tres} to={T.comp - 0.05} n="3" label={'TODO\nPERFIL'} />
-    <Card from={T.tres + 0.2} to={T.comp - 0.1} img="a20-degraus" side="L" label="DO SIMPLES AO TOP" icon="stairs" top={760} />
+    <Card from={T.tres + 0.2} to={T.alto - 0.15} img="a20-enfermaria" side="L" label="ENFERMARIA" icon="building" top={760} />
+    <Card from={T.alto} to={T.comp - 0.1} img="a20-suite" side="L" label="APARTAMENTO" icon="building" top={760} />
     <Tiers from={T.simples - 0.2} to={T.comp - 0.1} />
     <Pills from={T.comp} to={T.precisa - 0.1} items={[[T.comp + 0.15, 'QUEM VAI USAR'], [T.opc, 'ONDE SE TRATA'], [T.escolher, 'QUANTO CABE NO BOLSO'], [T.perfil, 'SEU PERFIL']]} />
     <Card from={T.precisa} to={T.comenta - 0.15} img="a20-docs" side="L" label="DOCUMENTOS" icon="idcard" />

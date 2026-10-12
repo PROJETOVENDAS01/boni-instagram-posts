@@ -5,7 +5,7 @@ segs=[("Atenção, advogado!",0.31,1.18),("Tem plano de saúde com condições e
 ("conforme o produto.",12.86,13.61),("Três:",14.12,14.49),("tem do plano simples ao alto padrão.",14.77,16.55),
 ("E eu comparo as opções com você,",17.09,18.63),("pra escolher o plano certo pro seu perfil.",18.86,20.54),
 ("O que precisa?",20.94,21.54),("A carteira da OAB,",22.04,22.92),("ou o diploma de conclusão.",23.28,24.35),("Só isso.",24.88,25.29),
-("Comenta ADVOGADO",25.78,26.9),("que eu te mostro as opções.",26.9,28.43)]
+("Comenta advogado,",25.71,26.62),("que eu te mostro as opções.",26.91,28.08)]
 ALT={'OAB,':'oabê'}
 w=lambda t:len(re.sub(r'\W','',ALT.get(t,t)))+2
 out=[]
