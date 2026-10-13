@@ -1,9 +1,9 @@
 import json,re
-segs=[("Tem loja no bairro",0.35,1.16),("e é MEI?",1.33,1.77),("Presta atenção.",2.54,3.14),("Loja de informática,",3.86,4.89),
-("mercearia,",5.06,5.75),("papelaria,",5.80,6.51),("qualquer lojinha:",6.87,7.60),("com o seu MEI dá pra ter plano de saúde empresarial,",7.97,10.30),
-("a partir de uma vida só.",10.65,11.75),("E o empresarial pode sair mais em conta que o individual.",12.29,14.90),("A regra:",15.41,15.79),
-("o CNPJ ativo há 180 dias.",16.16,18.57),("O resto varia por operadora,",19.04,20.37),("e eu comparo pra você.",20.69,21.60),
-("Comenta loja,",21.95,22.54),("que eu te mostro as opções.",22.78,23.74)]
+segs=[("Tem loja no bairro",0.35,1.16),("e é MEI?",1.33,1.77),("Presta atenção.",2.54,3.14),("Loja de informática,",3.67,4.80),
+("mercearia,",4.93,5.73),("papelaria,",5.90,6.61),("todo comércio do bairro:",7.04,7.97),("com o seu MEI dá pra ter plano de saúde empresarial,",8.31,10.62),
+("a partir de uma vida só.",10.97,12.07),("E o empresarial pode sair mais em conta que o individual.",12.61,15.22),("A regra:",15.73,16.11),
+("o CNPJ ativo há 180 dias.",16.48,18.89),("O resto varia por operadora,",19.36,20.69),("e eu comparo pra você.",21.01,21.92),
+("Comenta loja,",22.27,22.86),("que eu te mostro as opções.",23.10,24.06)]
 ALT={'180':'centoeoitenta','CNPJ':'cenepejota'}
 w=lambda t:len(re.sub(r'\W','',ALT.get(t,t)))+2
 out=[]

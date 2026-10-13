@@ -1,1 +1,1 @@
-export const DUR26 = 602;
+export const DUR26 = 610;
