@@ -8,11 +8,11 @@ Arquivo final: story-amil-50.mp4 (1080x1920, 18 s, com legendas e música).
 - [ ] MEI: CNPJ ativo há 180 dias (regra fixa). Não aparece no vídeo; vai no texto do anúncio.
 - [ ] Aviso no final: "Promoção por tempo limitado, conforme regras da operadora. Carências, rede e valores variam por operadora e produto."
 
-## Observação sobre o gesto
-O HeyGen não fez a mão "apresentando" de palma para cima. Ele levanta a mão aberta em 2 momentos: no começo (0,3 s a 1,1 s) e em "tempo limitado" (10,5 s a 12,7 s).
-- O 50% em 3D aparece em cima da mão no 1º segundo. Depois ele vai girando para o centro, no "cinquenta por cento".
-- O selo "TEMPO LIMITADO" fica em cima da mão no 2º gesto.
-- Refazer o vídeo para tentar outro gesto custa ~8 créditos do HeyGen, sem garantia.
+## Observação sobre o gesto (v3, 14/10)
+- O HeyGen ignorou a mão de bandeja em 3 tentativas (cerca de 6 a 8 créditos cada). Por isso o 50% nasce no centro do peito, sem depender da mão.
+- No 1º meio segundo ele mexe a mão. Essa parte fica escondida pela abertura escura com a logo da Amil.
+- No "duas vidas" ele mostra 2 dedos, e um "2" dourado em 3D aparece ao lado da mão.
+- Nas outras partes, as mãos ficam calmas.
 
 ## Texto do anúncio (Meta)
 Texto principal:

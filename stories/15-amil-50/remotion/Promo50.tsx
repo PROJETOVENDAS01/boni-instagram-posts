@@ -137,7 +137,7 @@ const palmAt = (t: number) => {
   const ts = PALM.map((p) => p[0]);
   return [interpolate(t, ts, PALM.map((p) => p[1]), cl), interpolate(t, ts, PALM.map((p) => p[2]), cl)];
 };
-const CAM: [number, number, boolean][] = [[0, 1.12, false], [T.palm, 1.06, true], [T.cinq, 1.0, true], [T.mens, 1.08, true], [4.69, 1.0, false], [T.resg, 1.05, true], [T.tempo, 1.1, true], [T.end, 1.0, false]];
+const CAM: [number, number, boolean][] = [[0, 1.12, false], [0.75, 1.06, false], [T.cinq, 1.0, true], [T.mens, 1.08, true], [4.69, 1.0, false], [T.resg, 1.05, true], [T.tempo, 1.1, true], [T.end, 1.0, false]];
 
 const glass: React.CSSProperties = {background: 'rgba(12,9,4,.62)', border: '2px solid rgba(245,184,0,.75)', backdropFilter: 'blur(14px)', borderRadius: 30, boxShadow: '0 10px 40px rgba(0,0,0,.5), 0 0 30px rgba(245,184,0,.25)'};
 const txt = (size: number, color = '#fff', weight = 800): React.CSSProperties => ({fontFamily: F, fontWeight: weight, fontSize: size, color, lineHeight: 1.05, textShadow: '0 3px 14px rgba(0,0,0,.8)'});
@@ -166,21 +166,34 @@ const Camera50: React.FC<{children: React.ReactNode}> = ({children}) => {
 const Fifty: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / FPS50;
-  if (t < T.palm - 0.02) return null;
-  const pop = spr(f, T.palm, 9, 140);
-  const [px, py] = palmAt(t);
-  const toC = interpolate(t, [1.1, T.cinq + 0.25], [0, 1], {...cl, easing: Easing.inOut(Easing.cubic)});
+  if (t < T.cinq - 0.05) return null;
+  const pop = spr(f, T.cinq - 0.05, 9, 140);
   const toT = interpolate(t, [T.out, T.out + 0.45], [0, 1], {...cl, easing: Easing.inOut(Easing.cubic)});
   // on the palm -> centre stage -> small badge top-right
-  let x = interpolate(toC, [0, 1], [px - 40, 540]), y = interpolate(toC, [0, 1], [py - 330, 1060]), s = interpolate(toC, [0, 1], [0.5, 1]) * pop;
+  let x = 540, y = 1060, s = pop;
   x = interpolate(toT, [0, 1], [x, 930]); y = interpolate(toT, [0, 1], [y, 350]); s = interpolate(toT, [0, 1], [s, 0.24]);
-  const spin = interpolate(t, [T.palm, 1.1], [-200, 0], {...cl, easing: Easing.out(Easing.cubic)}) + interpolate(t, [T.cinq, T.cinq + 1.1], [-360, 0], {...cl, easing: Easing.out(Easing.cubic)}) + interpolate(t, [T.mens, T.mens + 0.8], [360, 0], {...cl, easing: Easing.out(Easing.cubic)});
+  const spin = interpolate(t, [T.cinq, T.cinq + 1.1], [-360, 0], {...cl, easing: Easing.out(Easing.cubic)}) + interpolate(t, [T.mens, T.mens + 0.8], [360, 0], {...cl, easing: Easing.out(Easing.cubic)});
   const rotY = spin + Math.sin(f / 10) * (toT > 0.5 ? 25 : 10);
   const sweep = ((f * 2.4) % 140) - 20;
   return (
     <div style={{position: 'absolute', left: x, top: y, transform: `translate(-50%,-50%) scale(${s})`, perspective: 1400}}>
       <div style={{position: 'absolute', left: '50%', top: '50%', width: 760, height: 420, transform: 'translate(-50%,-50%)', background: 'radial-gradient(ellipse, rgba(255,190,60,.45), transparent 65%)', filter: 'blur(10px)'}} />
       <Gold3D text="50%" size={320} rotY={rotY} rotX={-8} sweep={sweep} />
+    </div>
+  );
+};
+
+// gold '2' next to his two raised fingers (6.7s-7.7s, hand at ~x 270)
+const Two: React.FC = () => {
+  const f = useCurrentFrame();
+  const t = f / FPS50;
+  if (t < 6.7 || t > 7.95) return null;
+  const p = spr(f, 6.72, 10, 160);
+  const out = interpolate(t, [7.6, 7.9], [1, 0], cl);
+  return (
+    <div style={{position: 'absolute', left: 185, top: 475, transform: `translate(-50%,-50%) scale(${p * 0.55})`, opacity: out, perspective: 1200}}>
+      <div style={{position: 'absolute', left: '50%', top: '50%', width: 420, height: 420, transform: 'translate(-50%,-50%)', background: 'radial-gradient(circle, rgba(255,190,60,.45), transparent 65%)', filter: 'blur(10px)'}} />
+      <Gold3D text="2" size={300} rotY={interpolate(t, [6.72, 7.3], [-180, 0], {...cl, easing: Easing.out(Easing.cubic)}) + Math.sin(f / 8) * 8} rotX={-6} sweep={((f * 2.4) % 140) - 20} />
     </div>
   );
 };
@@ -298,9 +311,9 @@ const Tempo: React.FC = () => {
   const p = spr(f, T.tempo, 10, 160);
   const out = interpolate(t, [T.end - 0.05, T.end + 0.25], [1, 0], cl);
   const pulse = 1 + Math.sin(f / 3) * 0.03;
-  // floats above his raised palm (palm up 10.5s-12.75s at ~x 280)
+  // beside his left shoulder, face stays free
   return (
-    <div style={{position: 'absolute', left: 255, top: 580, transform: `translate(-50%,-50%) scale(${p * pulse}) rotateY(${(1 - p) * 180}deg)`, opacity: out, ...glass, width: 280, padding: '18px 0 20px', display: 'flex', flexDirection: 'column', alignItems: 'center', border: `3px solid ${GOLD}`}}>
+    <div style={{position: 'absolute', left: 850, top: 640, transform: `translate(-50%,-50%) scale(${p * pulse}) rotateY(${(1 - p) * 180}deg)`, opacity: out, ...glass, width: 280, padding: '18px 0 20px', display: 'flex', flexDirection: 'column', alignItems: 'center', border: `3px solid ${GOLD}`}}>
       <Icon name="clock" p={interpolate(t, [T.tempo, T.tempo + 0.6], [0, 1], cl)} size={90} />
       <div style={{...txt(44), textAlign: 'center', marginTop: 6}}>TEMPO<br /><span style={{color: GOLD}}>LIMITADO</span></div>
     </div>
@@ -361,26 +374,27 @@ const End50: React.FC = () => {
 
 const Flash50: React.FC = () => {
   const f = useCurrentFrame();
-  const a = Math.max(0, ...[T.palm, T.cinq, T.mens, T.tempo].map((t) => interpolate(f - fr(t), [0, 2, 8], [0, 0.4, 0], cl)));
+  const a = Math.max(0, ...[0.75, T.cinq, T.mens, T.tempo].map((t) => interpolate(f - fr(t), [0, 2, 8], [0, 0.4, 0], cl)));
   return <AbsoluteFill style={{background: '#fff4d6', opacity: a, mixBlendMode: 'screen'}} />;
 };
 
 export const Promo50: React.FC = () => {
   const f = useCurrentFrame();
-  const vid = <OffthreadVideo src={staticFile('avatar50.mp4')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />;
+  const vid = <OffthreadVideo src={staticFile('avatar50c.mp4')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />;
   return (
     <AbsoluteFill style={{background: '#000', overflow: 'hidden'}}>
       <style>{FONTS}</style>
       <Camera50>
         <Sequence durationInFrames={VID_END}>{vid}</Sequence>
-        <Sequence from={VID_END}><Freeze frame={VID_END - 1}><OffthreadVideo muted src={staticFile('avatar50.mp4')} style={{width: '100%', height: '100%', objectFit: 'cover'}} /></Freeze></Sequence>
+        <Sequence from={VID_END}><Freeze frame={VID_END - 1}><OffthreadVideo muted src={staticFile('avatar50c.mp4')} style={{width: '100%', height: '100%', objectFit: 'cover'}} /></Freeze></Sequence>
       </Camera50>
+      <AbsoluteFill style={{background: '#050403', opacity: interpolate(f, [0, 14, 21], [0.93, 0.93, 0], cl)}} />
       <AbsoluteFill style={{background: 'radial-gradient(ellipse at 50% 40%, rgba(0,0,0,0) 45%, rgba(0,0,0,.6) 100%)'}} />
       <Dust frame={f} />
       <Beam />
       <AmilLogo />
-      <Shock t0={T.palm} cx={palmAt(0.4)[0]} cy={palmAt(0.4)[1] - 330} r={380} />
-      <Particles frame={f} start={fr(T.palm)} n={40} cx={palmAt(0.4)[0]} cy={palmAt(0.4)[1] - 330} />
+      <Particles frame={f} start={fr(T.cinq)} n={50} cx={540} cy={1060} />
+      <Two />
       <Shock t0={T.cinq + 0.2} cx={540} cy={1060} />
       <Particles frame={f} start={fr(T.mens)} n={60} cx={540} cy={1060} />
       <Labels />
@@ -393,7 +407,7 @@ export const Promo50: React.FC = () => {
       <Flash50 />
       <Audio src={staticFile('music.mp3')} volume={(x) => interpolate(x, [0, 10, DUR50 - 25, DUR50], [0, 0.12, 0.12, 0], cl)} />
       {[0, 1.08, T.out, T.resg - 0.1, T.end - 0.05].map((t, i) => <Sequence key={'w' + i} from={Math.max(0, fr(t) - 2)}><Audio src={staticFile('whoosh.wav')} volume={0.4} /></Sequence>)}
-      {[T.palm, T.cinq, T.mens].map((t, i) => <Sequence key={'b' + i} from={fr(t)}><Audio src={staticFile('boom.wav')} volume={0.5} /></Sequence>)}
+      {[0.7, T.cinq, T.mens].map((t, i) => <Sequence key={'b' + i} from={fr(t)}><Audio src={staticFile('boom.wav')} volume={0.5} /></Sequence>)}
       {[T.cnpj, T.duas, T.mei, T.resg, T.odonto, T.todos, T.tempo].map((t, i) => <Sequence key={'p' + i} from={fr(t)}><Audio src={staticFile('pop.wav')} volume={0.45} /></Sequence>)}
     </AbsoluteFill>
   );
