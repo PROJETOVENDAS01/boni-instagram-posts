@@ -154,12 +154,18 @@ const Icon: React.FC<{name: string; p: number; size: number; color?: string}> = 
   </svg>
 );
 
+const WHIP: [number, number][] = [[6.42, 6.82], [7.64, 7.98]];
+
 const Camera50: React.FC<{children: React.ReactNode}> = ({children}) => {
   const f = useCurrentFrame();
   let s = CAM[0][1];
   for (let i = 1; i < CAM.length; i++) s += (CAM[i][1] - CAM[i - 1][1]) * spr(f, CAM[i][0], CAM[i][2] ? 18 : 30, CAM[i][2] ? 260 : 60);
   s += interpolate(f, [0, DUR50], [0, 0.04]);
-  const blur = Math.max(0, ...CAM.filter((c) => c[2]).map((c) => interpolate(f - fr(c[0]), [0, 2, 7], [0, 5, 0], cl)));
+  // whip-blur over the abrupt hand rise/drop around the 'two fingers' (HeyGen motion, can't be smoothed at source)
+  const t = f / FPS50;
+  const whip = Math.max(0, ...WHIP.map(([a, b]) => interpolate(t, [a, (a + b) / 2, b], [0, 1, 0], cl)));
+  s += 0.07 * whip;
+  const blur = Math.max(whip * 24, ...CAM.filter((c) => c[2]).map((c) => interpolate(f - fr(c[0]), [0, 2, 7], [0, 5, 0], cl)));
   return <AbsoluteFill style={{transform: `scale(${s})`, transformOrigin: '540px 700px', filter: `blur(${blur}px)`}}>{children}</AbsoluteFill>;
 };
 
@@ -189,7 +195,7 @@ const Two: React.FC = () => {
   const t = f / FPS50;
   if (t < 6.7 || t > 7.95) return null;
   const p = spr(f, 6.72, 10, 160);
-  const out = interpolate(t, [7.6, 7.9], [1, 0], cl);
+  const out = interpolate(t, [7.55, 7.7], [1, 0], cl);
   return (
     <div style={{position: 'absolute', left: 185, top: 475, transform: `translate(-50%,-50%) scale(${p * 0.55})`, opacity: out, perspective: 1200}}>
       <div style={{position: 'absolute', left: '50%', top: '50%', width: 420, height: 420, transform: 'translate(-50%,-50%)', background: 'radial-gradient(circle, rgba(255,190,60,.45), transparent 65%)', filter: 'blur(10px)'}} />
@@ -374,7 +380,7 @@ const End50: React.FC = () => {
 
 const Flash50: React.FC = () => {
   const f = useCurrentFrame();
-  const a = Math.max(0, ...[0.75, T.cinq, T.mens, T.tempo].map((t) => interpolate(f - fr(t), [0, 2, 8], [0, 0.4, 0], cl)));
+  const a = Math.max(0, ...[0.75, T.cinq, T.mens, T.tempo, 6.62, 7.81].map((t, i) => interpolate(f - fr(t), [0, 2, 8], [0, i > 3 ? 0.22 : 0.4, 0], cl)));
   return <AbsoluteFill style={{background: '#fff4d6', opacity: a, mixBlendMode: 'screen'}} />;
 };
 
@@ -406,7 +412,7 @@ export const Promo50: React.FC = () => {
       <End50 />
       <Flash50 />
       <Audio src={staticFile('music.mp3')} volume={(x) => interpolate(x, [0, 10, DUR50 - 25, DUR50], [0, 0.12, 0.12, 0], cl)} />
-      {[0, 1.08, T.out, T.resg - 0.1, T.end - 0.05].map((t, i) => <Sequence key={'w' + i} from={Math.max(0, fr(t) - 2)}><Audio src={staticFile('whoosh.wav')} volume={0.4} /></Sequence>)}
+      {[0, 1.08, T.out, 6.5, 7.7, T.resg - 0.1, T.end - 0.05].map((t, i) => <Sequence key={'w' + i} from={Math.max(0, fr(t) - 2)}><Audio src={staticFile('whoosh.wav')} volume={0.4} /></Sequence>)}
       {[0.7, T.cinq, T.mens].map((t, i) => <Sequence key={'b' + i} from={fr(t)}><Audio src={staticFile('boom.wav')} volume={0.5} /></Sequence>)}
       {[T.cnpj, T.duas, T.mei, T.resg, T.odonto, T.todos, T.tempo].map((t, i) => <Sequence key={'p' + i} from={fr(t)}><Audio src={staticFile('pop.wav')} volume={0.45} /></Sequence>)}
     </AbsoluteFill>
