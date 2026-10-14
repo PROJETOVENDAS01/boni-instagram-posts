@@ -117,7 +117,7 @@ export const Promo50Test: React.FC = () => {
 
 // ================= Full Story/ad: Amil PME 50% =================
 const FPS50 = 25;
-export const DUR50 = 450; // 16.6s of voice + hold on end card
+export const DUR50 = 500; // 16.6s of voice + ~3.5s hold on end card
 const VID_END = 414;
 const GOLD = '#F5B800', GOLD2 = '#FFD95A', VIO = '#6A3BFF';
 type W = {t: string; s: number; e: number; seg: number};
@@ -125,9 +125,9 @@ const WS: W[] = (words50 as any).words;
 const at = (re: RegExp) => (WS.find((w) => re.test(w.t)) as W).s;
 const fr = (s: number) => Math.round(s * FPS50);
 const cl = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
-const spr = (f: number, t: number, d = 14, st = 170) => spring({frame: f - fr(t), fps: FPS50, config: {damping: d, stiffness: st}});
+const spr = (f: number, t: number, d = 14, st = 170) => spring({frame: f - fr(t), fps: FPS50, config: {damping: d * 1.4, stiffness: st * 0.55}}); // softer, slower entrances (Thiago 14/10: too fast)
 const T = {
-  palm: 0.36, cinq: at(/^cinquenta/), desc: at(/^de$/), mens: at(/^na$/), out: 4.3,
+  palm: 0.36, cinq: at(/^cinquenta/), desc: at(/^de$/), mens: at(/^na$/), out: 4.6,
   cnpj: at(/^CNPJ/), duas: at(/^duas/), mei: at(/^MEI/), resg: 9.72, odonto: at(/^odonto/), todos: at(/^todos/),
   tempo: 11.74, end: 12.95,
 };
@@ -159,7 +159,7 @@ const Camera50: React.FC<{children: React.ReactNode}> = ({children}) => {
   let s = CAM[0][1];
   for (let i = 1; i < CAM.length; i++) s += (CAM[i][1] - CAM[i - 1][1]) * spr(f, CAM[i][0], CAM[i][2] ? 18 : 30, CAM[i][2] ? 260 : 60);
   s += interpolate(f, [0, DUR50], [0, 0.04]);
-  const blur = Math.max(0, ...CAM.filter((c) => c[2]).map((c) => interpolate(f - fr(c[0]), [0, 2, 7], [0, 5, 0], cl)));
+  const blur = Math.max(0, ...CAM.filter((c) => c[2]).map((c) => interpolate(f - fr(c[0]), [0, 2, 7], [0, 2, 0], cl)));
   return <AbsoluteFill style={{transform: `scale(${s})`, transformOrigin: '540px 700px', filter: `blur(${blur}px)`}}>{children}</AbsoluteFill>;
 };
 
@@ -264,7 +264,7 @@ const Labels: React.FC = () => {
 const Chips: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / FPS50;
-  const out = interpolate(t, [9.0, 9.3], [1, 0], cl);
+  const out = interpolate(t, [9.35, 9.6], [1, 0], cl);
   if (t < T.cnpj - 0.1 || out <= 0) return null;
   const items: [number, React.ReactNode][] = [
     [T.cnpj, <>PLANO PELO <span style={{color: GOLD}}>CNPJ</span></>],
@@ -286,7 +286,7 @@ const Chips: React.FC = () => {
 const Benefits: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / FPS50;
-  const out = interpolate(t, [T.tempo - 0.1, T.tempo + 0.2], [1, 0], cl);
+  const out = interpolate(t, [T.end - 0.1, T.end + 0.2], [1, 0], cl);
   if (t < T.resg - 0.1 || out <= 0) return null;
   const card = (t0: number, icon: string, a: string, b: string, side: number) => {
     const p = spr(f, t0 - 0.05, 12, 170);
@@ -379,7 +379,7 @@ const End50: React.FC = () => {
 
 const Flash50: React.FC = () => {
   const f = useCurrentFrame();
-  const a = Math.max(0, ...[0.75, T.cinq, T.mens, T.tempo, I2[0], I2[1]].map((t) => interpolate(f - fr(t), [0, 2, 8], [0, 0.4, 0], cl)));
+  const a = Math.max(0, ...[0.75, T.cinq, I2[0], I2[1]].map((t) => interpolate(f - fr(t), [0, 3, 10], [0, 0.3, 0], cl)));
   return <AbsoluteFill style={{background: '#fff4d6', opacity: a, mixBlendMode: 'screen'}} />;
 };
 
@@ -395,6 +395,7 @@ export const Promo50: React.FC = () => {
       </Camera50>
       <AbsoluteFill style={{background: '#050403', opacity: interpolate(f, [0, 14, 21], [0.93, 0.93, 0], cl)}} />
       <AbsoluteFill style={{background: 'radial-gradient(ellipse at 50% 40%, rgba(0,0,0,0) 45%, rgba(0,0,0,.6) 100%)'}} />
+      <AbsoluteFill style={{background: '#000', opacity: interpolate(f, [fr(16.4), fr(17.2)], [0, 0.55], cl)}} />
       <Dust frame={f} />
       <Beam />
       <AmilLogo />

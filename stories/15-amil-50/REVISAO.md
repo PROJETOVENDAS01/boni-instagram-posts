@@ -1,6 +1,6 @@
 # Story + anúncio Meta – Amil PME 50%
 
-Arquivo final: story-amil-50.mp4 (1080x1920, 18 s, com legendas e música).
+Arquivo final: story-amil-50.mp4 (1080x1920, 20 s, com legendas e música).
 
 ## O Thiago precisa conferir
 - [ ] Condição da Amil: 50% de desconto na 1ª e na 2ª mensalidade, plano PME pelo CNPJ, a partir de 2 vidas, inclusive MEI. Confirmar até quando vale e se há regra extra (ex.: produtos, região, vigência).
