@@ -25,3 +25,6 @@ Botão: Enviar mensagem (WhatsApp)
 ## Story
 Postar o vídeo como Story. O link do WhatsApp entra pelo sticker de link, no app.
 Melhor horário: 12h ou 19h.
+
+## Publicação
+- Story publicado em 14/10/2026 às 16h05 pelo Windsor (media id 17990110340867323).
