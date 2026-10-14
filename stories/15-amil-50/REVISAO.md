@@ -11,7 +11,7 @@ Arquivo final: story-amil-50.mp4 (1080x1920, 18 s, com legendas e música).
 ## Observação sobre o gesto (v3, 14/10)
 - O HeyGen ignorou a mão de bandeja em 3 tentativas (cerca de 6 a 8 créditos cada). Por isso o 50% nasce no centro do peito, sem depender da mão.
 - No 1º meio segundo ele mexe a mão. Essa parte fica escondida pela abertura escura com a logo da Amil.
-- No "duas vidas" ele mostra 2 dedos, e um "2" dourado em 3D aparece ao lado da mão.
+- No "duas vidas" o gesto de 2 dedos ficou brusco: esse trecho (6,4 s a 8 s) virou tela cheia com "A PARTIR DE 2 VIDAS" em 3D, e a voz continua.
 - Nas outras partes, as mãos ficam calmas.
 
 ## Texto do anúncio (Meta)
