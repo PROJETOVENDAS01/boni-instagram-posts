@@ -17,7 +17,7 @@ Escolhi o 1 porque fala direto com quem precisa ouvir e é curto (menos de 3 s).
 | 3–4,5 s | Presta atenção nisso. | — | Zoom leve no rosto |
 | 4,5–7,5 s | Quem tem empresa, até MEI, pode contratar pelo CNPJ. | Faixas de vidro: "EMPRESA" e "MEI" | Fundo: fachada de pequeno comércio (gerar, sem rosto e sem marca) |
 | 7,5–8,7 s | É o plano empresarial. | "PLANO EMPRESARIAL (PME)" em palavra gigante | Clarão dourado |
-| 8,7–14,5 s | Muitas vezes, mesma operadora, mesma rede... e sai mais em conta que o pessoa física. | Dois cartões lado a lado, "PESSOA FÍSICA" e "PELO CNPJ". "Mesma operadora ✓" e "Mesma rede ✓" aparecem nos dois, e uma seta desce no CNPJ com "pode sair mais em conta*" | Comparação animada; nenhum valor em R$ |
+| 8,7–14,5 s | Em geral, pelo CNPJ você paga menos pelo mesmo plano. Mesma operadora, mesma rede. | Dois cartões lado a lado, "PESSOA FÍSICA" e "PELO CNPJ". No CNPJ entra "EM GERAL, VOCÊ PAGA MENOS" com uma seta para baixo; depois "Mesma operadora ✓" e "Mesma rede ✓" aparecem nos dois | Comparação animada; nenhum valor em R$ |
 | 14,5–17 s | Dá pra colocar a família junto. | Ícones de família (3 pessoas) entrando no cartão do CNPJ | Fundo: mesa de jantar em família vista de longe, sem rostos |
 | 17–20 s | Pro MEI, o CNPJ precisa ter 180 dias. | Selo "MEI: CNPJ ativo há 180 dias" com calendário | — |
 | 20–22,5 s | O resto muda de operadora pra operadora. | Logos de várias operadoras passando em carrossel de vidro (padrão da barra multioperadora PME, sem Prevent) | — |
@@ -31,7 +31,8 @@ Tem CNPJ e paga plano pessoa física?
 Presta atenção nisso.
 Quem tem empresa, até MEI, pode contratar pelo CNPJ.
 É o plano empresarial.
-Muitas vezes, mesma operadora, mesma rede... e sai mais em conta que o pessoa física.
+Em geral, pelo CNPJ você paga menos pelo mesmo plano.
+Mesma operadora, mesma rede.
 Dá pra colocar a família junto.
 Pro MEI, o CNPJ precisa ter cento e oitenta dias.
 O resto muda de operadora pra operadora.
@@ -48,7 +49,7 @@ Expressividade "média", mãos calmas, sem apontar e sem sinal com os dedos.
 ## Legenda (rascunho, ainda passa pelo /ig-caption)
 Tem CNPJ ou é MEI e ainda paga plano de saúde como pessoa física? Comenta CNPJ que eu comparo pra você.
 
-Pelo CNPJ dá pra contratar o plano empresarial (PME), muitas vezes com a mesma operadora e a mesma rede, e colocar a família junto.
+Pelo CNPJ dá pra contratar o plano empresarial (PME). Em geral, você paga menos pelo mesmo plano, com a mesma operadora e a mesma rede, e ainda coloca a família junto.
 
 Para MEI, o CNPJ precisa estar ativo há 180 dias. As outras regras mudam de operadora para operadora, por isso eu comparo lado a lado e te mostro se vale a troca.
 
@@ -57,6 +58,6 @@ Carências, rede e valores variam por operadora e produto.
 #planodesaude #planodesaudeempresarial #planodesaudemei #cnpj #planodesauderj
 
 ## Para o Thiago conferir
-- [ ] "Muitas vezes sai mais em conta" está bom assim? Não promete nada nem cita valor.
+- [x] Frase do preço: "Em geral, pelo CNPJ você paga menos pelo mesmo plano." (Thiago, 16/10; "sempre mais barato" ficou fora por compliance)
 - [ ] Trocar de PF para PME: a carência começa de novo ou dá para pedir redução? (varia por operadora; o vídeo não fala disso de propósito)
 - [ ] Palavra-chave CNPJ: adicionar no ManyChat de DM? (hoje está parado)
