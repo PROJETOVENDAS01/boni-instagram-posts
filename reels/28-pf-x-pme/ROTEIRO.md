@@ -14,3 +14,7 @@ Abertura com logo BONI CAST → cartão PERGUNTA → ✓ EMPRESA / MEI também �
 
 ## Custos
 HeyGen ~9 créditos (4 trechos) + 1 (look lateral). ElevenLabs: imagens do estúdio ~US$ 2,14, vozes ~US$ 0,10.
+
+## Publicação
+- Reel publicado em 16/10/2026 às 15h10 pelo Windsor (media id 18151898263532704), capa aos 3 s (logo BONI CAST), também no feed.
+- Texto alternativo: pôr pelo app.
