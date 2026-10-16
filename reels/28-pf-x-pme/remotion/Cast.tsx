@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Freeze, Img, OffthreadVideo, Sequence, interpolate, spring, staticFile, useCurrentFrame, Easing, random} from 'remotion';
 import words from '../public/words28.json';
-import {Gold3D} from './Promo50';
+import {Gold3D, Dust} from './Promo50';
 
 // BONI CAST EP.01 — host question (off-screen voice) + Thiago answering, 2 cameras
 const FPS = 25;
@@ -72,6 +72,53 @@ const Badge: React.FC = () => {
   );
 };
 
+
+// BONI CAST opening cover (logo) while the host says "Oi, gente! Tá começando mais um BONI CAST!"
+const INTRO_END = 3.35;
+export const CastLogo: React.FC<{f: number; scale?: number}> = ({f, scale = 1}) => {
+  const pe = spr(f, 0.05, 11, 110), pw = spr(f, 0.45, 13, 120), ps = spr(f, 0.9, 14, 120);
+  const sweep = ((f * 2.6) % 140) - 20;
+  return (
+    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', transform: `scale(${scale})`}}>
+      <div style={{position: 'relative', width: 420, height: 420, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        {[0, 1, 2].map((k) => {
+          const w = ((f / FPS + k * 0.55) % 1.65) / 1.65;
+          return <div key={k} style={{position: 'absolute', width: 300 + 380 * w, height: 300 + 380 * w, borderRadius: '50%', border: `3px solid rgba(245,184,0,${0.55 * (1 - w) * pe})`}} />;
+        })}
+        <div style={{position: 'absolute', width: 520, height: 520, borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,190,60,.35), transparent 60%)', filter: 'blur(12px)', opacity: pe}} />
+        <Img src={staticFile('emblema.png')} style={{width: 330, height: 330, opacity: pe, transform: `scale(${0.6 + 0.4 * pe}) rotateY(${(1 - pe) * 160}deg)`, mixBlendMode: 'screen', WebkitMaskImage: 'radial-gradient(closest-side, #000 90%, transparent 100%)'}} />
+      </div>
+      <div style={{display: 'flex', alignItems: 'baseline', gap: 26, marginTop: -10, opacity: pw, transform: `translateY(${(1 - pw) * 40}px)`}}>
+        <span style={{...txt(150, '#ffffff'), letterSpacing: 6, textShadow: '0 0 30px rgba(255,255,255,.35), 0 4px 18px rgba(0,0,0,.8)'}}>BONI</span>
+        <div style={{perspective: 1200}}><Gold3D text="CAST" size={150} rotY={(1 - pw) * -90 + Math.sin(f / 14) * 5} rotX={-4} sweep={sweep} depth={18} /></div>
+      </div>
+      <div style={{display: 'flex', alignItems: 'center', gap: 18, marginTop: 14, opacity: ps}}>
+        <div style={{display: 'flex', gap: 5, alignItems: 'center', height: 40}}>
+          {Array.from({length: 9}, (_, i) => <div key={i} style={{width: 6, borderRadius: 3, background: GOLD, height: 8 + 26 * Math.abs(Math.sin(f / 3.2 + i * 0.8))}} />)}
+        </div>
+        <span style={{...txt(34, GOLD2, 500), letterSpacing: 6}}>PLANO DE SAÚDE SEM COMPLICAÇÃO</span>
+      </div>
+    </div>
+  );
+};
+
+const Intro: React.FC = () => {
+  const f = useCurrentFrame();
+  const t = f / FPS;
+  if (t > INTRO_END + 0.4) return null;
+  const out = interpolate(t, [INTRO_END - 0.05, INTRO_END + 0.35], [1, 0], cl);
+  const zoom = interpolate(t, [0, INTRO_END], [1.0, 1.06]) + (1 - out) * 0.35;
+  return (
+    <AbsoluteFill style={{opacity: out}}>
+      <AbsoluteFill style={{backdropFilter: 'blur(26px)', background: 'radial-gradient(ellipse at 50% 45%, rgba(20,14,4,.72), rgba(0,0,0,.94) 75%)'}} />
+      <Dust frame={f} />
+      <AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', transform: `scale(${zoom})`}}>
+        <CastLogo f={f} />
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
 // host question: off-screen voice, question on screen with a live waveform
 const Question: React.FC = () => {
   const f = useCurrentFrame();
@@ -79,16 +126,10 @@ const Question: React.FC = () => {
   if (t > A0 + 0.3) return null;
   const p = spr(f, 3.45, 14, 120);
   const out = interpolate(t, [A0 - 0.2, A0 + 0.2], [1, 0], cl);
-  const pi = Math.min(spr(f, 0.1, 12, 120), interpolate(t, [3.0, 3.4], [1, 0], cl));
   const lines: [number, React.ReactNode][] = [[6.1, <>"Tenho <span style={{color: GOLD}}>CNPJ</span>, mas pago</>], [8.3, <>plano <span style={{color: GOLD}}>pessoa física</span>.</>], [10.95, <>Tô <span style={{color: GOLD}}>pagando a mais</span>?"</>]];
   return (
     <>
       <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,.75) 75%)', opacity: out}} />
-      {/* show opener, while the host says "Tá começando mais um BONI CAST!" */}
-      <div style={{position: 'absolute', left: 0, right: 0, top: 1040, textAlign: 'center', opacity: pi, transform: `scale(${0.85 + 0.15 * pi})`}}>
-        <div style={{...txt(40, GOLD2, 500), letterSpacing: 8}}>COMEÇANDO MAIS UM</div>
-        <div style={{...txt(130), letterSpacing: 4}}>BONI <span style={{color: GOLD}}>CAST</span></div>
-      </div>
       <div style={{position: 'absolute', left: 60, right: 60, top: 1000, ...glass, padding: '26px 34px 30px', opacity: p * out, transform: `translateY(${(1 - p) * 80}px)`}}>
         <div style={{display: 'flex', alignItems: 'center', gap: 16, marginBottom: 14}}>
           <span style={{...txt(26, '#000'), textShadow: 'none', background: GOLD, borderRadius: 30, padding: '6px 18px'}}>PERGUNTA</span>
@@ -254,6 +295,7 @@ export const Cast: React.FC = () => {
       <AbsoluteFill style={{background: 'radial-gradient(ellipse at 50% 38%, rgba(0,0,0,0) 45%, rgba(0,0,0,.55) 100%)'}} />
       <Badge />
       <Question />
+      <Intro />
       <Chips />
       <BigWord />
       <Compare />
