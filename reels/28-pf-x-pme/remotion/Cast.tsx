@@ -40,11 +40,12 @@ const Cameras: React.FC = () => {
   const lateral = t < A0 || (idx >= 0 && CLIPS[idx][2]);
   const start = t < A0 ? 0 : A0 + CLIPS[Math.max(idx, 0)][1];
   // lateral camera is tighter (hides host mic), slow push-in inside each shot
-  const s = (lateral ? 1.14 : 1.0) + interpolate(t - start, [0, 9], [0, 0.05], cl);
+  // during the question: the approved photo itself, no tight crop (frame 0 of the HeyGen clip looked distorted)
+  const s = t < A0 ? interpolate(t, [0, A0], [1.0, 1.04]) : (lateral ? 1.14 : 1.0) + interpolate(t - start, [0, 9], [0, 0.05], cl);
   return (
     <AbsoluteFill style={{transform: `scale(${s})`, transformOrigin: lateral ? '420px 640px' : '540px 700px'}}>
       <Sequence durationInFrames={fr(A0)}>
-        <Img src={staticFile('ep1a_f0.png')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+        <Img src={staticFile('podcast-lateral.png')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
       </Sequence>
       {CLIPS.map(([file, s0], i) => (
         <Sequence key={file} from={fr(A0 + s0)} durationInFrames={fr(CLIP_END[i] - s0) + (i === 3 ? 0 : 1)}>
