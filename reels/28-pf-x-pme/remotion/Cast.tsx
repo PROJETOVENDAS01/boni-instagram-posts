@@ -5,7 +5,7 @@ import {Gold3D} from './Promo50';
 
 // BONI CAST EP.01 — host question (off-screen voice) + Thiago answering, 2 cameras
 const FPS = 25;
-const Q = 7.55; // question audio length (pergunta_f.mp3)
+const Q = 12.05; // host audio (pergunta_f.mp3 = official host voice): intro 0-3.2s, question 3.5-12s
 const A0 = Q + 0.25; // answer starts
 const ANS = 27.75;
 export const DUR28 = Math.round((A0 + ANS + 2.6) * FPS);
@@ -77,12 +77,18 @@ const Question: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / FPS;
   if (t > A0 + 0.3) return null;
-  const p = spr(f, 0.15, 14, 120);
+  const p = spr(f, 3.45, 14, 120);
   const out = interpolate(t, [A0 - 0.2, A0 + 0.2], [1, 0], cl);
-  const lines: [number, React.ReactNode][] = [[0.15, <>"Tenho <span style={{color: GOLD}}>CNPJ</span>, mas pago</>], [2.4, <>plano <span style={{color: GOLD}}>pessoa física</span>.</>], [5.6, <>Tô <span style={{color: GOLD}}>pagando a mais</span>?"</>]];
+  const pi = Math.min(spr(f, 0.1, 12, 120), interpolate(t, [3.0, 3.4], [1, 0], cl));
+  const lines: [number, React.ReactNode][] = [[6.1, <>"Tenho <span style={{color: GOLD}}>CNPJ</span>, mas pago</>], [8.3, <>plano <span style={{color: GOLD}}>pessoa física</span>.</>], [10.95, <>Tô <span style={{color: GOLD}}>pagando a mais</span>?"</>]];
   return (
     <>
       <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,.75) 75%)', opacity: out}} />
+      {/* show opener, while the host says "Tá começando mais um BONI CAST!" */}
+      <div style={{position: 'absolute', left: 0, right: 0, top: 1040, textAlign: 'center', opacity: pi, transform: `scale(${0.85 + 0.15 * pi})`}}>
+        <div style={{...txt(40, GOLD2, 500), letterSpacing: 8}}>COMEÇANDO MAIS UM</div>
+        <div style={{...txt(130), letterSpacing: 4}}>BONI <span style={{color: GOLD}}>CAST</span></div>
+      </div>
       <div style={{position: 'absolute', left: 60, right: 60, top: 1000, ...glass, padding: '26px 34px 30px', opacity: p * out, transform: `translateY(${(1 - p) * 80}px)`}}>
         <div style={{display: 'flex', alignItems: 'center', gap: 16, marginBottom: 14}}>
           <span style={{...txt(26, '#000'), textShadow: 'none', background: GOLD, borderRadius: 30, padding: '6px 18px'}}>PERGUNTA</span>
