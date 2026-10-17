@@ -24,3 +24,8 @@ HeyGen ~9 créditos (25,6 s). ElevenLabs: 3 fundos, ~US$ 0,10 no total (saiu bem
 
 ## Melhor horário sugerido
 Terça a quinta, entre 12h e 13h ou 19h e 20h.
+
+## Publicação
+- Reel publicado em 17/10/2026 às 19h02 pelo agendamento do Windsor (media id 17866288365679234), também no feed, capa aos 3 s.
+- Link: https://www.instagram.com/reel/DenImLiiQT9/
+- Texto alternativo: pôr pelo app.
