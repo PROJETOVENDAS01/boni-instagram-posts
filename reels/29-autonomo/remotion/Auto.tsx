@@ -4,7 +4,7 @@ import words from '../public/words29.json';
 import {Gold3D} from './Promo50';
 
 const FPS = 25;
-export const DUR29 = 750; // 25.6s fala + ~4.4s de encerramento
+export const DUR29 = 760; // 25.6s fala + ~4.4s de encerramento
 const DURF = DUR29;
 const GOLD = '#F5B800';
 const GOLD2 = '#FFD95A';
@@ -279,7 +279,7 @@ const EndCard: React.FC = () => {
           <span style={{fontFamily: F, fontWeight: 800, fontSize: 50, color: '#000'}}>Comenta AUTÔNOMO</span>
           <div style={{position: 'absolute', top: 0, bottom: 0, left: `${sweep}%`, width: '25%', background: 'linear-gradient(100deg, rgba(255,255,255,0), rgba(255,255,255,.7), rgba(255,255,255,0))'}} />
         </div>
-        <div style={{fontFamily: F, fontWeight: 700, fontSize: 36, color: '#fff', marginTop: 18}}>ou toque no <span style={{color: GOLD}}>Link na bio ↑</span></div>
+        <div style={{fontFamily: F, fontWeight: 700, fontSize: 36, color: '#fff', marginTop: 18}}>ou clique no <span style={{color: GOLD}}>link da bio ↑</span></div>
         <div style={{fontFamily: F, fontWeight: 500, fontSize: 28, color: GOLD2, marginTop: 10}}>O plano certo para o seu perfil</div>
         <div style={{fontFamily: F, fontWeight: 400, fontSize: 21, color: 'rgba(255,255,255,.78)', marginTop: 12}}>Carências, rede e valores variam por operadora e produto.</div>
       </div>
@@ -288,13 +288,13 @@ const EndCard: React.FC = () => {
 };
 
 // encerramento: tela da marca depois do "Comenta AUTÔNOMO"
-const OUT = 26.2;
+const OUT = 25.45; // logo depois do "autônomo"; o "ou clique no link da bio" entra sobre a tela da marca
 const Outro: React.FC = () => {
   const f = useCurrentFrame();
   if (f < fr(OUT)) return null;
   const k = f - fr(OUT);
-  const bg = interpolate(k, [0, 14], [0, 1], cl);
-  const p1 = sp(f, OUT + 0.3, 14, 110), p2 = sp(f, OUT + 0.8, 16, 120), p3 = sp(f, OUT + 1.3, 16, 120);
+  const bg = interpolate(k, [0, 7], [0, 1], cl);
+  const p1 = sp(f, OUT + 0.3, 14, 110), p2 = sp(f, OUT + 0.5, 16, 120), p3 = sp(f, OUT + 0.3, 16, 120);
   const sweep = interpolate(k, [10, 50], [-20, 130], cl);
   const glow = 0.5 + 0.2 * Math.sin(k / 6);
   return (
@@ -305,7 +305,7 @@ const Outro: React.FC = () => {
         <div style={{display: 'flex', justifyContent: 'center', marginTop: 20, opacity: p1, perspective: 900}}><Gold3D text="BONI" size={150} rotY={Math.sin(k / 20) * 8} sweep={sweep} /></div>
         <div style={{fontFamily: F, fontWeight: 600, fontSize: 38, letterSpacing: 4, color: '#fff', marginTop: 6, opacity: p2, transform: `translateY(${(1 - p2) * 30}px)`}}>CONSULTORIA EM PLANOS DE SAÚDE</div>
         <div style={{display: 'inline-block', marginTop: 50, padding: '14px 40px', borderRadius: 60, background: `linear-gradient(90deg, ${GOLD}, ${GOLD2})`, fontFamily: F, fontWeight: 800, fontSize: 48, color: '#000', opacity: p3, transform: `scale(${0.7 + 0.3 * p3})`, boxShadow: '0 0 50px rgba(245,184,0,.6)'}}>Comenta AUTÔNOMO</div>
-        <div style={{fontFamily: F, fontWeight: 700, fontSize: 36, color: '#fff', marginTop: 22, opacity: p3}}>ou toque no <span style={{color: GOLD}}>Link na bio ↑</span></div>
+        <div style={{fontFamily: F, fontWeight: 700, fontSize: 40, color: '#fff', marginTop: 22, opacity: p3}}>ou clique no <span style={{color: GOLD}}>link da bio ↑</span></div>
         <div style={{fontFamily: F, fontWeight: 400, fontSize: 22, color: 'rgba(255,255,255,.75)', marginTop: 40, opacity: p3}}>Carências, rede e valores variam por operadora e produto.</div>
       </div>
     </AbsoluteFill>
@@ -314,6 +314,7 @@ const Outro: React.FC = () => {
 
 const Sfx: React.FC = () => (
   <>
+    <Sequence from={fr(23.71)}><Audio src={staticFile('fim29.wav')} /></Sequence>
     {SC.slice(1).map((s, i) => <Sequence key={'w' + i} from={Math.max(0, fr(s.s) - 2)}><Audio src={staticFile('whoosh.wav')} volume={0.35} /></Sequence>)}
     {[T.tres, T.n180, OUT + 0.3].map((t, i) => <Sequence key={'b' + i} from={fr(t)}><Audio src={staticFile('boom.wav')} volume={0.5} /></Sequence>)}
     {[T.cart, T.dipl, T.emp, T.fam, T.mostro].map((t, i) => <Sequence key={'p' + i} from={fr(t)}><Audio src={staticFile('pop.wav')} volume={0.4} /></Sequence>)}
