@@ -4,7 +4,7 @@ import words from '../public/words29.json';
 import {Gold3D} from './Promo50';
 
 const FPS = 25;
-export const DUR29 = 668;
+export const DUR29 = 750; // 25.6s fala + ~4.4s de encerramento
 const DURF = DUR29;
 const GOLD = '#F5B800';
 const GOLD2 = '#FFD95A';
@@ -56,7 +56,7 @@ const Avatar: React.FC = () => {
   return (
     <AbsoluteFill style={{clipPath: `circle(${R}px at ${CIRC.cx}px ${interpolate(p, [0, 1], [960, CIRC.cy])}px)`}}>
       <AbsoluteFill style={{transform: `translate(${tx}px,${ty}px) scale(${scale})`}}>
-        <OffthreadVideo src={staticFile('avatar29.mp4')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+        {f < fr(25.5) ? <OffthreadVideo src={staticFile('avatar29.mp4')} style={{width: '100%', height: '100%', objectFit: 'cover'}} /> : <Img src={staticFile('avatar29_last.png')} style={{width: '100%', height: '100%', objectFit: 'cover'}} />}
       </AbsoluteFill>
     </AbsoluteFill>
   );
@@ -287,10 +287,35 @@ const EndCard: React.FC = () => {
   );
 };
 
+// encerramento: tela da marca depois do "Comenta AUTÔNOMO"
+const OUT = 26.2;
+const Outro: React.FC = () => {
+  const f = useCurrentFrame();
+  if (f < fr(OUT)) return null;
+  const k = f - fr(OUT);
+  const bg = interpolate(k, [0, 14], [0, 1], cl);
+  const p1 = sp(f, OUT + 0.3, 14, 110), p2 = sp(f, OUT + 0.8, 16, 120), p3 = sp(f, OUT + 1.3, 16, 120);
+  const sweep = interpolate(k, [10, 50], [-20, 130], cl);
+  const glow = 0.5 + 0.2 * Math.sin(k / 6);
+  return (
+    <AbsoluteFill style={{background: `rgba(0,0,0,${bg})`, alignItems: 'center', justifyContent: 'center'}}>
+      <AbsoluteFill style={{background: `radial-gradient(circle at 50% 42%, rgba(245,184,0,${0.22 * bg}), rgba(0,0,0,0) 55%)`}} />
+      <div style={{textAlign: 'center', marginTop: -120}}>
+        <Img src={staticFile('emblema.png')} style={{width: 260, height: 260, objectFit: 'contain', opacity: p1, mixBlendMode: 'screen', WebkitMaskImage: 'radial-gradient(circle, black 55%, transparent 72%)', transform: `scale(${0.6 + 0.4 * p1}) rotate(${(1 - p1) * -25}deg)`, filter: `drop-shadow(0 0 ${40 * glow}px rgba(245,184,0,.7))`}} />
+        <div style={{display: 'flex', justifyContent: 'center', marginTop: 20, opacity: p1, perspective: 900}}><Gold3D text="BONI" size={150} rotY={Math.sin(k / 20) * 8} sweep={sweep} /></div>
+        <div style={{fontFamily: F, fontWeight: 600, fontSize: 38, letterSpacing: 4, color: '#fff', marginTop: 6, opacity: p2, transform: `translateY(${(1 - p2) * 30}px)`}}>CONSULTORIA EM PLANOS DE SAÚDE</div>
+        <div style={{display: 'inline-block', marginTop: 50, padding: '14px 40px', borderRadius: 60, background: `linear-gradient(90deg, ${GOLD}, ${GOLD2})`, fontFamily: F, fontWeight: 800, fontSize: 48, color: '#000', opacity: p3, transform: `scale(${0.7 + 0.3 * p3})`, boxShadow: '0 0 50px rgba(245,184,0,.6)'}}>Comenta AUTÔNOMO</div>
+        <div style={{fontFamily: F, fontWeight: 700, fontSize: 36, color: '#fff', marginTop: 22, opacity: p3}}>ou toque no <span style={{color: GOLD}}>Link na bio ↑</span></div>
+        <div style={{fontFamily: F, fontWeight: 400, fontSize: 22, color: 'rgba(255,255,255,.75)', marginTop: 40, opacity: p3}}>Carências, rede e valores variam por operadora e produto.</div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 const Sfx: React.FC = () => (
   <>
     {SC.slice(1).map((s, i) => <Sequence key={'w' + i} from={Math.max(0, fr(s.s) - 2)}><Audio src={staticFile('whoosh.wav')} volume={0.35} /></Sequence>)}
-    {[T.tres, T.n180].map((t, i) => <Sequence key={'b' + i} from={fr(t)}><Audio src={staticFile('boom.wav')} volume={0.5} /></Sequence>)}
+    {[T.tres, T.n180, OUT + 0.3].map((t, i) => <Sequence key={'b' + i} from={fr(t)}><Audio src={staticFile('boom.wav')} volume={0.5} /></Sequence>)}
     {[T.cart, T.dipl, T.emp, T.fam, T.mostro].map((t, i) => <Sequence key={'p' + i} from={fr(t)}><Audio src={staticFile('pop.wav')} volume={0.4} /></Sequence>)}
   </>
 );
@@ -314,6 +339,7 @@ export const Auto: React.FC = () => (
     <Captions />
     <EndCard />
     <Particles from={T.comenta} to={DURF / FPS} cx={540} cy={1150} />
+    <Outro />
     <Audio src={staticFile('music.mp3')} volume={(x) => interpolate(x, [0, 10, DURF - 20, DURF], [0, 0.1, 0.1, 0], cl)} />
     <Sfx />
   </AbsoluteFill>
