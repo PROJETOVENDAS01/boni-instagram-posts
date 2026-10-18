@@ -98,6 +98,7 @@ slide-1..N.png, legenda.txt, alt-text.txt, REVISAO.md
 - Hospedagem das imagens: repositório público github.com/PROJETOVENDAS01/boni-instagram-posts (pastas 02-5-motivos/ e stories/NN-destaque/). A API do Instagram só aceita imagem por link público em JPEG (até 8 MB); feed 4:5, stories 9:16.
 - Converter PNG para JPEG (qualidade ~92), subir no repositório e usar o link https://raw.githubusercontent.com/PROJETOVENDAS01/boni-instagram-posts/main/<pasta>/<arquivo>.jpg.
 - Publicação: Windsor.ai, conector instagram, conta 17841426832415539 (@boniconsultorsaude). Ações: create_carousel_post (2 a 10 imagens + legenda), create_image_post, create_story (uma imagem por chamada, sem legenda). Sobe na hora, sem agendamento; desfazer só apagando pelo app.
+- Windsor tem 2 contas de Instagram (plano pago, 18/10/2026): @boniconsultorsaude (17841426832415539) e @ofertasclickstore (17841468845482714, outro projeto). Neste repositório publicar SEMPRE e só no @boniconsultorsaude, passando o id da conta em toda chamada e em todo agendamento (Thiago, 18/10/2026).
 - Texto alternativo não vai pela API: adicionar pelo app (Editar > Texto alternativo).
 - Autorização do Windsor: tem que ser via "Authorize via Instagram" com o login do @boniconsultorsaude (a via Facebook não dá permissão de publicar).
 - Página do Facebook: BONI - Consultoria em Planos de Saúde (criada pelo Facebook pessoal do Thiago e vinculada ao Instagram). A Página antiga "BONI - Planos de Saúde" e o portfólio ficaram sem uso (bloqueio "pedido pendente" no Meta Business Suite).
