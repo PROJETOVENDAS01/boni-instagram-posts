@@ -5,8 +5,8 @@ import {Gold3D} from './Promo50';
 
 // Reel 31 "Quanto custa ir ao dentista sem plano?" — tela dividida: b-roll em cima, Thiago embaixo.
 const FPS = 25;
-const VOZ = 28.84;
-const OUT = 28.75; // tela da marca depois da fala
+const VOZ = 33.5;
+const OUT = 33.41; // tela da marca depois da fala
 export const DUR31 = Math.round((OUT + 3.4) * FPS);
 const GOLD = '#F5B800', GOLD2 = '#FFD95A', RED = '#FF5A4E', F = 'Poppins';
 const SPLIT = 940; // linha que divide os quadros
@@ -27,20 +27,21 @@ const BROLL: [number, number, string, number][] = [
   [2.85, 5.2, 'p31/d2-limpeza.mp4', 0],
   [5.2, 7.85, 'p31/d3-restauracao.mp4', 0],
   [7.85, 9.5, 'p31/d4-raiox.mp4', 0],
-  [9.5, 11.9, 'p31/d5-dinheiro.mp4', 0],
-  [11.9, 17.6, 'p31/d6-clinica.mp4', 0],
-  [17.6, 21.25, 'p31/d7-implante.mp4', 0],
-  [21.25, 24.15, 'p31/d8-relogio.mp4', 0],
-  [24.15, 99, 'p31/d1-cadeira.mp4', 0.6],
+  [9.5, 12.1, 'p31/d5-dinheiro.mp4', 0],
+  [12.1, 16.2, 'p31/d6-clinica.mp4', 0],
+  [16.2, 20.05, 'p31/d2-limpeza.mp4', 1.0],
+  [20.05, 25.75, 'p31/d7-implante.mp4', 0],
+  [25.75, 28.85, 'p31/d8-relogio.mp4', 0],
+  [28.85, 99, 'p31/d1-cadeira.mp4', 0.6],
 ];
 // Thiago embaixo: 4 trechos alternando os visuais (áudio vem do voz.wav)
 const AV: [number, number, string, number][] = [
   [0, 9.46, 'p31/av1.mp4', 0],
-  [9.46, 17.55, 'p31/av2.mp4', 0],
-  [17.55, 24.15, 'p31/av3.mp4', 0],
-  [24.15, 99, 'p31/av4.mp4', 0],
+  [9.46, 20.03, 'p31/av2b.mp4', 0],
+  [20.03, 28.81, 'p31/av3b.mp4', 0],
+  [28.81, 99, 'p31/av4.mp4', 0],
 ];
-const FACE: Record<string, [number, number]> = {'p31/av1.mp4': [640, 1.0], 'p31/av3.mp4': [640, 1.0], 'p31/av2.mp4': [585, 1.22], 'p31/av4.mp4': [585, 1.22]}; // [rosto y, zoom]
+const FACE: Record<string, [number, number]> = {'p31/av1.mp4': [640, 1.0], 'p31/av3b.mp4': [640, 1.0], 'p31/av2b.mp4': [585, 1.22], 'p31/av4.mp4': [585, 1.22]}; // [rosto y, zoom]
 
 const Broll: React.FC = () => (
   <>
@@ -130,7 +131,7 @@ const LINES: [number, string, string, string][] = [
 ];
 const Bill: React.FC = () => {
   const f = useCurrentFrame();
-  const a = fr(2.9), b = fr(11.85);
+  const a = fr(2.9), b = fr(12.0);
   if (f < a || f > b + 8) return null;
   const o = interpolate(f, [b, b + 8], [1, 0], cl);
   const p = sp(f, 2.9, 16, 120);
@@ -179,12 +180,18 @@ const Lista: React.FC<{itens: [number, string][]; mark: string; cor: string}> = 
     </div>
   );
 };
+const Sub: React.FC<{at: number; children: React.ReactNode}> = ({at, children}) => {
+  const f = useCurrentFrame();
+  if (f < fr(at)) return null;
+  const q = sp(f, at, 13, 170);
+  return <div style={{fontSize: 34, marginTop: 10, color: GOLD2, opacity: q, transform: `translateY(${(1 - q) * 14}px)`}}>{children}</div>;
+};
 const Cover: React.FC = () => (
-  <Tag from={11.98} to={17.55} color="#4BD37B" top={300}><div style={{fontSize: 34, letterSpacing: 4, color: '#9ff0bc'}}>O PLANO ODONTO COBRE</div><Lista itens={[[13.13, 'Limpeza'], [13.86, 'Restauração'], [14.88, 'Canal'], [15.78, 'Extração'], [16.63, 'Raio-x']]} mark="✓" cor="#4BD37B" /></Tag>
+  <Tag from={12.2} to={19.95} color="#4BD37B" top={300}><div style={{fontSize: 34, letterSpacing: 4, color: '#9ff0bc'}}>O PLANO ODONTO COBRE</div><Lista itens={[[13.4, 'Limpeza'], [14.08, 'Restauração'], [15.02, 'Canal'], [15.7, 'Extração'], [16.43, 'Raio-x'], [17.03, '+ outras obrigatórias pelo rol da ANS']]} mark="✓" cor="#4BD37B" /></Tag>
 );
 const Captions: React.FC = () => {
   const f = useCurrentFrame(); const t = f / FPS;
-  if (t > 25.95) return null;
+  if (t > 30.61) return null;
   const chunks: W[][] = [];
   const segs = Array.from(new Set(WS.map((w) => w.seg)));
   segs.forEach((sg) => { const ws = WS.filter((w) => w.seg === sg); for (let i = 0; i < ws.length; i += 3) chunks.push(ws.slice(i, i + 3)); });
@@ -196,7 +203,7 @@ const Captions: React.FC = () => {
     <div style={{position: 'absolute', left: 50, right: 50, top: SPLIT + 26, display: 'flex', justifyContent: 'center', flexWrap: 'wrap', opacity: p, transform: `scale(${0.88 + 0.12 * p})`}}>
       {c.map((w, i) => {
         const act = t >= w.s - 0.02 && t < w.e + 0.08;
-        const key = /\d|mil|R\$|dentista|plano|odonto|limpeza|restaura|canal|extração|raio|implante|aparelho|clareamento|urgência|carência|DENTE/i.test(w.t);
+        const key = /\d|mil|R\$|dentista|plano|odonto|limpeza|restaura|canal|extração|raio|implante|aparelho|clareamento|urgência|carência|DENTE|ANS|obrigatórias|variar|contratado/i.test(w.t);
         return <span key={i} style={{fontFamily: F, fontWeight: 800, fontSize: 56, margin: '0 13px', textTransform: 'uppercase', color: key ? GOLD : '#fff', transform: `scale(${act ? 1.1 : 1})`, display: 'inline-block', textShadow: '0 4px 0 rgba(0,0,0,.95), 0 0 24px rgba(0,0,0,.95)'}}>{w.t.replace(/[.,:?]$/, '')}</span>;
       })}
     </div>
@@ -204,12 +211,12 @@ const Captions: React.FC = () => {
 };
 const Footer: React.FC = () => {
   const f = useCurrentFrame();
-  const o = interpolate(f, [fr(2.9), fr(3.3), fr(25.8), fr(26.2)], [0, 1, 1, 0], cl);
-  return <div style={{position: 'absolute', left: 40, right: 40, top: SPLIT - 52, textAlign: 'center', opacity: o, fontFamily: F, fontWeight: 500, fontSize: 19, color: 'rgba(255,255,255,.88)', textShadow: '0 1px 6px #000'}}>Valores médios de referência no particular, pesquisados em 2025–2026. Podem variar conforme hospital, região e cada caso.</div>;
+  const o = interpolate(f, [fr(2.9), fr(3.3), fr(30.46), fr(30.86)], [0, 1, 1, 0], cl);
+  return <div style={{position: 'absolute', left: 40, right: 40, top: SPLIT - 52, textAlign: 'center', opacity: o, fontFamily: F, fontWeight: 500, fontSize: 19, color: 'rgba(255,255,255,.88)', textShadow: '0 1px 6px #000'}}>Valores médios de referência no particular, pesquisados em 2025–2026. Podem variar conforme clínica, região e cada caso.</div>;
 };
 const EndCard: React.FC = () => {
   const f = useCurrentFrame();
-  const a = 25.95;
+  const a = 30.61;
   if (f < fr(a) || f > fr(OUT) + 4) return null;
   const p = sp(f, a, 16, 120);
   const sweep = interpolate((f - fr(a)) % 34, [0, 20], [-40, 140], cl);
@@ -240,7 +247,7 @@ const Outro: React.FC = () => {
         <div style={{fontWeight: 600, fontSize: 36, letterSpacing: 4, color: '#fff', marginTop: 6, opacity: p3}}>CONSULTORIA EM PLANOS DE SAÚDE</div>
         <div style={{display: 'inline-block', marginTop: 44, padding: '14px 40px', borderRadius: 60, background: `linear-gradient(90deg, ${GOLD}, ${GOLD2})`, fontWeight: 800, fontSize: 48, color: '#000', opacity: p3}}>Comenta DENTE</div>
         <div style={{fontWeight: 700, fontSize: 38, color: '#fff', marginTop: 20, opacity: p3}}>ou clique no <span style={{color: GOLD}}>link da bio ↑</span></div>
-        <div style={{fontWeight: 400, fontSize: 21, color: 'rgba(255,255,255,.75)', marginTop: 36, opacity: p3, padding: '0 60px'}}>Valores médios de referência no particular, pesquisados em 2025–2026. Podem variar conforme hospital, região e cada caso. Carências, rede e valores variam por operadora e produto.</div>
+        <div style={{fontWeight: 400, fontSize: 21, color: 'rgba(255,255,255,.75)', marginTop: 36, opacity: p3, padding: '0 60px'}}>Valores médios de referência no particular, pesquisados em 2025–2026. Podem variar conforme clínica, região e cada caso. Carências, rede e valores variam por operadora e produto.</div>
       </div>
     </AbsoluteFill>
   );
@@ -254,7 +261,7 @@ const Flash: React.FC = () => {
 const Sfx: React.FC = () => (
   <>
     {BROLL.slice(1).map(([s], i) => <Sequence key={'w' + i} from={Math.max(0, fr(s) - 2)}><Audio src={staticFile('whoosh.wav')} volume={0.25} /></Sequence>)}
-    {[9.55, 17.74, 21.5].map((t, i) => <Sequence key={'b' + i} from={fr(t)}><Audio src={staticFile('boom.wav')} volume={0.5} /></Sequence>)}
+    {[9.55, 20.13, 25.9].map((t, i) => <Sequence key={'b' + i} from={fr(t)}><Audio src={staticFile('boom.wav')} volume={0.5} /></Sequence>)}
     {LINES.map(([t], i) => <Sequence key={'p' + i} from={fr(t)}><Audio src={staticFile('pop.wav')} volume={0.5} /></Sequence>)}
     {[OUT + 0.2].map((t, i) => <Sequence key={'o' + i} from={fr(t)}><Audio src={staticFile('boom.wav')} volume={0.4} /></Sequence>)}
   </>
@@ -270,9 +277,9 @@ export const Dente: React.FC = () => (
     <Hook />
     <Bill />
     <Cover />
-    <Tag from={17.74} to={21.2} color={RED}><div style={{fontSize: 32, letterSpacing: 4, color: '#ffb3ad'}}>COSTUMAM FICAR DE FORA</div><Lista itens={[[17.74, 'Implante'], [18.47, 'Aparelho'], [19.19, 'Clareamento']]} mark="✗" cor={RED} /></Tag>
-    <Tag from={21.33} to={24.1}><div style={{fontSize: 34, letterSpacing: 4, color: GOLD2}}>URGÊNCIA: CARÊNCIA DE SÓ</div><div style={{display: 'flex', justifyContent: 'center', perspective: 900}}><Gold3D text="24 HORAS" size={110} rotY={0} sweep={60} /></div></Tag>
-    <Tag from={24.25} to={25.9}><div style={{fontSize: 56}}>QUER SABER QUANTO<br />FICA O SEU?</div></Tag>
+    <Tag from={20.13} to={25.6}><div style={{fontSize: 32, letterSpacing: 4, color: GOLD2}}>PODEM VARIAR</div><Lista itens={[[20.34, 'Implante'], [20.98, 'Aparelho'], [21.75, 'Clareamento']]} mark="•" cor={GOLD2} /><Sub at={22.47}>conforme o tipo de plano contratado</Sub></Tag>
+    <Tag from={25.89} to={28.75}><div style={{fontSize: 34, letterSpacing: 4, color: GOLD2}}>URGÊNCIA: CARÊNCIA DE SÓ</div><div style={{display: 'flex', justifyContent: 'center', perspective: 900}}><Gold3D text="24 HORAS" size={110} rotY={0} sweep={60} /></div></Tag>
+    <Tag from={28.91} to={30.56}><div style={{fontSize: 56}}>QUER SABER QUANTO<br />FICA O SEU?</div></Tag>
     <EndCard />
     <Footer />
     <Captions />
