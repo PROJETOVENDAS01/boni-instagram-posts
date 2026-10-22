@@ -1,6 +1,6 @@
 # Série "Quanto custa sem plano?" – referências de preço (pesquisa 22/10/2026)
 
-Regra na tela: "valores de referência, variam por hospital e região". Sem nome/logo de hospital (exceto quando o Thiago pedir). Conferir as fontes de novo antes de gerar cada vídeo.
+Rodapé aprovado pelo Thiago (22/10/2026, valores mantidos): "Valores médios de referência no particular, pesquisados em 2025–2026. Podem variar conforme hospital, região e cada caso." Sem nome/logo de hospital (exceto quando o Thiago pedir).
 
 ## Parto (RJ, forte)
 - Hospital, normal ou cesárea, até 3 diárias: R$ 12.500–14.310 (Perinatal Glória, tabela 2026) – https://matwp.rededorsaoluiz.com.br/wp-content/uploads/2026/04/PROJETO-NASCER-Custos-hospitalares-Honorarios-Consultas-Gloria_2026.pdf
