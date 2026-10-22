@@ -25,3 +25,14 @@ Rodapé aprovado pelo Thiago (22/10/2026, valores mantidos): "Valores médios de
 - Pronto-socorro: ~R$ 800; tomografia ~R$ 750 – https://exodosaude.com.br/a-conta-que-ninguem-quer-fazer-quanto-custa-ficar-doente-sem-um-plano-de-saude/
 - Ressonância: R$ 720–790 por região – https://meutudo.com.br/blog/quanto-custa-uma-ressonancia-magnetica/ (2024)
 - Hemograma: R$ 27–50 – https://cidesp.com.br/conteudo/tabela-de-precos-de-exames-laboratoriais-particular-2026
+
+## Odonto (pesquisa 22/10/2026) – Reel previsto para seg 09/11
+- Consulta RJ: a partir de R$ 150–200 (Doctoralia/WhatClinic)
+- Limpeza RJ: R$ 350–600 – https://whatclinic.com/dentists/brazil/rio-de-janeiro/hygienist-session (out/2026)
+- Restauração: R$ 90–350 – Doctoralia SP / Saber Tecnologias (mai/2026)
+- Canal de molar RJ: R$ 990–1.200 – https://whatclinic.com/dentists/brazil/rio-de-janeiro/molar-root-canal (out/2026)
+- Extração de siso RJ: R$ 750–2.500 – https://whatclinic.com/dentists/brazil/rio-de-janeiro/extractions
+- Clareamento: R$ 900–2.000 (consultório) – Catraca Livre jan/2026; implante RJ R$ 3.500–7.843 (só contexto, costuma não ter cobertura)
+- Plano odonto: média de mercado ~R$ 19/mês (Sinog, Consumidor Moderno, dez/2024) – inclui coletivos; individual costuma custar mais
+- Lei 9.656/98 art. 12 IV/V: cobre consultas, exames (raio-x), limpeza, restauração, canal, pequenas cirurgias (extração); carência máx. 24h urgência, 180 dias demais
+- Conta sugerida: 1 ano sem plano (2 limpezas + 2 restaurações + 1 canal) = a partir de ~R$ 1.930
