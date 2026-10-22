@@ -13,3 +13,6 @@
 
 ## Custo
 - HeyGen: ~10 créditos (versão 1) + ~7 créditos (refação do meio, 19,4 s). ElevenLabs: 8 clipes Kling, ~US$ 3,10.
+
+## Agendado
+- Publicação automática em 09/11/2026 às 19h30 (BRT) no @boniconsultorsaude (conta 17841426832415539), tarefa agendada trig_01HyYHR1MSzmECsnCFdeVU36. "Pode agendar" do Thiago em 22/10.
