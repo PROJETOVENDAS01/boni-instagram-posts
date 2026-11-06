@@ -130,7 +130,7 @@ export const BateTela: React.FC<BTProps> = (p) => {
       </Sequence>
       <AbsoluteFill style={{background: `rgba(255,244,210,${flash})`, pointerEvents: 'none'}} />
       <Sequence from={fr(p.knockAt)} durationInFrames={20}><Audio src={staticFile('bt/knock.wav')} /></Sequence>
-      <Audio src={staticFile('bt/bt-trilha.mp3')} volume={music} />
+      <Audio src={staticFile('bt/bt-trilha-long.mp3')} volume={music} />
     </AbsoluteFill>
   );
 };
