@@ -24,6 +24,7 @@ export type BTProps = {
   knockAt: number;     // quando o dedo chega na tela (s, na composição)
   vo: string;          // narração do gancho
   voDur: number;       // duração da narração
+  holdAt?: number;     // segundo do clipe do toque em que a mão congela (1 toque só)
   freezeAt?: number;   // quadro da fala para congelar na saída
   tDest: number; tB: number; tSub: number; // tempos das palavras na narração
 };
@@ -96,7 +97,9 @@ export const BateTela: React.FC<BTProps> = (p) => {
       {/* 1. toque na tela */}
       <Sequence durationInFrames={s1}>
         <AbsoluteFill style={{transform: `translate(${sx}px,${sy}px) scale(${1 + k * 0.06})`, transformOrigin: '50% 35%'}}>
-          <OffthreadVideo src={staticFile(`bt/${p.look}-toque.mp4`)} muted startFrom={fr(p.toqueIni)} style={cover} />
+          {p.holdAt !== undefined && f >= fr(p.holdAt - p.toqueIni)
+            ? <Freeze frame={fr(p.holdAt - p.toqueIni)}><OffthreadVideo src={staticFile(`bt/${p.look}-toque.mp4`)} muted startFrom={fr(p.toqueIni)} style={cover} /></Freeze>
+            : <OffthreadVideo src={staticFile(`bt/${p.look}-toque.mp4`)} muted startFrom={fr(p.toqueIni)} style={cover} />}
         </AbsoluteFill>
       </Sequence>
       {/* 2. fala */}
