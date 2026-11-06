@@ -24,6 +24,7 @@ export type BTProps = {
   knockAt: number;     // quando o dedo chega na tela (s, na composição)
   vo: string;          // narração do gancho
   voDur: number;       // duração da narração
+  tip?: [number, number]; // ponta do dedo (% x, % y) no quadro com zoom: onde nasce a onda de impacto
   punch?: boolean;     // zoom rápido na mão no instante do toque (mão 'encosta' na lente)
   holdAt?: number;     // segundo do clipe do toque em que a mão congela (1 toque só)
   freezeAt?: number;   // quadro da fala para congelar na saída
@@ -34,7 +35,7 @@ export type BTProps = {
 const VO_INI = 0.45;          // narração entra depois da transição
 const TR = 15;                // frames de transição (dissolve)
 const T_APONTA = 3.3;         // clipe apontando: a partir de 1.8s do original
-const tHook = (p: BTProps) => VO_INI + p.voDur + 0.5;
+const tHook = (p: BTProps) => VO_INI + p.voDur + 1.5; // gancho fica mais tempo na tela depois da narração
 export const durBT = (p: BTProps) => fr(p.toqueDur) + fr(p.falaDur) + fr(tHook(p)) + fr(T_APONTA);
 
 const cover: React.CSSProperties = {width: '100%', height: '100%', objectFit: 'cover'};
@@ -98,7 +99,7 @@ export const BateTela: React.FC<BTProps> = (p) => {
       <style>{fontCss}</style>
       {/* 1. toque na tela */}
       <Sequence durationInFrames={s1}>
-        <AbsoluteFill style={{transform: `translate(${sx}px,${sy}px) scale(${(1 + k * 0.06) * (p.punch ? interpolate(f, [fr(p.knockAt) - 4, fr(p.knockAt) + 3], [1, 1.55], {...cl, easing: Easing.out(Easing.cubic)}) : 1)})`, transformOrigin: p.punch ? '38% 52%' : '50% 35%'}}>
+        <AbsoluteFill style={{transform: `translate(${sx}px,${sy}px) scale(${(1 + k * (p.punch ? 0.11 : 0.06)) * (p.punch ? interpolate(f, [fr(p.knockAt) - 4, fr(p.knockAt) + 3], [1, 1.55], {...cl, easing: Easing.out(Easing.cubic)}) : 1)})`, transformOrigin: p.punch ? '38% 52%' : '50% 35%'}}>
           {p.holdAt !== undefined && f >= fr(p.holdAt - p.toqueIni)
             ? <Freeze frame={fr(p.holdAt - p.toqueIni)}><OffthreadVideo src={staticFile(`bt/${p.look}-toque.mp4`)} muted startFrom={fr(p.toqueIni)} style={cover} /></Freeze>
             : <OffthreadVideo src={staticFile(`bt/${p.look}-toque.mp4`)} muted startFrom={fr(p.toqueIni)} style={cover} />}
@@ -133,6 +134,17 @@ export const BateTela: React.FC<BTProps> = (p) => {
         </div>
         </AbsoluteFill>
       </Sequence>
+      {p.tip && [p.knockAt - 0.1, p.knockAt + 0.13].map((t, i) => {
+        const d = f - fr(t);
+        if (d < 0 || d > 10) return null;
+        const r = 70 + d * 46;
+        return (
+          <React.Fragment key={i}>
+            <div style={{position: 'absolute', left: `${p.tip![0]}%`, top: `${p.tip![1]}%`, width: r * 2, height: r * 2, marginLeft: -r, marginTop: -r, borderRadius: '50%', border: `${18 - d * 1.3}px solid rgba(255,244,200,${1 - d / 11})`, boxShadow: `0 0 70px rgba(245,184,0,${0.95 - d / 12}), inset 0 0 50px rgba(255,236,170,${0.6 - d / 18})`}} />
+            {d < 3 && <AbsoluteFill style={{background: `rgba(255,255,255,${0.28 * (1 - d / 3)})`}} />}
+          </React.Fragment>
+        );
+      })}
       <AbsoluteFill style={{background: `rgba(255,244,210,${flash})`, pointerEvents: 'none'}} />
       <Sequence from={fr(kt)} durationInFrames={20}><Audio src={staticFile('bt/knock.wav')} /></Sequence>
       <Audio src={staticFile('bt/bt-trilha-long.mp3')} volume={music} />
