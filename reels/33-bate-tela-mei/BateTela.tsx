@@ -33,9 +33,10 @@ export type BTProps = {
 
 // tempos (segundos)
 const VO_INI = 0.45;          // narração entra depois da transição
-const TR = 15;                // frames de transição (dissolve)
+const TR = 15;
+const TR2 = 26;               // dissolve mais lento do gancho para a cena final                // frames de transição (dissolve)
 const T_APONTA = 3.3;         // clipe apontando: a partir de 1.8s do original
-const tHook = (p: BTProps) => VO_INI + p.voDur + 1.5; // gancho fica mais tempo na tela depois da narração
+const tHook = (p: BTProps) => VO_INI + p.voDur + 3.2; // gancho fica parado na tela depois da narração, tempo de ler
 export const durBT = (p: BTProps) => fr(p.toqueDur) + fr(p.falaDur) + fr(tHook(p)) + fr(T_APONTA);
 
 const cover: React.CSSProperties = {width: '100%', height: '100%', objectFit: 'cover'};
@@ -115,13 +116,13 @@ export const BateTela: React.FC<BTProps> = (p) => {
         <Legenda text={p.fala} top={1240} />
       </Sequence>
       {/* 3. ele saiu: cenário vazio + gancho */}
-      <Sequence from={s2} durationInFrames={s3 - s2 + TR}>
+      <Sequence from={s2} durationInFrames={s3 - s2 + TR2}>
         <AbsoluteFill style={{opacity: fadeIn(s2)}}><Hook {...p} /></AbsoluteFill>
         <Sequence from={fr(VO_INI)}><Audio src={staticFile(`bt/${p.vo}`)} /></Sequence>
       </Sequence>
       {/* 4. volta e aponta pro CTA */}
       <Sequence from={s3}>
-        <AbsoluteFill style={{opacity: fadeIn(s3)}}>
+        <AbsoluteFill style={{opacity: interpolate(f, [s3, s3 + TR2], [0, 1], cl)}}>
         <OffthreadVideo src={staticFile(`bt/${p.look}-aponta.mp4`)} muted startFrom={fr(1.8)} style={cover} />
         <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 80%)'}} />
         <div style={{position: 'absolute', top: 1190, left: 0, right: 0, display: 'flex', justifyContent: 'center', transform: `scale(${(0.5 + 0.5 * cta) * pulse})`, opacity: Math.min(1, cta * 2)}}>
