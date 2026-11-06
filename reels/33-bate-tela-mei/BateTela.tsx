@@ -80,7 +80,8 @@ export const BateTela: React.FC<BTProps> = (p) => {
   const fadeIn = (at: number) => interpolate(f, [at, at + TR], [0, 1], cl);
   // "batidas" na tela: tremor + zoom no 1.4s e 1.63s do vídeo
   const knock = (t: number) => { const d = f - fr(t); return d >= 0 && d < 6 ? (6 - d) / 6 : 0; };
-  const k = Math.max(knock(p.knockAt), knock(p.knockAt + 0.23));
+  const kt = p.punch ? p.knockAt - 0.1 : p.knockAt; // com zoom, o golpe visual começa antes do fim da rampa
+  const k = Math.max(knock(kt), knock(kt + 0.23));
   const sx = k * 22 * (random('x' + f) - 0.5), sy = k * 22 * (random('y' + f) - 0.5);
   // flashes nas trocas
   const flashAt = (at: number) => { const d = f - at; return d >= 0 && d < 7 ? interpolate(d, [0, 7], [0.85, 0]) : 0; };
@@ -133,7 +134,7 @@ export const BateTela: React.FC<BTProps> = (p) => {
         </AbsoluteFill>
       </Sequence>
       <AbsoluteFill style={{background: `rgba(255,244,210,${flash})`, pointerEvents: 'none'}} />
-      <Sequence from={fr(p.knockAt)} durationInFrames={20}><Audio src={staticFile('bt/knock.wav')} /></Sequence>
+      <Sequence from={fr(kt)} durationInFrames={20}><Audio src={staticFile('bt/knock.wav')} /></Sequence>
       <Audio src={staticFile('bt/bt-trilha-long.mp3')} volume={music} />
     </AbsoluteFill>
   );
