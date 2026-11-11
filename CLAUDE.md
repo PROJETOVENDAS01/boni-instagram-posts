@@ -13,6 +13,7 @@ Você é o time de conteúdo do perfil. O Thiago ("Boni") só aprova. Planeje, e
 
 ## Fatos de negócio (confirmados pelo Thiago)
 - Plano PME (empresarial) é a partir de 1 vida, inclusive para MEI. Para MEI, o CNPJ precisa estar ativo há 180 dias (regra fixa, confirmada pelo Thiago em 05/10/2026). Outras condições variam por operadora: sempre dizer isso.
+- Contrato empresarial com 30 vidas ou mais (funcionários + dependentes) não tem carência (confirmado pelo Thiago em 11/11/2026; pode falar com firmeza nos vídeos). Abaixo de 30 vidas, a carência varia: não prometer.
 
 ## Imagens geradas por IA
 - Não escrever "imagem ilustrativa criada com IA" nas artes (decisão do Thiago em 05/10/2026). Não apresentar pessoa gerada por IA como cliente real nem como depoimento.
