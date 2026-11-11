@@ -2,33 +2,33 @@ import React from 'react';
 import {AbsoluteFill, Audio, Img, OffthreadVideo, interpolate, spring, staticFile, useCurrentFrame} from 'remotion';
 import {FPS, GOLD, GOLD2, cl, fr, fontCss, Glass, Arrow, Giant, IBuilding, IPeople, IShield, IPay, ICheck, IQuest, IDoc, IScale} from './Ret';
 
-const END = 40.91;
+const END = 42.0;
 export const DUR_ESC = fr(END);
-const CTA = 37.8;
+const CTA = 39.0;
 
 // respostas (Scribe): [texto, início no vídeo final, fim]
 const off = (o: number, a: [string, number, number][]) => a.map(([t, s, e]) => [t, s + o, e + o] as [string, number, number]);
 const W: [string, number, number][] = [
-  ...off(13.01, [['Pode.', 0.36, 0.62], ['No', 0.98, 1.06], ['mesmo', 1.1, 1.36], ['contrato', 1.38, 1.78], ['da', 1.8, 1.86], ['empresa,', 1.9, 2.3], ['cada', 2.58, 2.76], ['titular', 2.84, 3.22], ['escolhe', 3.26, 3.54], ['o', 3.56, 3.64], ['produto', 3.66, 4.0], ['que', 4.02, 4.18], ['cabe', 4.22, 4.48], ['pra', 4.5, 4.64], ['ele.', 4.7, 4.82]]),
-  ...off(17.07, [['O', 5.5, 5.54], ['sócio', 5.62, 5.84], ['quer', 5.86, 5.94], ['uma', 5.98, 6.08], ['rede', 6.1, 6.28], ['maior?', 6.32, 6.62], ['Escolhe.', 6.86, 7.28], ['O', 7.66, 7.7], ['funcionário', 7.74, 8.2], ['prefere', 8.22, 8.52], ['enfermaria,', 8.54, 9.16], ['que', 9.32, 9.44], ['pesa', 9.46, 9.66], ['menos', 9.72, 9.98], ['no', 10.0, 10.08], ['bolso?', 10.12, 10.4], ['Também.', 10.9, 11.2]]),
-  ...off(20.31, [['Muito.', 11.74, 12.02], ['O', 12.48, 12.52], ['RH', 12.58, 12.78], ['não', 12.8, 12.9], ['precisa', 12.92, 13.22], ['agradar', 13.26, 13.6], ['todo', 13.62, 13.82], ['mundo', 13.86, 14.04], ['com', 14.08, 14.18], ['um', 14.18, 14.26], ['plano', 14.28, 14.48], ['só.', 14.58, 14.7], ['Depende', 15.16, 15.46], ['da', 15.48, 15.54], ['operadora', 15.56, 16.04], ['e', 16.24, 16.28], ['do', 16.32, 16.4], ['contrato.', 16.42, 16.86], ['E', 17.1, 17.12], ['eu', 17.14, 17.22], ['te', 17.24, 17.34], ['mostro', 17.38, 17.58], ['as', 17.62, 17.68], ['opções.', 17.72, 18.14], ['Comenta', 18.54, 18.8], ['ESCOLHA', 18.82, 19.26], ['que', 19.42, 19.44], ['eu', 19.46, 19.5], ['te', 19.56, 19.62], ['chamo', 19.64, 19.8], ['no', 19.84, 19.9], ['WhatsApp', 19.94, 20.36]]),
+  ...off(11.41, [['Pode', 0.36, 0.66], ['sim.', 0.72, 0.92], ['No', 1.54, 1.62], ['mesmo', 1.68, 1.96], ['contrato', 1.98, 2.4], ['da', 2.44, 2.48], ['empresa,', 2.52, 2.94], ['cada', 3.34, 3.54], ['titular', 3.62, 4.02], ['escolhe', 4.08, 4.4], ['o', 4.42, 4.5], ['produto', 4.52, 4.92], ['que', 4.94, 5.08], ['cabe', 5.14, 5.4], ['pra', 5.42, 5.54], ['ele.', 5.62, 5.74]]),
+  ...off(15.65, [['O', 6.24, 6.26], ['sócio', 6.36, 6.64], ['quer', 6.66, 6.72], ['uma', 6.76, 6.88], ['rede', 6.92, 7.1], ['maior?', 7.14, 7.48], ['Escolhe.', 7.78, 8.2], ['O', 8.6, 8.66], ['funcionário', 8.7, 9.16], ['prefere', 9.18, 9.46], ['enfermaria', 9.5, 10.24], ['que', 10.26, 10.38], ['pesa', 10.42, 10.7], ['menos', 10.74, 11.0], ['no', 11.04, 11.12], ['bolso?', 11.16, 11.44], ['Também,', 12.04, 12.3], ['muito.', 12.82, 13.14]]),
+  ...off(18.64, [['O', 13.98, 14.02], ['RH', 14.1, 14.32], ['não', 14.36, 14.46], ['precisa', 14.48, 14.84], ['agradar', 14.88, 15.24], ['todo', 15.32, 15.54], ['mundo', 15.58, 15.82], ['com', 15.86, 15.94], ['um', 15.98, 16.08], ['plano', 16.1, 16.32], ['só.', 16.44, 16.58], ['Depende', 17.06, 17.4], ['da', 17.42, 17.5], ['operadora', 17.52, 18.0], ['e', 18.02, 18.06], ['do', 18.1, 18.18], ['contrato,', 18.2, 18.7], ['e', 19.04, 19.08], ['eu', 19.1, 19.16], ['te', 19.22, 19.3], ['mostro', 19.36, 19.62], ['as', 19.64, 19.72], ['opções.', 19.76, 20.22], ['Comenta', 20.74, 21.0], ['a', 21.02, 21.08], ['palavra', 21.1, 21.38], ['escolha,', 21.42, 21.9], ['que', 22.06, 22.1], ['eu', 22.12, 22.16], ['te', 22.22, 22.32], ['chamo', 22.34, 22.56], ['no', 22.58, 22.66], ['WhatsApp', 22.68, 23.1]]),
 ];
 
 // perguntas da apresentadora (linha inteira)
 const Q: {t: string; a: number; b: number}[] = [
   {t: 'Oi, gente! Tá começando mais um BONI CAST!', a: 0.1, b: 3.6},
-  {t: 'Hoje o papo é com o Thiago', a: 4.05, b: 8.04},
-  {t: 'Numa mesma empresa, cada funcionário pode ter um plano diferente?', a: 8.48, b: 13.2},
-  {t: 'E o sócio? Pode escolher um plano maior?', a: 18.1, b: 22.4},
-  {t: 'E pro RH, isso deixa tudo mais leve?', a: 28.54, b: 31.9},
+  {t: 'Hoje o papo é com o consultor Boni', a: 4.05, b: 6.54},
+  {t: 'Numa mesma empresa, cada funcionário pode ter um plano diferente?', a: 7.05, b: 11.65},
+  {t: 'E o sócio? Pode escolher um plano maior?', a: 17.4, b: 21.7},
+  {t: 'E pro RH, isso deixa tudo mais leve?', a: 29.14, b: 32.5},
 ];
 
 const SCENES = [
-  {a: 0, b: 13.4, bg: 'pastas-diferentes'},
-  {a: 13.4, b: 18.1, bg: 'contrato-lupa'},
-  {a: 18.1, b: 22.6, bg: 'decisao-dois-caminhos'},
-  {a: 22.6, b: 28.5, bg: 'dinheiro-calculadora-moedas'},
-  {a: 28.5, b: CTA, bg: 'generico-equilibrio-pedras'},
+  {a: 0, b: 11.77, bg: 'pastas-diferentes'},
+  {a: 11.77, b: 17.4, bg: 'contrato-lupa'},
+  {a: 17.4, b: 21.89, bg: 'decisao-dois-caminhos'},
+  {a: 21.89, b: 29.09, bg: 'dinheiro-calculadora-moedas'},
+  {a: 29.09, b: CTA, bg: 'generico-equilibrio-pedras'},
   {a: CTA, b: 99, bg: 'celular-aceso'},
 ];
 
@@ -62,7 +62,7 @@ const Legend: React.FC = () => {
   const t = useCurrentFrame() / FPS;
   const q = Q.find((x) => t >= x.a && t < x.b + 0.15);
   const g = groups.find((x, i) => t >= x.a - 0.05 && t < (groups[i + 1]?.a ?? x.b + 0.3) - 0.01);
-  if (t > 38.5) return null;
+  if (t > 38.95) return null;
   if (q) {
     return (
       <div style={{position: 'absolute', left: 50, right: 50, top: 790, display: 'flex', justifyContent: 'center'}}>
@@ -84,28 +84,27 @@ const Elements: React.FC = () => {
     <>
       {/* Q1 */}
       <Giant at={0.2} out={3.5} text="BONI CAST" size={120} y={330} />
-      <Glass at={4.3} out={8.0} x={540} y={Y + 40} variant="wide" w={720} icon={<IBuilding />} label="NA MESMA EMPRESA" sub="vários funcionários" />
-      <Glass at={8.7} out={13.3} x={190} y={Y + 20} icon={<IShield />} label="PLANO A" tilt={-3} />
-      <Glass at={9.4} out={13.3} x={540} y={Y + 80} icon={<IShield />} label="PLANO B" />
-      <Glass at={10.1} out={13.3} x={895} y={Y + 140} icon={<IShield />} label="PLANO C" tilt={3} />
+      <Glass at={4.3} out={6.5} x={540} y={Y + 40} variant="wide" w={720} icon={<IBuilding />} label="NA MESMA EMPRESA" sub="vários funcionários" />
+      <Glass at={7.3} out={11.7} x={190} y={Y + 20} icon={<IShield />} label="PLANO A" tilt={-3} />
+      <Glass at={8.0} out={11.7} x={540} y={Y + 80} icon={<IShield />} label="PLANO B" />
+      <Glass at={8.7} out={11.7} x={895} y={Y + 140} icon={<IShield />} label="PLANO C" tilt={3} />
       {/* A1 */}
-      <Glass at={14.0} out={15.5} x={540} y={Y + 40} variant="wide" w={720} icon={<IDoc />} label="UM CONTRATO" sub="no CNPJ da empresa" />
-      <Glass at={15.7} out={18.1} x={300} y={Y + 20} icon={<IPeople />} label="CADA TITULAR" tilt={-3} />
-      <Arrow at={16.9} out={18.1} x={540} y={Y + 130} w={80} />
-      <Glass at={17.0} out={18.1} x={790} y={Y + 20} icon={<IShield />} label="O SEU PRODUTO" tilt={3} accent={GOLD2} />
+      <Glass at={12.95} out={14.7} x={540} y={Y + 40} variant="wide" w={720} icon={<IDoc />} label="UM CONTRATO" sub="no CNPJ da empresa" />
+      <Glass at={15.0} out={17.3} x={300} y={Y + 20} icon={<IPeople />} label="CADA TITULAR" tilt={-3} />
+      <Arrow at={16.0} out={17.3} x={540} y={Y + 130} w={80} />
+      <Glass at={16.1} out={17.3} x={790} y={Y + 20} icon={<IShield />} label="O SEU PRODUTO" tilt={3} accent={GOLD2} />
       {/* Q2 */}
-      <Glass at={18.3} out={22.5} x={540} y={Y + 60} variant="wide" w={620} icon={<IQuest />} label="E O SÓCIO?" sub="plano maior?" />
+      <Glass at={17.6} out={21.8} x={540} y={Y + 60} variant="wide" w={620} icon={<IQuest />} label="E O SÓCIO?" sub="plano maior?" />
       {/* A2 */}
-      <Glass at={22.9} out={24.7} x={540} y={Y + 20} variant="wide" w={700} icon={<IPeople />} label="SÓCIO" sub="quer rede maior" />
-      <Giant at={23.9} out={24.7} text="ESCOLHE" size={110} y={600} />
-      <Glass at={25.0} out={28.4} x={540} y={Y + 10} variant="wide" w={720} icon={<IPay />} label="FUNCIONÁRIO" sub="enfermaria" accent={GOLD2} />
-      <Giant at={26.8} out={28.4} text="PESA MENOS" size={100} y={600} />
+      <Glass at={22.0} out={23.95} x={540} y={Y + 20} variant="wide" w={700} icon={<IPeople />} label="SÓCIO" sub="quer rede maior" />
+      <Giant at={23.4} out={23.95} text="ESCOLHE" size={110} y={600} />
+      <Glass at={24.4} out={29.0} x={540} y={Y + 10} variant="wide" w={720} icon={<IPay />} label="FUNCIONÁRIO" sub="enfermaria" accent={GOLD2} />
+      <Giant at={26.1} out={29.0} text="PESA MENOS" size={100} y={600} />
       {/* Q3 */}
-      <Glass at={28.7} out={32.0} x={540} y={Y + 60} variant="wide" w={620} icon={<IQuest />} label="E O RH?" sub="fica mais leve?" />
+      <Glass at={29.3} out={32.5} x={540} y={Y + 60} variant="wide" w={620} icon={<IQuest />} label="E O RH?" sub="fica mais leve?" />
       {/* A3 */}
-      <Giant at={32.1} out={33.0} text="MUITO" size={150} y={380} />
-      <Glass at={33.1} out={35.3} x={540} y={Y + 30} variant="wide" w={740} icon={<IScale />} label="UM PLANO SÓ" sub="não precisa agradar todo mundo" tilt={-1} />
-      <Glass at={35.5} out={37.6} x={540} y={Y + 30} variant="wide" w={740} icon={<ICheck />} label="DEPENDE" sub="da operadora e do contrato" accent={GOLD2} />
+      <Glass at={32.9} out={35.5} x={540} y={Y + 30} variant="wide" w={740} icon={<IScale />} label="UM PLANO SÓ" sub="não precisa agradar todo mundo" tilt={-1} />
+      <Glass at={35.7} out={38.9} x={540} y={Y + 30} variant="wide" w={740} icon={<ICheck />} label="DEPENDE" sub="da operadora e do contrato" accent={GOLD2} />
     </>
   );
 };
@@ -113,8 +112,8 @@ const Elements: React.FC = () => {
 const End: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / FPS;
-  const a = spring({frame: f - fr(38.4), fps: FPS, config: {damping: 13, stiffness: 150}});
-  const b = spring({frame: f - fr(38.85), fps: FPS, config: {damping: 11, stiffness: 160}});
+  const a = spring({frame: f - fr(39.6), fps: FPS, config: {damping: 13, stiffness: 150}});
+  const b = spring({frame: f - fr(40.0), fps: FPS, config: {damping: 11, stiffness: 160}});
   const glow = 0.5 + 0.5 * Math.sin(f / 6);
   if (t < CTA) return null;
   return (
@@ -124,7 +123,7 @@ const End: React.FC = () => {
         <div style={{padding: '16px 48px', borderRadius: 28, background: GOLD, boxShadow: `0 0 ${50 + 40 * glow}px ${GOLD}aa`, fontFamily: 'Poppins', fontWeight: 800, fontSize: 100, color: '#000'}}>ESCOLHA</div>
       </div>
       <div style={{position: 'absolute', left: 0, right: 0, top: 640, textAlign: 'center', fontFamily: 'Poppins', fontWeight: 500, fontSize: 36, color: '#fff', opacity: b, textShadow: '0 4px 18px #000'}}>Eu te chamo no WhatsApp</div>
-      <div style={{position: 'absolute', left: 50, right: 50, top: 790, textAlign: 'center', fontFamily: 'Poppins', fontWeight: 500, fontSize: 26, lineHeight: 1.3, color: '#ffffffdd', textShadow: '0 3px 14px #000', opacity: interpolate(t, [39.0, 39.4], [0, 1], cl)}}>
+      <div style={{position: 'absolute', left: 50, right: 50, top: 790, textAlign: 'center', fontFamily: 'Poppins', fontWeight: 500, fontSize: 26, lineHeight: 1.3, color: '#ffffffdd', textShadow: '0 3px 14px #000', opacity: interpolate(t, [40.3, 40.7], [0, 1], cl)}}>
         Carências, rede e valores variam por operadora e produto.
       </div>
     </>
