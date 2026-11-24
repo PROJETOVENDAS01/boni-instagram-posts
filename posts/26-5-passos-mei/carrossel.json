@@ -1,0 +1,68 @@
+{
+ "capa": {
+  "destaque": "5 PASSOS",
+  "sub": "para sua empresa pequena ou MEI ter plano de saúde",
+  "fundo": {
+   "arquivo": "autonomo-mei-calendario",
+   "x": 0.5,
+   "modo": "topo"
+  }
+ },
+ "lamina": [
+  {
+   "rotulo": "PASSO 01",
+   "icone": "check",
+   "titulo": "CNPJ ativo",
+   "texto": "Para MEI, o CNPJ precisa estar ativo há 180 dias. Confira o do seu antes de pedir cotação.",
+   "fundo": {
+    "arquivo": "contrato-lupa",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "PASSO 02",
+   "icone": "grupo",
+   "titulo": "Conte as vidas",
+   "texto": "O plano empresarial começa a partir de 1 vida. Liste quem vai entrar, e veja se a operadora aceita dependentes.",
+   "fundo": {
+    "arquivo": "ep4-grupo",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "PASSO 03",
+   "icone": "documento",
+   "titulo": "Separe os documentos",
+   "texto": "Cada operadora pede os seus. Ter o CNPJ e os dados de quem vai entrar à mão agiliza a proposta.",
+   "fundo": {
+    "arquivo": "consultor-maos-documento",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "PASSO 04",
+   "icone": "lupa",
+   "titulo": "Compare as opções",
+   "texto": "Rede, carência e valor mudam de operadora para operadora. Compare tudo no perfil da sua empresa.",
+   "fundo": {
+    "arquivo": "dinheiro-calculadora-moedas",
+    "x": 0.5
+   }
+  },
+  {
+   "rotulo": "PASSO 05",
+   "icone": "balao",
+   "titulo": "Peça ajuda",
+   "texto": "Eu comparo as opções e explico cada regra em linguagem simples, para você decidir com clareza.",
+   "fundo": {
+    "arquivo": "celular-aceso",
+    "x": 0.5
+   }
+  }
+ ],
+ "final": {
+  "pergunta": "Sua empresa pequena também pode ter plano.",
+  "texto_html": "Comenta <em>PEQUENA</em> que eu te chamo no WhatsApp.",
+  "aviso": "Carências, rede e valores variam por operadora e produto."
+ }
+}
