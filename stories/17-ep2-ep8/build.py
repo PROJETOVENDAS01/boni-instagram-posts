@@ -47,6 +47,7 @@ L = 'Link na bio ↑'
 T = {
  '01-qua-25-18h': ('st17-s01-retencao', .5, .95, 80, B(330, 'HOJE 19H30 NO FEED', f'Você contrata, treina e a pessoa {G("vai embora?")}', 'Hoje às 19h30: o que o colaborador olha além do salário. Plano de saúde costuma pesar nessa conversa.', 'Confira às 19h30'), 0),
  '02-sex-27-18h': ('st17-s02-contrato', .5, .95, 80, B(330, 'BONI CAST · HOJE 19H30', f'Cada funcionário com um plano {G("diferente?")} No mesmo contrato?', 'Hoje às 19h30 no feed. Depende da operadora e do contrato.', 'Confira às 19h30'), 0),
+ '03-seg-30-18h': ('st17-s03-30vidas', .5, .95, 80, B(330, 'HOJE 19H30 NO FEED', f'{G("30 vidas")} ou mais: plano de saúde sem carência?', 'Hoje às 19h30: o que conta como vida e como chegar nas 30.', 'Confira às 19h30'), 0),
 }
 css = CSS.replace('FONTES', (KIT/'fontes').as_uri())
 with sync_playwright() as p:
