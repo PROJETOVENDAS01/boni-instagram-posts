@@ -2,16 +2,16 @@ import React from 'react';
 import {AbsoluteFill, Audio, Img, OffthreadVideo, interpolate, spring, staticFile, useCurrentFrame} from 'remotion';
 import {FPS, GOLD, GOLD2, cl, fr, fontCss, Glass, Arrow, Giant, IBuilding, IPeople, IShield, IPay, ICheck, IQuest, IDoc, IScale} from './Ret';
 
-const END = 42.0;
+const END = 48.4;
 export const DUR_ESC = fr(END);
-const CTA = 39.0;
+const CTA = 41.7;
 
 // respostas (Scribe): [texto, início no vídeo final, fim]
 const off = (o: number, a: [string, number, number][]) => a.map(([t, s, e]) => [t, s + o, e + o] as [string, number, number]);
 const W: [string, number, number][] = [
   ...off(11.41, [['Pode', 0.36, 0.66], ['sim.', 0.72, 0.92], ['No', 1.54, 1.62], ['mesmo', 1.68, 1.96], ['contrato', 1.98, 2.4], ['da', 2.44, 2.48], ['empresa,', 2.52, 2.94], ['cada', 3.34, 3.54], ['titular', 3.62, 4.02], ['escolhe', 4.08, 4.4], ['o', 4.42, 4.5], ['produto', 4.52, 4.92], ['que', 4.94, 5.08], ['cabe', 5.14, 5.4], ['pra', 5.42, 5.54], ['ele.', 5.62, 5.74]]),
   ...off(15.65, [['O', 6.24, 6.26], ['sócio', 6.36, 6.64], ['quer', 6.66, 6.72], ['uma', 6.76, 6.88], ['rede', 6.92, 7.1], ['maior?', 7.14, 7.48], ['Escolhe.', 7.78, 8.2], ['O', 8.6, 8.66], ['funcionário', 8.7, 9.16], ['prefere', 9.18, 9.46], ['enfermaria', 9.5, 10.24], ['que', 10.26, 10.38], ['pesa', 10.42, 10.7], ['menos', 10.74, 11.0], ['no', 11.04, 11.12], ['bolso?', 11.16, 11.44], ['Também,', 12.04, 12.3], ['muito.', 12.82, 13.14]]),
-  ...off(18.64, [['O', 13.98, 14.02], ['RH', 14.1, 14.32], ['não', 14.36, 14.46], ['precisa', 14.48, 14.84], ['agradar', 14.88, 15.24], ['todo', 15.32, 15.54], ['mundo', 15.58, 15.82], ['com', 15.86, 15.94], ['um', 15.98, 16.08], ['plano', 16.1, 16.32], ['só.', 16.44, 16.58], ['Depende', 17.06, 17.4], ['da', 17.42, 17.5], ['operadora', 17.52, 18.0], ['e', 18.02, 18.06], ['do', 18.1, 18.18], ['contrato,', 18.2, 18.7], ['e', 19.04, 19.08], ['eu', 19.1, 19.16], ['te', 19.22, 19.3], ['mostro', 19.36, 19.62], ['as', 19.64, 19.72], ['opções.', 19.76, 20.22], ['Comenta', 20.74, 21.0], ['a', 21.02, 21.08], ['palavra', 21.1, 21.38], ['escolha,', 21.42, 21.9], ['que', 22.06, 22.1], ['eu', 22.12, 22.16], ['te', 22.22, 22.32], ['chamo', 22.34, 22.56], ['no', 22.58, 22.66], ['WhatsApp', 22.68, 23.1]]),
+  ...off(18.64, [['O', 13.98, 14.02], ['RH', 14.1, 14.32], ['não', 14.36, 14.46], ['precisa', 14.48, 14.84], ['agradar', 14.88, 15.24], ['todo', 15.32, 15.54], ['mundo', 15.58, 15.82], ['com', 15.86, 15.94], ['um', 15.98, 16.08], ['plano', 16.1, 16.32], ['só.', 16.44, 16.58], ['Depende', 17.06, 17.4], ['da', 17.42, 17.5], ['operadora', 17.52, 18.0], ['e', 18.02, 18.06], ['do', 18.1, 18.18], ['contrato,', 18.2, 18.7], ['e', 19.04, 19.08], ['eu', 19.1, 19.16], ['te', 19.22, 19.3], ['mostro', 19.36, 19.62], ['as', 19.64, 19.72], ['opções.', 19.76, 20.22]]),
 ];
 
 // perguntas da apresentadora (linha inteira)
@@ -21,6 +21,8 @@ const Q: {t: string; a: number; b: number}[] = [
   {t: 'Numa mesma empresa, cada funcionário pode ter um plano diferente?', a: 7.05, b: 11.65},
   {t: 'E o sócio? Pode escolher um plano maior?', a: 17.4, b: 21.7},
   {t: 'E pro RH, isso deixa tudo mais leve?', a: 29.14, b: 32.5},
+  {t: 'Quer saber como isso funciona na sua empresa?', a: 39.25, b: 41.6},
+  {t: 'Até o próximo BONI CAST!', a: 46.15, b: 48.3},
 ];
 
 const SCENES = [
@@ -28,7 +30,8 @@ const SCENES = [
   {a: 11.77, b: 17.4, bg: 'contrato-lupa'},
   {a: 17.4, b: 21.89, bg: 'decisao-dois-caminhos'},
   {a: 21.89, b: 29.09, bg: 'dinheiro-calculadora-moedas'},
-  {a: 29.09, b: CTA, bg: 'generico-equilibrio-pedras'},
+  {a: 29.09, b: 39.2, bg: 'generico-equilibrio-pedras'},
+  {a: 39.2, b: CTA, bg: 'pastas-diferentes'},
   {a: CTA, b: 99, bg: 'celular-aceso'},
 ];
 
@@ -62,7 +65,6 @@ const Legend: React.FC = () => {
   const t = useCurrentFrame() / FPS;
   const q = Q.find((x) => t >= x.a && t < x.b + 0.15);
   const g = groups.find((x, i) => t >= x.a - 0.05 && t < (groups[i + 1]?.a ?? x.b + 0.3) - 0.01);
-  if (t > 38.95) return null;
   if (q) {
     return (
       <div style={{position: 'absolute', left: 50, right: 50, top: 790, display: 'flex', justifyContent: 'center'}}>
@@ -105,6 +107,8 @@ const Elements: React.FC = () => {
       {/* A3 */}
       <Glass at={32.9} out={35.5} x={540} y={Y + 30} variant="wide" w={740} icon={<IScale />} label="UM PLANO SÓ" sub="não precisa agradar todo mundo" tilt={-1} />
       <Glass at={35.7} out={38.9} x={540} y={Y + 30} variant="wide" w={740} icon={<ICheck />} label="DEPENDE" sub="da operadora e do contrato" accent={GOLD2} />
+      {/* fechamento */}
+      <Glass at={39.5} out={41.6} x={540} y={Y + 40} variant="wide" w={720} icon={<IBuilding />} label="NA SUA EMPRESA?" sub="como funciona" />
     </>
   );
 };
@@ -112,8 +116,9 @@ const Elements: React.FC = () => {
 const End: React.FC = () => {
   const f = useCurrentFrame();
   const t = f / FPS;
-  const a = spring({frame: f - fr(39.6), fps: FPS, config: {damping: 13, stiffness: 150}});
-  const b = spring({frame: f - fr(40.0), fps: FPS, config: {damping: 11, stiffness: 160}});
+  const a = spring({frame: f - fr(41.9), fps: FPS, config: {damping: 13, stiffness: 150}});
+  const b = spring({frame: f - fr(42.9), fps: FPS, config: {damping: 11, stiffness: 160}});
+  const c = spring({frame: f - fr(45.0), fps: FPS, config: {damping: 13, stiffness: 150}});
   const glow = 0.5 + 0.5 * Math.sin(f / 6);
   if (t < CTA) return null;
   return (
@@ -122,8 +127,8 @@ const End: React.FC = () => {
       <div style={{position: 'absolute', left: 0, right: 0, top: 410, display: 'flex', justifyContent: 'center', opacity: b, transform: `scale(${0.7 + 0.3 * b})`}}>
         <div style={{padding: '16px 48px', borderRadius: 28, background: GOLD, boxShadow: `0 0 ${50 + 40 * glow}px ${GOLD}aa`, fontFamily: 'Poppins', fontWeight: 800, fontSize: 100, color: '#000'}}>ESCOLHA</div>
       </div>
-      <div style={{position: 'absolute', left: 0, right: 0, top: 640, textAlign: 'center', fontFamily: 'Poppins', fontWeight: 500, fontSize: 36, color: '#fff', opacity: b, textShadow: '0 4px 18px #000'}}>Eu te chamo no WhatsApp</div>
-      <div style={{position: 'absolute', left: 50, right: 50, top: 790, textAlign: 'center', fontFamily: 'Poppins', fontWeight: 500, fontSize: 26, lineHeight: 1.3, color: '#ffffffdd', textShadow: '0 3px 14px #000', opacity: interpolate(t, [40.3, 40.7], [0, 1], cl)}}>
+      <div style={{position: 'absolute', left: 0, right: 0, top: 640, textAlign: 'center', fontFamily: 'Poppins', fontWeight: 500, fontSize: 36, color: '#fff', opacity: c, textShadow: '0 4px 18px #000'}}>Eu te chamo no WhatsApp</div>
+      <div style={{position: 'absolute', left: 50, right: 50, top: 720, textAlign: 'center', fontFamily: 'Poppins', fontWeight: 500, fontSize: 26, lineHeight: 1.3, color: '#ffffffdd', textShadow: '0 3px 14px #000', opacity: interpolate(t, [42.4, 42.8], [0, 1], cl)}}>
         Carências, rede e valores variam por operadora e produto.
       </div>
     </>
