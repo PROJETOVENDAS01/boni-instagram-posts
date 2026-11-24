@@ -14,3 +14,6 @@ Thiago: "em geral pode incluir cônjuge e filhos" vale para as operadoras que vo
 
 ## Custo estimado
 HeyGen ~8 créditos (trechos do Thiago, ~22s, imagens do banco podcast/lateral); voz da apresentadora ~US$ 0,05; fundos do estúdio já existem (US$ 0).
+
+## Entregue
+reel.mp4 (final), legenda.txt, alt-text.txt. HeyGen usado: 5 vídeos (~12 créditos). Aviso de carências no último quadro; 8 hashtags; apresentadora = personagem IA (sem texto "criada com IA", decisão 05/10), não é cliente.
