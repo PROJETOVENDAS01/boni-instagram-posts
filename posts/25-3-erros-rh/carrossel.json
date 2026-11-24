@@ -1,0 +1,14 @@
+{
+ "capa": {
+  "destaque": "3 ERROS DO RH",
+  "sub": "na hora de escolher o plano de saúde da empresa",
+  "fundo": {"arquivo": "pme-notebook-cafe", "x": 0.5, "modo": "topo"}
+ },
+ "lamina": [
+  {"rotulo": "ERRO 01", "icone": "check", "titulo": "Olhar só o preço", "texto": "O mais barato no papel pode deixar a equipe sem a rede ou a cobertura que ela realmente usa.", "fundo": {"arquivo": "dinheiro-calculadora-moedas", "x": 0.5}},
+  {"rotulo": "ERRO 02", "icone": "pino", "titulo": "Não ver a rede", "texto": "Confira se hospitais, clínicas e laboratórios ficam perto de onde a equipe mora e trabalha.", "fundo": {"arquivo": "pessoas-recepcao-clinica", "x": 0.5}},
+  {"rotulo": "ERRO 03", "icone": "calendario", "titulo": "Esquecer o reajuste", "texto": "Pergunte como o reajuste funciona e quando acontece antes de assinar. Isso muda o custo do ano.", "fundo": {"arquivo": "agenda-data-circulada", "x": 0.5}},
+  {"rotulo": "O CAMINHO", "icone": "documento", "titulo": "Compare com calma", "texto": "Preço, rede e regras do contrato, lado a lado e no perfil da sua equipe. Cada operadora tem as suas condições.", "fundo": {"arquivo": "contrato-lupa", "x": 0.5}}
+ ],
+ "final": {"pergunta": "Sua empresa já conferiu esses 3 pontos?", "texto_html": "Comenta <em>RH</em> que eu te ajudo a conferir.", "aviso": "Carências, rede e valores variam por operadora e produto."}
+}
