@@ -48,6 +48,9 @@ T = {
  '01-qua-25-18h': ('st17-s01-retencao', .5, .95, 80, B(330, 'HOJE 19H30 NO FEED', f'Você contrata, treina e a pessoa {G("vai embora?")}', 'Hoje às 19h30: o que o colaborador olha além do salário. Plano de saúde costuma pesar nessa conversa.', 'Confira às 19h30'), 0),
  '02-sex-27-18h': ('st17-s02-contrato', .5, .95, 80, B(330, 'BONI CAST · HOJE 19H30', f'Cada funcionário com um plano {G("diferente?")} No mesmo contrato?', 'Hoje às 19h30 no feed. Depende da operadora e do contrato.', 'Confira às 19h30'), 0),
  '03-seg-30-18h': ('st17-s03-30vidas', .5, .95, 80, B(330, 'HOJE 19H30 NO FEED', f'{G("30 vidas")} ou mais: plano de saúde sem carência?', 'Hoje às 19h30: o que conta como vida e como chegar nas 30.', 'Confira às 19h30'), 0),
+ '04-qua-02-18h': ('st18-ep5-pequena', .5, .95, 80, B(330, 'HOJE 19H30 NO FEED', f'Empresa pequena também pode ter {G("plano de saúde?")}', 'Hoje às 19h30: o que muda quando a empresa tem poucos funcionários.', 'Confira às 19h30'), 0),
+ '05-sex-04-18h': ('st18-ep3-rh', .5, .95, 80, B(330, 'HOJE 19H30 NO FEED', f'Seu RH perde a manhã {G("ligando pra operadora?")}', 'Hoje às 19h30: como a gente cuida disso junto à operadora.', 'Confira às 19h30'), 0),
+ '06-seg-07-18h': ('st18-ep7-familia', .5, .95, 80, B(330, 'BONI CAST · HOJE 19H30', f'Funcionário pode incluir a {G("família")} no plano da empresa?', 'Hoje às 19h30 no feed. Quem entra muda de operadora para operadora.', 'Confira às 19h30'), 0),
 }
 css = CSS.replace('FONTES', (KIT/'fontes').as_uri())
 with sync_playwright() as p:
